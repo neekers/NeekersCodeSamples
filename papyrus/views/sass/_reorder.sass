@@ -1,0 +1,90 @@
+#reorder
+  @include modal-position
+  position: static
+  top: 50px
+  left: 30%
+  width: 575px
+
+  #action-bar
+    position: fixed
+    top: 200px
+    left: 62%
+    .drag-text
+      line-height: 40px
+      margin-bottom: 40px
+      font-size: 18
+      color: $mid-gray-3
+      vertical-align: middle
+      img
+        line-height: 30px
+        vertical-align: middle
+        padding-right: 10px
+      .text
+        vertical-align: middle
+    a
+      display: block
+      margin: 10px 0
+      &.done-reorder-btn, &.cancel-reorder-btn
+        @include reorder-button-base
+      &.done-reorder-btn
+        background-color: #1cbd51
+        @include gradient(linear,top,rgb(28, 189, 81),rgb(35, 135, 1),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#1cbd51', EndColorStr='#238701')
+        &:hover
+          background-color: #2cc966
+          @include gradient(linear,top,rgb(44, 201, 102),rgb(52, 153, 2),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2cc966', EndColorStr='#349902')
+      &.cancel-reorder-btn
+        background-color: #595959
+        @include gradient(linear,top,rgb(89, 89, 89),rgb(71, 71, 71),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#595959', EndColorStr='#474747')
+        &:hover
+          background-color: #868686
+          @include gradient(linear,top,rgb(134, 134, 134),rgb(105, 105, 105),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#868686', EndColorStr='#696969')
+        &:active
+          background-color: #565656
+          @include gradient(linear,top,rgb(86, 86, 86),rgb(54, 54, 54),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#565656', EndColorStr='#363636')
+
+  #reorder-list
+    position: absolute
+    left: 34%
+    top:  50px
+    width: 300px
+    li
+      height: 120px
+      overflow: hidden
+      margin: 10px 0
+      position: relative
+      .screen-item
+        background-color: $off-white
+        height: 100%
+        background-position: center center
+        background-size: cover
+        &.fact-type
+          padding: 10px 0 0 20px
+          width: 450px
+          h2
+            font-size: 22px
+          .screen-text
+            margin: 7px 0
+            p
+              margin: 7px 0
+              font-size: 12px
+              line-height: 17px
+        h4
+          color: $off-white
+          position: absolute
+          bottom: 0
+          left: 0
+          font-size: 15px
+          padding: 8px
+          overflow: hidden
+          font-size: 17px
+          text-shadow: 0px 1px 3px $nearly-black-40
+      aside.caption
+        display: none
+  .ui-state-highlight
+    background-color: $nearly-black-80
+    border: 1px dashed $light-gray-1

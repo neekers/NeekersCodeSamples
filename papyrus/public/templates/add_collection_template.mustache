@@ -1,0 +1,33 @@
+<div class="add-collection-form-wrapper">
+  <a class="cancel_btn" href="javascript:void(0)"><img src="/images/close-button.png" /></a>
+  <article class="add-collection-form">
+    <header>
+      <h3 class="heading">Create a Collage</h3>
+    </header>
+
+    <form id="create-collection">
+      <div>
+        <div id="title_error_message" class = "error_message"></div>
+        <input name="title" class="title field" type="text" placeholder="Enter Title" />
+      </div>
+      <div>
+        <div id="topic_error_message" class = "error_message"></div>
+        <div class="dropdown-container">
+          <div class="selected-topic">Select a Topic</div>
+          <div class="notch"></div>
+          <ul class="options">
+          {{#topics}}
+            <li class="option" data-entity="{{entity_url}}">{{title}}</li>
+          {{/topics}}
+          </ul>
+        </div>
+      </div>
+    </form>
+
+    <footer>
+      <a href="javascript:void(0)" class="create_btn">Create</a>
+    </footer>
+  </article>
+</div>
+
+<div class="fs_overlay"></div>

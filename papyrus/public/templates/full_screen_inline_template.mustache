@@ -1,0 +1,160 @@
+<div class="screen-item {{item.type}}-type cf">
+    {{#editable}}
+        <div class="page-tear top"></div>
+        <div class="page-tear"></div>
+    {{/editable}}
+    {{#showActions}}
+     {{#showScreenNavigation}}
+        {{> screen_nav_template}}
+     {{/showScreenNavigation}}
+    {{/showActions}}
+
+
+    <div class="asset-wrapper">
+        <div class="asset">
+        {{#item}}
+
+            {{#image_745_url}}
+                <div class="image-wrapper">
+                    {{#imageType}}
+                        <a {{#source_page_url}}href="{{source_page_url}}"{{/source_page_url}} {{^source_page_url}}href="#"{{/source_page_url}} rel="nofollow">
+                        <img class="image" src="{{image_745_url}}" />
+                        <div class="caption">
+                            {{#caption}}
+                            <div class='caption-wrapper'>
+                                <textarea class="caption-text" placeholder="Enter a caption">{{caption}}</textarea>
+                            </div>
+                            {{/caption}}
+                        </div>
+                        </a>
+                    {{/imageType}}
+
+                    {{#collectionType}}
+                    <a href="{{app_url}}">
+                        <div class="collage">
+                            <div class="collage-cover {{^screens}}full{{/screens}}" style="background-image: url({{image_745_url}})"></div>
+                            <h3>
+                                {{title}}
+                                <aside>By {{owner.first_name}} {{owner.last_name}}</aside>
+                            </h3>
+
+                            {{#screens.length}}
+                            <ul class='record-screens layout-{{screens.length}}'>
+                                {{#screens}}
+                                <li>{{> collage_screens_template}}</li>
+                                {{/screens}}
+                            </ul>
+                            {{/screens.length}}
+                        </div>
+
+                        <div class="metadata">
+                            <div class="container">
+                              {{#view_count}}
+                              <div class="view-count-wrapper">
+                                <img class="icon" src="/images/visits-icon.png"/>
+                                <span class="view-count">{{view_count}}</span>
+                              </div>
+                              {{/view_count}}
+                              {{#comment_count}}
+                              <div class="comment-count-wrapper">
+                                <img class="icon" src="/images/comment-icon.png"/>
+                                <span class="comment-count">{{comment_count}}</span>
+                              </div>
+                              {{/comment_count}}
+
+                              <!--
+                              <div class="item-count-wrapper">
+                                <span class="items">{{screens_count}} {{screens_count_text}}</span>
+                              </div>
+                              -->
+
+                              <div class="creation-elapsed-wrapper">
+                                <span class="creation-elapsed">{{created}}</span>
+                              </div>
+                            </div>
+                        </div>
+                    </a>
+                    {{/collectionType}}
+
+                    {{#youtube_id}}
+                        <div class="video-wrapper">
+                            <a href="#">
+                                <img class="thumb" src="{{image_745_url}}">
+                                <svg class="svg_play" xmlns="http://www.w3.org/2000/svg" pointer-events="none">
+                                    <rect id="play" x="0" y="0" width="100%" height="100%" fill="transparent" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="caption">
+                            {{#caption}}
+                            <div class='caption-wrapper'>
+                                <textarea class="caption-text" placeholder="Enter a caption">{{caption}}</textarea>
+                            </div>
+                            {{/caption}}
+                        </div>
+                    {{/youtube_id}}
+                </div>
+            {{/image_745_url}}
+
+            {{#factType}}
+            <div class="fact-wrapper">
+                {{#title}}<h2>{{title}}</h2>{{/title}}
+                {{{#text}}}<div class="screen-text">{{{text}}}</div>{{{/text}}}
+            </div>
+            {{/factType}}
+
+            {{#feedType}}
+            <div class="content"></div>
+            {{/feedType}}
+
+            {{/item}}
+
+            {{#showActions}}
+                {{#showLikeButton}}
+                <div class="like-container">
+                    <a class="like-btn" title="like" href="#" {{#item.collected}}class="liked"{{/item.collected}}><img src="/images/icon-heart.png" /></a>
+
+                    {{#item.collected_count}}
+                    <div class="like-count">
+                        {{item.collected_count}}
+                    </div>
+                    {{/item.collected_count}}
+                </div>
+                {{/showLikeButton}}
+
+                {{#showReuseButton}}
+                <a href="#" class="screen-reuse"><img src="/images/icon-scissor.png" title="Reuse" /></a>
+                {{/showReuseButton}}
+
+                {{#showFacebookShareButton}}
+                <a href="#" class="screen-fb-share"><img src="/images/icon-facebook.png" title="Share on Facebook" /></a>
+                {{/showFacebookShareButton}}
+
+                {{#editable}}
+                {{#showDeleteButton}}
+                    <a href="#" class="screen-delete" style="display: none;"><img src="/images/icon-trash.png" title="Delete" /></a>
+                {{/showDeleteButton}}
+                {{/editable}}
+
+            {{/showActions}}
+
+        </div>
+
+        
+        <div class="below-asset cf">
+            <div class="source">
+                {{#item.source_page_url}}
+                    Source: <a class="origin_source_url" href="{{item.source_page_url}}" target="_blank" rel="nofollow">{{item.domain}}</a>
+                {{/item.source_page_url}}
+                {{^item.source_page_url}}
+                    Uploaded by user
+                {{/item.source_page_url}}
+            </div>
+
+
+            <a class="more-info" href="#">Element info <b class="notch"></b></a>
+
+        </div>
+        
+    </div>
+</div>

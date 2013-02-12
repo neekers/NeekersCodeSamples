@@ -1,0 +1,62 @@
+<header class="explore-navigation-header">
+    <div class="wrapper">
+        <nav class="navigation">
+
+            <ul class="list">
+                <li class="explore-search item">
+                    <a class="icon" href="#">Search</a>
+                </li>
+                <li class="search-form item">
+                    <input class="query" type="text" placeholder="Search Collages and People..." value="{{searchTerm}}" />
+                </li>
+                <li class="explore-topics item">
+                    <div class="button-wrapper">
+                        <a class="title" href="javascript:void(0)">ALL TOPICS</a>
+                        <b class="notch"></b>
+                    </div>
+                </li>
+                <li class="explore-following item">
+                    <a class="title" href="javascript:void(0)">FOLLOWING</a>
+                </li>
+                <li class="explore-filters item">
+                    <div class="button-wrapper">
+                        <a class="title" href="javascript:void(0)">SELECTED FILTER</a>
+                        <b class="notch"></b>
+                    </div>
+                </li>
+                <li class="explore-sort-label">
+                    <span>SORT BY:</span>
+                </li>
+            </ul>
+
+            <ul class="filter-options">
+                <li class="explore-modified option">
+                    <a class="title" href="javascript:void(0)">MODIFIED DATE</a>
+                </li>
+                <li class="explore-newest option">
+                    <a class="title" href="javascript:void(0)">NEWEST</a>
+                </li>
+                <li class="explore-likes option">
+                    <a class="title" href="javascript:void(0)">MOST LIKED</a>
+                </li>
+                <li class="explore-commented option">
+                    <a class="title" href="javascript:void(0)">MOST COMMENTED</a>
+                </li>
+                <li class="explore-views option">
+                    <a class="title" href="javascript:void(0)">MOST VIEWS</a>
+                </li>
+                <li class="explore-reused option">
+                    <a class="title" href="javascript:void(0)">MOST REUSED</a>
+                </li>
+            </ul>
+
+            <ul class="topics-options">
+                {{#topics}}
+                <li class="option">
+                    <a class="title" href="{{url}}">{{title}}</a>
+                </li>
+                {{/topics}}
+            </ul>
+        </nav>
+    </div>
+</header>

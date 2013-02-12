@@ -1,0 +1,311 @@
+@import "reset"
+@import "typefaces"
+@import "colors"
+@import "gradient_mixin"
+@import "mixins"
+@import "papyrus"
+
+#login-container
+  width: 800px
+  margin: 40px auto 0px auto
+
+  @include font-sans-serif
+  color: $mid-gray-1
+
+#welcome-message
+  display: inline-block
+  width: 460px
+  padding: 0px
+  margin: 0px
+
+.slogan
+  font-size: 28px
+  line-height: 26pt
+
+.message
+  font-size: 14px
+  line-height: 16pt
+
+#request
+  display: inline-block
+  width: 300px
+  margin-top: 0px
+  float: right
+
+.request-header
+  font-size: 16px
+  line-height: 20px
+  font-weight: bold
+  margin-top: 4px
+  margin-bottom: 0px
+
+.request
+  font-size: 12px
+  line-height: 14pt
+  margin-top: 10px
+  margin-bottom: 20px
+
+.request-form
+  width: 280px
+  height: 40px
+  padding: 0 10px
+  vertical-align: middle
+
+  font-size: 16px
+  line-height: 40px
+  color: $mid-gray-3
+  outline: none
+  background-color: $off-white
+
+  border: 0
+  @include box-shadow( inset 0 0 3px 1px $nearly-black-20 )
+
+.request-button
+  @include add-toolbar-button
+  height: 40px
+  line-height: 40px
+  vertical-align: middle
+  font-weight: bold
+  border: 0
+  margin-top: 15px
+  cursor: move
+
+#logins
+  width: 800px
+  padding-bottom: 40px
+
+  text-align: center
+
+  border-top: 1px solid #d0d0d0
+  border-bottom: 1px solid #d0d0d0
+
+.already
+  margin-top: 30px
+  margin-bottom: 30px
+  font-size: 16px
+  line-height: 20px
+  color: $mid-gray-1
+
+.fb_login, .browserid_login, .twitter_login
+  display: inline-block
+  height: 40px
+  line-height: 40px
+  cursor: pointer
+  margin: 0 3px
+  @include box-shadow(0 1px 3px $nearly-black-20)
+
+  &:active
+    @include box-shadow(inset 0 1px 3px $nearly-black-40)
+
+.fb_login
+  width: 185px
+  color: $off-white
+  @include font-sans-serif
+  font-weight: bold
+  font-size: 13px
+  @include facebook-button
+
+  .icon-highlight
+    background-image: url('/images/icon-facebook.png')
+
+
+.browserid_login
+  width: 215px
+  @include mozilla-button
+
+  a
+    color: $off-white
+
+    @include font-sans-serif
+    font-weight: bold
+    font-size: 13px
+
+  .icon-highlight
+    background-image: url('/images/icon-mozilla.png')
+
+.icon-highlight
+  display: block
+  float: left
+  width: 40px
+  height: 40px
+  background-color: rgba( 246, 246, 246, .1)
+  background-position: center center
+  background-repeat: no-repeat
+
+.backdoor
+  position: fixed
+  bottom: 0
+  left: 0
+  opacity: 0
+
+.agreement-wrapper
+  text-align: center
+  margin: 30px auto
+  width: 530px
+  .button
+    z-index: 1
+  .overlay
+    display: none
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(255,255,255,.4)
+    .inner
+      position: relative
+      background: #f8f8f8
+      width: 75%
+      height: 75%
+      margin: 100px auto
+      padding: 45px 60px 100px
+      .button
+        display: inline-block
+        margin-top: 20px
+      .close
+        display: block
+        position: absolute
+        top: 5px
+        right: 5px
+        height: 25px
+        width: 25px
+        line-height: 25px
+        text-align: center
+        background: #ddd
+        color: #9f9fa0
+        font-size: 10px
+        cursor: pointer
+        border: 1px solid rgba(0,0,0,.15)
+        @include font-icon
+        @include border-radius( 25px )
+        @include box-shadow( 2px 2px 6px 0 rgba(0,0,0,.15) )
+      .close:active
+        @include transform(scale(.95))
+
+    section.agreement
+      text-align: left
+      padding: 10px
+      height: 100%
+      overflow: scroll
+      li
+        margin: 8px 0 0 20px
+
+  .check-agree
+    font-size: 12px
+    line-height: 18px
+    text-align: left
+    padding: 10px 20px
+    a
+      font-weight: bold
+      color: #1faddb
+    a:hover
+      text-decoration: underline
+    form
+      display: none
+
+//This is for the NDA formatting
+.P1
+  font-size: 10pt
+  font-family: Times New Roman
+  writing-mode: lr-tb
+
+.P11
+  font-size: 11pt
+  font-weight: bold
+  text-align: center !important
+  font-family: Times New Roman
+  writing-mode: lr-tb
+  text-decoration: underline
+
+.P12
+  font-size: 12pt
+  font-weight: bold
+  text-align: center !important
+  font-family: Times New Roman
+  writing-mode: lr-tb
+
+.P2
+  font-size: 10pt
+  font-family: Times New Roman
+  writing-mode: lr-tb
+  text-align: center !important
+
+.P3
+  font-size: 10pt
+  font-family: Times New Roman
+  writing-mode: lr-tb
+  margin-left: 0in
+  margin-right: -0.037in
+  margin-top: 0.0835in
+  margin-bottom: 0.0835in
+  text-align: justify !important
+  text-indent: 0in
+
+.P4
+  font-size: 10pt
+  font-family: Times New Roman
+  writing-mode: lr-tb
+  margin-left: 0.5in
+  margin-right: 0in
+  margin-top: 0.0835in
+  margin-bottom: 0.0835in
+  text-align: justify !important
+  text-indent: -0.5in
+
+.P5, .P6, .P7
+  font-size: 10pt
+  font-family: Times New Roman
+  writing-mode: lr-tb
+  margin-top: 0.0835in
+  margin-bottom: 0.0835in
+  text-align: justify !important
+
+.P8
+  font-size: 11pt
+  font-family: Times New Roman
+  writing-mode: lr-tb
+  margin-top: 0.0835in
+  margin-bottom: 0.0835in
+  text-align: justify !important
+
+.P9
+  font-size: 10pt
+  margin-bottom: 0.0835in
+  margin-top: 0.0835in
+  font-family: Times New Roman
+  writing-mode: lr-tb
+  text-align: justify !important
+
+.Standard
+  font-size: 10pt
+  font-family: Times New Roman
+  writing-mode: lr-tb
+
+.ListLabel_20_1
+  font-size: 12pt
+
+.ListLabel_20_2
+  font-size: 10pt
+
+.ListLabel_20_3
+  font-weight: normal
+
+.T
+  font-weight: bold
+
+.T1, .T2
+  font-size: 11pt
+
+.T3, .T4
+  font-size: 11pt
+  text-decoration: underline
+
+.T5
+  font-size: 11pt
+  text-decoration: underline
+  font-weight: bold
+
+.T6, .T7
+  font-size: 11pt
+  font-weight: bold

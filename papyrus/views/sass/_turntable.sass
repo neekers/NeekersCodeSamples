@@ -1,0 +1,309 @@
+@mixin single-width
+  width: 840px
+@mixin single-size
+  @include single-width
+  height: 450px
+
+#explore-turntable
+  position: relative
+  padding-bottom: 30px
+  background-color: $nearly-black-70
+  @include disable-seletion
+  // margin-top: -592px
+  // @include transition(margin-top 1s)
+  .back-wrapper
+    width: 40px
+    margin: 0 auto
+    height: 40px
+    position: relative
+    top: -255px
+    left: -625px
+    .back-arrow
+      position: absolute
+      top: 0
+      display: block
+      left: -5px
+      height: 40px
+      width: 40px
+      content: ""
+      background-color: $nearly-black-20
+      line-height: 40px
+      background-position: center center
+      background-repeat: no-repeat
+      background-image: url(/images/asset-nav-down.png)
+      @include transform( rotate(90deg) )
+      &:hover
+        background-color: $nearly-black-15
+      &:active
+        background-color: $nearly-black-25
+
+  #turntable-wrapper
+    width: 100%
+    overflow-x: hidden
+    padding-top: 30px
+
+    .bx-wrapper, .bx-window
+      width: $bodyWidth !important
+      margin: 0 auto !important
+
+    #turntable
+      display: block
+      position: relative
+      width: 10000px
+      height: 480px
+      margin: 0
+      @include transition(left 750ms)
+      &.forced
+        // @include transition(left 500ms)
+      &>li
+        background-color: $nearly-black
+        z-index: 2
+        @include transform( scale(0.95) )
+        @include single-size
+        overflow: hidden
+        position: relative
+        display: inline-block
+        h3
+          opacity: 0
+          @include transition(opacity 800ms 500ms)
+        .screen-item
+          opacity: .3
+        &.pager-active
+          @include box-shadow( 0 10px 50px $nearly-black )
+          @include transform( scale(1) )
+          h3, .screen-item
+            opacity: 1
+          h3
+            left: 0
+          .collage
+            .collage-cover
+              left: -25%
+          .record-screens
+            right: 0
+            opacity: 1
+        &:hover
+          .turntable-arrow-right, .turntable-arrow-left
+            opacity: 1
+        .metadata
+          display: none
+        .collage
+          position: relative
+          .collage-cover
+            position: relative
+            float: left
+            width: 100%
+            height: 100%
+            left: 0
+            background-position: center center
+            background-size: cover
+            @include transition(left 750ms)
+            &.previous
+              @include transition(left 0ms)
+            &.full
+              width: 100%
+
+        h3
+          width:  100%
+          font-size: 36px
+          padding: 40px 35px 25px 35px
+          line-height: 40px
+          aside
+            padding-top: 12px
+            line-height: 22px
+            font-size: 18px
+
+  #records-wrapper
+    position: relative
+    z-index: 2
+    width: 1113px
+    margin: 0 auto
+    overflow-x: hidden
+    overflow-y: hidden
+    #records
+      position: relative
+      display: inline-block
+      margin: 0
+      font-size: 0
+      @include transition(left 500ms)
+      li
+        background-color: $nearly-black
+        display: inline-block
+        height: 50px
+        width: 100px
+        margin-left: 5px
+        background-position: center center
+        background-size: cover
+        cursor: pointer
+        //filter: url(/images/filters.svg#grayscale)
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale") // Firefox 3.5+
+        filter: gray //IE
+        -webkit-filter: grayscale(1)
+        &.pager-active
+          filter: none
+          -webkit-filter: grayscale(0)
+        &:first-child
+          margin-left: 0
+        &:hover
+
+  .collage
+    @include single-size
+    background-position: center center
+    background-size: cover
+    display: block
+    cursor: pointer
+    & > h3
+      position: absolute
+      bottom: 0
+      @include single-width
+      padding: 15px 0 10px 10px
+      @include gradient(linear,top,rgba(0, 0, 0, 0.00),rgba(13, 13, 13, 0.50),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#0d0d0d')
+
+      font-size: 35px
+      color: rgba(255,255,255,.95)
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, .5)
+      font-weight: 300
+      z-index: 1
+
+    .record-screens
+      position: absolute
+      right: -50%
+      top: 0
+      width: 50%
+      display: block
+      height: 100%
+      opacity: 0
+      @include transition(right 750ms)
+      li
+        float: left
+        width: 50%
+        height: 50%
+        margin: 0
+        padding: 0
+        position: relative
+        &:first-child .fact-type .overlay
+          background-color: rgba(13, 13, 13, 0.15)
+        &:nth-child(2) .fact-type .overlay
+          background-color: rgba(13, 13, 13, 0.10)
+        &:nth-child(3) .fact-type .overlay
+          background-color: rgba(13, 13, 13, 0.05)
+        &:nth-child(4) .fact-type .overlay
+          background-color: rgba(13, 13, 13, 0.10)
+        &:nth-child(5) .fact-type .overlay
+          background-color: rgba(13, 13, 13, 0.15)
+        &:nth-child(6) .fact-type .overlay
+          background-color: rgba(13, 13, 13, 0.20)
+        .record-screen-item
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          cursor: pointer
+          background-position: center center
+          background-size: cover
+          overflow:  hidden
+          &.fact-type
+            background-color: #fff
+            .overlay
+              position: absolute
+              top: 0
+              bottom: 0
+              right: 0
+              left: 0
+            .fact-wrapper
+              padding: 8px 0 0 10px
+              font-size: 16px
+              overflow: hidden
+              width:  500px
+              position: absolute
+              color: $mid-gray-1
+              h4
+                font-size: 26px
+                line-height: 26px
+                font-weight: bold
+                color: $mid-gray-1
+              .screen-text
+                margin: 0
+                margin-top: 5px
+                p
+                  margin: 0
+                  font-size: 16px
+                h1, h2, h3, h4, h5, h6
+                  font-size: 20px
+
+    .layout-1
+      li
+        height: 100% !important
+        width: 100% !important
+    .layout-2
+      li
+        height: 100% !important
+        width: 50% !important
+    .layout-3
+      li
+        height: 40%
+      li:first-child
+        width: 100%
+        height: 60%
+        float: none
+    .layout-4
+      li
+        width: 50%
+        height: 50%        
+    .layout-5
+      li
+        height: 33.33%
+      li:nth-child(1n+1)
+        width: 33% !important
+      li:nth-child(2)
+        width: 34% !important
+      li:first-child, li:last-child
+        width: 100% !important
+    .layout-6
+      li
+        height: 33.33% !important
+        width: 50% !important
+
+  #vignette
+    position: absolute
+    z-index: 1
+    height: 593px
+    width: 100%
+    background: url(/images/beta_request/vignette.png) no-repeat
+    background-size: 100% 100%
+    opacity: .6
+
+  .turntable-arrow-right, .turntable-arrow-left
+    position: absolute
+    top: 20px
+    right: 20px
+    bottom: 20px
+    left: 20px
+    background: url(/images/spotlight-arrow-r.png) no-repeat
+    background-position: center left
+    opacity: 0
+    cursor: pointer
+    @include transition(opacity 500ms)
+
+  .turntable-arrow-left
+    @include transform( rotate(180deg) )
+
+  #records-wrapper
+    .container
+      width: 1045px
+      display: inline-block
+      overflow: hidden
+    .turntable-arrow-right, .turntable-arrow-left
+      display: inline-block
+      position: relative
+      height: 50px
+      width: 30px
+      background-position: center center
+      background-size: 50%
+      opacity: 1
+      top: auto
+      right: auto
+      bottom: auto
+      left: auto
+      @include transition(opacity 500ms)

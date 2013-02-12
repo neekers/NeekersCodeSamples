@@ -1,0 +1,326 @@
+@mixin default-font-stack
+  font-family: "Asap", "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif
+
+@mixin font-sans-serif
+  @include default-font-stack
+  font-weight: 400
+@mixin font-sans-serif-italic
+  @include default-font-stack
+  font-style: italic
+  font-weight: 400
+@mixin font-sans-serif-bold
+  @include default-font-stack
+  font-weight: 700
+@mixin font-sans-serif-bold-italic
+  @include default-font-stack
+  font-style: italic
+  font-weight: 700
+@mixin font-icon
+  font-family: Pictos
+
+@mixin input-placeholder
+  @include font-sans-serif
+  color: rgba(0, 0, 0, .25)
+
+@mixin button-base
+  height: 30px
+  padding: 0 18px
+  @include box-shadow( 0 1px 3px $nearly-black-20 )
+  font-size: 13px
+  text-transform: uppercase
+  color: $off-white
+  text-shadow: 1px 1px 1px $nearly-black-20
+  &:hover
+    @include box-shadow( 0 1px 5px $nearly-black-20 )
+  &:active
+    @include box-shadow( inset 0 1px 3px $nearly-black-80 )
+
+@mixin button-square-base
+  line-height: 40px
+  height: 40px
+  width: 40px
+  text-align: center
+  display: inline-block
+  vertical-align: middle
+  @include font-sans-serif
+  color: $off-white
+  @include box-shadow( 0 1px 3px $nearly-black-20 )
+
+@mixin blue-button-base
+  @include button-square-base
+  opacity: 0
+  position: absolute
+  line-height: 40px
+  @include transition( opacity 250ms )
+  @include gradient(linear,top,rgba(13, 13, 13, 0.20),rgba(63, 63, 63, 0.20),'left top, left bottom')
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0d0d0d', EndColorStr='#3f3f3f')
+  &:hover
+    background-color: #52b1e2
+    @include gradient(linear,top,rgb(82, 177, 226),rgb(60, 154, 202),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#52b1e2', EndColorStr='#3c9aca')
+  &:active
+    background-color: #2689cf
+    @include gradient(linear,top,rgb(38, 137, 207),rgb(24, 111, 175),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2689cf', EndColorStr='#186faf')
+  img
+    vertical-align: middle
+
+@mixin header-button-base
+  height: $headerHeight
+  line-height: $headerHeight
+  padding: 0 30px
+  @include box-shadow(0 1px 3px $nearly-black-20)
+  font-size: 18px
+  text-transform: uppercase
+  color: $off-white
+  border-right: 1px solid $off-white-30
+  border-left: 1px solid $nearly-black-20
+  &:hover
+    @include box-shadow(0 1px 5px $nearly-black-20)
+    background-color: #52b1e2
+    @include gradient(linear,top,rgb(82, 177, 226),rgb(60, 154, 202),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#52b1e2', EndColorStr='#3c9aca')
+  &:active
+    @include box-shadow(inset 0 1px 3px $nearly-black-80)
+    background-color: #2689cf
+    @include gradient(linear,top,rgb(38, 137, 207),rgb(24, 111, 175),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2689cf', EndColorStr='#186faf')
+  img
+    display: inline-block
+    line-height: $headerHeight
+    vertical-align: middle
+  span.text
+    height: $headerHeight
+    vertical-align: middle
+    margin-left: 10px
+
+@mixin add-toolbar-button
+  @include button-base
+  display: inline-block
+  cursor: pointer
+  line-height: 30px
+  background-color: #3ea1db
+  @include gradient(linear,top,#3ea1db,#3a88bf,'left top, left bottom')
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3ea1db', EndColorStr='#3a88bf')
+  &:hover
+    background-color: #52b1e2
+    @include gradient(linear,top,rgb(82, 177, 226),rgb(60, 154, 202),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#52b1e2', EndColorStr='#3c9aca')
+  &:active
+    background-color: #2689cf
+    @include gradient(linear,top,rgb(38, 137, 207),rgb(24, 111, 175),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2689cf', EndColorStr='#186faf')
+
+@mixin gray-button-base
+  display: inline-block
+  &:hover
+    @include box-shadow( 1px 1px 4px $nearly-black-30 )
+    span.text
+      background-color: #707070
+      @include gradient(linear,top,rgb(112, 112, 112),rgb(98, 98, 98),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#707070', EndColorStr='#626262')
+  &:active,&.active
+    @include box-shadow( inset 0px 1px 3px $nearly-black-80 )
+    span.text
+      @include box-shadow( inset 0px 1px 3px $nearly-black-80 )
+      background-color: #414141
+      @include gradient(linear,top,rgb(65, 65, 65),rgb(52, 52, 52),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#414141', EndColorStr='#343434')
+
+@mixin reorder-button-base
+  text-align: center
+  line-height: 30px
+  height: 30px
+  padding: 0 18px
+  @include box-shadow( 0 1px 3px $nearly-black-20)
+  font-size: 13px
+  text-transform: uppercase
+  color: $off-white
+  &:hover
+    @include box-shadow(0 1px 5px $nearly-black-20)
+  &:active
+    @include box-shadow(inset 0 1px 3px $nearly-black-80)
+
+@mixin facebook-button
+  background-color: #3a589a
+  @include gradient(linear,top,rgb(58, 88, 154),rgb(31, 57, 111),'left top, left bottom')
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3a589a', EndColorStr='#1f396f')
+  &:hover
+    background-color: #4e6da9
+    @include gradient(linear,top,rgb(78, 109, 169),rgb(47, 77, 131),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#4e6da9', EndColorStr='#2f4d83')
+  &:active
+    background-color: #233e81
+    @include gradient(linear,top,rgb(35, 62, 129),rgb(15, 35, 84),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#233e81', EndColorStr='#0f2354')
+
+@mixin twitter-button
+  background-color: #56c1f2
+  @include gradient(linear,top,rgb(86, 193, 242),rgb(68, 156, 199),'left top, left bottom')
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#56c1f2', EndColorStr='#449cc7')
+  &:hover
+    background-color: #6bccf5
+    @include gradient(linear,top,rgb(107, 204, 245),rgb(89, 172, 209),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#6bccf5', EndColorStr='#59acd1')
+  &:active
+    background-color: #3cb0ee
+    @include gradient(linear,top,rgb(60, 176, 238),rgb(44, 132, 183),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3cb0ee', EndColorStr='#2c84b7')
+
+@mixin mozilla-button
+  background-color: #da7d31
+  @include gradient(linear,top,rgb(218, 125, 49),rgb(204, 96, 49),'left top, left bottom')
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#da7d31', EndColorStr='#cc6031')
+  &:hover
+    background-color: #e08f44
+    @include gradient(linear,top,rgb(224, 143, 68),rgb(213, 118, 68),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e08f44', EndColorStr='#d57644')
+  &:active
+    background-color: #ce621c
+    @include gradient(linear,top,rgb(206, 98, 28),rgb(189, 69, 28),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ce621c', EndColorStr='#bd451c')
+
+@mixin modal-position
+  position: fixed
+  top: 10%
+  left: 25%
+  z-index: 300
+
+@mixin transition ( $trans )
+  -webkit-transition: ( $trans )
+  -moz-transition: ( $trans )
+  transition: ( $trans )
+
+@mixin transition-transform( $duration )
+  -webkit-transition: -webkit-transform $duration
+  -moz-transition: -moz-transform $duration
+  -ms-transition: -ms-transform $duration
+  -o-transition: -o-transform $duration
+  transition: transform $duration
+
+@mixin transition-delay ( $delay )
+  -webkit-transition-delay: ( $delay )
+  -moz-transition-delay: ( $delay )
+  transition-delay: ( $delay )
+
+@mixin transition-property ( $property )
+  -webkit-transition-property: ( $property )
+  -moz-transition-property: ( $property )
+  transition-property: ( $property )
+
+@mixin transition-property-two ( $property1, $property2 )
+  -webkit-transition-property: ( $property1, $property2 )
+  -moz-transition-property: ( $property1, $property2 )
+  transition-property: ( $property1, $property2 )
+
+@mixin transition-duration ( $duration )
+  -webkit-transition-duration: ( $duration )
+  -moz-transition-duration: ( $duration )
+  transition-duration: ( $duration )
+
+@mixin animation ( $animation )
+  -webkit-animation: ( $animation )
+  -moz-animation: ( $animation )
+  -ms-animation: ( $animation )
+  animation: ( $animation )
+
+@mixin text-shadow( $shadow )
+  -webkit-text-shadow: ( $shadow )
+  -moz-text-shadow: ( $shadow )
+  text-shadow: ( $shadow )
+
+@mixin box-shadow( $shadow )
+  -webkit-box-shadow: ( $shadow )
+  -moz-box-shadow: ( $shadow )
+  box-shadow: ( $shadow )
+
+@mixin box-shadow-two( $shadow1, $shadow2 )
+  -webkit-box-shadow: ( $shadow1, $shadow2 )
+  -moz-box-shadow: ( $shadow1, $shadow2 )
+  box-shadow: ( $shadow1, $shadow2 )
+
+@mixin box-shadow-four( $shadow1, $shadow2, $shadow3, $shadow4 )
+  -webkit-box-shadow: ( $shadow1, $shadow2, $shadow3, $shadow4 )
+  -moz-box-shadow: ( $shadow1, $shadow2, $shadow3, $shadow4 )
+  box-shadow: ( $shadow1, $shadow2, $shadow3, $shadow4 )
+
+@mixin input-text ( $color )
+  ::-webkit-input-placeholder
+    color: $color
+  :-moz-placeholder
+    color: $color
+
+@mixin transform ( $transform )
+  -webkit-transform: ( $transform )
+  -moz-transform: ( $transform )
+  -ms-transform: ( $transform )
+  -o-transform: ( $transform )
+  transform: ( $transform )
+
+@mixin transform-style ( $style )
+  -webkit-transform-style: ( $style )
+  -moz-transform-style: ( $style )
+  -ms-transform-style: ( $style )
+  transform-style: ( $style )
+
+@mixin backface-visibility ( $visibility )
+  -webkit-backface-visibility: ( $visibility )
+  -moz-backface-visibility: ( $visibility )
+  -ms-backface-visibility: ( $visibility )
+  backface-visibility: ( $visibility )
+
+@mixin perspective ( $perspective )
+  -webkit-perspective: ( $perspective )
+  -moz-perspective: ( $perspective )
+  -ms-perspective: ( $perspective )
+  perspective: ( $perspective )
+
+@mixin perspective-origin( $origin )
+  -webkit-perspective-origin: ( $origin )
+  -moz-perspective-origin: ( $origin )
+  -ms-perspective-origin: ( $origin )
+  perspective-origin: ( $origin )
+
+@mixin border-radius ( $radius )
+  -webkit-border-radius: ( $radius )
+  -moz-border-radius: ( $radius )
+  border-radius: ( $radius )
+
+@mixin box-sizing( $box-size )
+  -webkit-box-sizing: ( $box-size )
+  -khtml-box-sizing: ( $box-size )
+  -icab-box-sizing: ( $box-size )
+  -moz-box-sizing: ( $box-size )
+  -o-box-sizing: ( $box-size )
+  box-sizing: ( $box-size )
+
+@mixin collection-cover-selected-icon
+  color: #FFF
+  text-shadow: 0px 0px 10px rgba(0,0,0, .9)
+
+@mixin disable-seletion
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+@mixin screen-gradient-overlay
+  @include gradient(linear,top,rgba(0, 0, 0, 0.00) 70%,rgba(13, 13, 13, 1.00) 130%,'left top, left bottom')
+  //IE doesnt support rgba gradients
+  //filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#0d0d0d')
+
+@mixin debugmessage($message, $color: rgba(255,255,200, 0.6) )
+  body::before
+    content: $message
+    font-weight: bold
+    display: block
+    text-align: center
+    background: #{$color}
+    position: absolute
+    right: 0
+    left: 0
+    top: 0
+    z-index: 9999
+    padding: 4px

@@ -1,0 +1,50 @@
+@import "mixins"
+@import "reset"
+
+body
+	background-color: #eee
+
+#container
+	position: absolute
+	top: 20px
+	left: -400px
+	margin: 0 50%
+	padding: 20px
+	padding-bottom: 30px
+	width: 800px
+	height: 454
+	text-align: center
+	@include font-sans-serif
+	font-size: 16px
+	color: #eee
+	background-color: #43464C
+	@include box-shadow( 0 2px 5px 0 rgba(0, 0, 0, .6) )
+
+header
+	margin-bottom: 20px
+
+content
+	width: 800px
+	display: block
+	li
+		overflow: hidden
+		display: inline-block
+		width: 200px
+		height: 220px
+		margin: 20px
+		img
+			height: 100px
+	hr
+		margin-bottom: 30px
+
+#button
+	padding: 10px
+	margin: 10px
+	background-color: #D3DCF2
+	@include font-sans-serif
+	font
+		size: 20px
+	color: #43464C
+	@include border-radius( 4px )
+	@include box-shadow( 0 2px 5px 0 rgba(0, 0, 0, .6) )
+	text-decoration: none

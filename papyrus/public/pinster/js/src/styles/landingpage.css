@@ -1,0 +1,57 @@
+html {
+	background: rgba(220, 220, 220, 1) url('../images/bg.png') scroll repeat 0 0;margin:0;
+}
+body{
+	background: transparent url('../images/collagio-bg.png') scroll no-repeat 0 80px;
+	font-family: Helvetica,arial,sans-serif; /*let's change this later!*/
+	color:#2F3030;
+	font-size:14px;
+	margin:0;
+}
+#content {
+	width:600px;
+	text-align:center;
+	margin: 10px auto 0 auto;
+	height: 400px;
+	background: transparent url('../images/up_curved_arrow.png') 250px 10px scroll no-repeat;
+	padding:184px 0 0;
+}
+
+#login-popup {
+	border:3px solid #282828;
+	background-color:#1f5574;
+	padding:5px;
+	font-weight:bold;
+	width:170px;
+	color: rgba(210,210,210,1);
+	text-align:center;
+	margin: 20px;
+	padding:14px 22px;
+	position:absolute;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	right:0;
+	font-size:14px;
+	top:0;
+	line-height:1.5em;
+	box-shadow:  5px 5px 10px rgba(0, 0, 0, .1);
+	-moz-box-shadow:  5px 5px 10px rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+	text-shadow: 1px 1px 0 rgba(10, 10, 10, .3);
+	-webkit-text-shadow: 1px 1px 2px rgba(255, 255, 255, .5);
+}
+#login-popup a{
+	color:#a3aaae;
+	font-weight:bold;
+}
+
+#pinster{
+	display: inline-block;
+	border: 0;
+	height: 40px;
+	width: 210px;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+}

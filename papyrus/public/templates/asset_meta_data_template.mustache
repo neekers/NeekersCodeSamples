@@ -1,0 +1,13 @@
+
+<div class="asset-owner-info">
+    Added by: <a href="{{owner_link}}" class="asset_owner_url">{{owner.first_name}} {{owner.last_name}}</a>
+</div>
+
+<div>
+Collages containing this Element:<br/>
+  <ul>
+  {{#parent_collections}}
+    <li><a href="{{collection_url}}" class="parent_collection_url">{{title}}</a></li>
+  {{/parent_collections}}
+  </ul>
+</div>

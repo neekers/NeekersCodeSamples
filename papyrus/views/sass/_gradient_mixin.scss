@@ -1,0 +1,45 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+///
+///   Use this mixin in conjunction with the Gradient App availabe in the Mac AppStore
+///   http://www.gradientapp.com/
+///   There are 3 components to a gradient we must pay attention to
+///   1. FF,Chrome,Safari
+///   2. IE uses the css filter prooperty to achieve the gradients
+///   3. Background-color for absolute fallback
+///
+///
+///   background-color: #2689cf;
+///   @include gradient(linear,top,rgb(38, 137, 207),rgb(24, 111, 175),'left top, left bottom');
+///   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2689cf', EndColorStr='#186faf');
+///
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//Prefixes definition
+$webkit:true;
+$o:true;
+$moz:true;
+$w3:true;
+$ms:true;
+
+//Gradient Mixin
+@mixin gradient($mode,$direction,$from,$to,$oldDirection:null){
+
+  @if $webkit == true {
+@if($oldDirection != null){
+  background-image: -webkit-gradient($mode, #{$oldDirection}, from($from),to($to));
+}
+background-image: -webkit-#{$mode}-gradient($direction, $from, $to);
+  }
+  @if $moz == true {
+      background-image: -moz-#{$mode}-gradient($direction, $from, $to);
+  }
+  @if $o == true {
+      background-image: -o-#{$mode}-gradient($direction, $from, $to);
+  }
+  @if $ms == true {
+      background-image: -ms-#{$mode}-gradient($direction, $from, $to);
+  }
+  @if $w3 == true {
+      background-image: #{$mode}-gradient($direction, $from, $to);
+  }
+  }

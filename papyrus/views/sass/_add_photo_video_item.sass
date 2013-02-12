@@ -1,0 +1,225 @@
+.add-asset.image-type, .add-asset.video-type, .add-asset.cover-type, .add-asset.collage-type
+  text-align: left
+  h3
+    color: $mid-gray-2
+    font-size: 16px
+    margin-bottom: 15px
+    @include font-sans-serif
+  .liked-items-bar
+    height: 40px
+    overflow: hidden
+    position: relative
+    vertical-align: middle
+    @include box-shadow( 0 1px 3px $nearly-black-20)
+    margin-bottom: 20px
+    background-color: #eaeaea
+    @include gradient(linear,top,rgb(234, 234, 234),rgb(208, 208, 208),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eaeaea', EndColorStr='#d0d0d0')
+    a
+      color: $mid-gray-2
+      font-size: 14px !important
+      display: inline-block
+      line-height: 40px
+      border-right: 1px solid $off-white-30
+      border-right: 1px solid $nearly-black-20
+      @include gray-button-base
+      text-transform: uppercase
+      font-weight: bold
+      &.active
+        vertical-align: middle
+        display: inline-block
+        height: 40px
+        background-color: #3f3f3f
+        @include gradient(linear,top,rgb(63, 63, 63),rgb(51, 51, 51),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3f3f3f', EndColorStr='#333333')
+        border-left: 1px solid $nearly-black-20
+        font-size: 14px
+        color: $off-white
+      &:hover
+        color: $off-white
+        background-color: #868686
+        @include gradient(linear,top,rgb(134, 134, 134),rgb(105, 105, 105),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#868686', EndColorStr='#696969')
+
+      &.upload-image
+        position: absolute
+        top: 0
+        right: 0
+        cursor: pointer
+        height: 40px
+        @include box-shadow(0 1px 3px $nearly-black-20)
+        font-size: 14px
+        color: $off-white
+        text-transform: uppercase
+        background-color: #3ea1db
+        @include gradient(linear,top,rgb(62, 161, 219),rgb(58, 136, 191),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3ea1db', EndColorStr='#3a88bf')
+        &:hover
+          background-color: #52b1e2
+          @include gradient(linear,top,rgb(82, 177, 226),rgb(60, 154, 202),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#52b1e2', EndColorStr='#3c9aca')
+        &:active
+          background-color: #2689cf
+          @include gradient(linear,top,rgb(38, 137, 207),rgb(24, 111, 175),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2689cf', EndColorStr='#186faf')
+
+  .search-images
+    float: left
+    width: 40px
+    padding: 0 !important
+    line-height: 43px
+    .icon
+      display: block
+      height: 40px
+      width: 40px
+      background: url('/images/icon-search-dark.png') no-repeat center center
+  .search-images.active
+    .icon
+      background-image: url('/images/icon-search.png')
+  .search-images:hover
+    .icon
+      background-image: url('/images/icon-search.png')
+  
+  .search-photo-bar
+    overflow: hidden
+    float: left
+    width: 38%
+    @include transition( width 250ms )
+    input
+      line-height: 40px
+      font-size: 16px
+      height: 40px
+      width: 100%
+      padding: 0 20px
+      border: 0
+      outline: none
+      background-color: $off-white
+      @include box-shadow(inset 0 1px 3px $nearly-black-20)
+      @include input-text( $mid-gray-3 )
+  .liked-images, .liked-videos, .liked-collages, .my-collages, .my-videos, .my-images, .upload-image
+    padding-left: 15px
+    padding-right: 15px
+    text-align: center
+  .liked-images, .liked-videos, .liked-collages, .my-collages, .my-images, .my-videos
+    float: left
+  .upload-image
+    float: right
+    position: relative
+    overflow: hidden
+    .file
+      position: absolute
+      width: 800px
+      top: 0
+      right: 0
+      bottom: 0
+      opacity: 0
+      cursor: pointer
+      text-align: right
+  .file-uploader
+    opacity: 0
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  .liked-items
+    height: 520px
+    overflow-y: auto
+    @include transition( opacity 2s)
+    li:nth-child(3n+2)
+      margin-left: 5%
+      margin-right: 5%
+    li:not(.screen)
+      display: inline-block
+      margin-bottom: 25px
+      width: 30%
+      height: 155px
+      position: relative
+      a
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: inline-block
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+        @include box-shadow( 0 1px 3px $nearly-black-20 )
+        &.video-thumb
+          background-position: center center, center center
+          background-repeat: no-repeat, no-repeat
+          background-size: auto, cover
+
+  .no-likes
+    line-height: 200px
+    vertical-align: middle
+    text-align: center
+    color: $mid-gray-3
+    font-size: 16px
+
+.add-asset.image-type, .add-asset.video-type
+  .liked-items
+    li:nth-child(3n+1)
+      margin-right: 2.5%
+    li:nth-child(3n+2)
+      margin-left: 2.5%
+      margin-right: 2.5%
+    li:nth-child(3n+3)
+      margin-left: 2.5%
+
+.add-asset.cover-type
+  background-image: none
+  background-color: $light-gray-1
+  @include box-shadow(inset 0 1px 3px $nearly-black-20 )
+  width: 755px
+  h3
+    padding: 30px 0 0 30px
+  .liked-items
+    margin-left: 30px
+    li
+      width: 325px !important
+      @include box-shadow( 0 1px 3px $nearly-black-30)
+      margin-left: 0
+      margin-right: 0
+      &:nth-child(even)
+        margin-left: 30px
+        margin-right: 0
+      &:nth-child(odd)
+        margin-left: 0
+        margin-right: 0
+
+.add-asset.cover-type
+  @include modal-position
+
+#collections article
+  .add-asset.collage-type
+    width: 750px
+    h3
+      color: $mid-gray-2
+      font-size: 16px
+      margin-bottom: 15px
+      @include font-sans-serif
+    .liked-items
+      height: 520px
+      margin-bottom: 35px
+      overflow-y: auto
+      .screen
+        margin: 0 0 20px 0
+        width: 260px
+        margin-left: 2px
+      .screen:nth-child(odd)
+        margin-right: 20px
+    .screen-item.collection-type
+      margin: 0
+      min-height: 320px
+      .asset-wrapper
+        width: 380px
+        height: 320px
+        min-height: 320px
+        padding: 0
+        .metadata
+          margin: 0
+          position: absolute
+          width: 380px

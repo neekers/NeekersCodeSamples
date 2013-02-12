@@ -1,0 +1,236 @@
+@import "mixins"
+@import "reset"
+
+$default-z-index: 999999999
+$overlay-color: #0d6aad
+$tile-width: 260px
+$tile-height: 180px
+$asset-dimensions-height: 20px
+
+@mixin top-left
+  position: absolute
+  top: 0
+  left: 0
+
+@mixin tile-size
+  width: $tile-width
+  height: $tile-height
+
+@mixin tile-asset-attributes
+  max-height: $tile-height
+  max-width: $tile-width
+  display: block
+  margin: 0 auto
+
+.hidden
+  display: none
+
+.title
+  height: 50px
+  line-height: 50px
+  vertical-align: middle
+  position: fixed
+  top: 10px
+  left: 10px
+  right: 10px
+  z-index: 10
+  font-size: 1.2em
+  color: #333
+  background: rgba(248,245,243, .9)
+  text-shadow: 0px 1px 1px rgba(255,255,255, .9)
+  border-bottom: 1px solid rgba(220,220,220, 1)
+  @include box-shadow( 0px 3px 3px -2px rgba(0,0,0, .4) )
+
+  h1
+    font-weight: normal
+    font-size: 20px
+    line-height: 50px
+    text-align: center
+
+  .close-drawer
+    position: absolute
+    top: 0
+    right: 0
+    height: 50px
+    width: 50px
+
+    img
+      margin: 11px
+      height: 28px
+      width: 28px
+
+  .marklet_logo
+    background-color: #fff
+    height: 40px
+    width: 40px
+    float: left
+    margin: 5px 10px
+    @include border-radius( 50% )
+.potential-assets
+  text-align: center
+
+.tta-container
+  position: fixed
+  top: 10px
+  left: 10px
+  right: 10px
+  overflow-y: auto
+  max-height: 90%
+  padding: 20px
+  z-index: $default-z-index
+  @include box-shadow( 0px 2px 15px 0px rgba(0,0,0, .4) )
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAABCAIAAAByq0inAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABdJREFUeNpi/PXr1+/fv1nBgAEMAAIMAFw/Bf8F0nzaAAAAAElFTkSuQmCC)
+
+  .tta-overlay
+    @include font-sans-serif
+    z-index: $default-z-index
+    margin-top: 50px
+
+    .tta-title-description
+      width: 100%
+      height: 290px
+
+      & > div
+        float: left
+
+      .tta-asset-container
+        width: 50%
+
+        .tta-potential-asset-preview
+          margin: 0 auto
+          height: 270px
+          position: relative
+          margin-right: 20px
+          
+          img, video
+            position: absolute
+            top: 0
+            right: 0
+            max-height: 100%
+          video
+            width: 100%
+          img
+            max-width: 100%
+
+      .tta-title-description-container
+        margin-top: 20px
+        width: 50%
+        text-align: left
+
+        .tta-title-description-form-wrapper
+          display: inline-block
+
+          .tta-header
+            border: 0
+            margin: 0
+            padding: 0
+
+          .tta-title-input
+            @include font-serif
+            color: #000
+            background-color: #fff
+            display: block
+            width: 100%
+            margin-top: 20px
+            height: 30px
+            border: 1px solid #333
+            padding: 0 5px
+
+          .tta-description-textarea
+            @include font-serif
+            color: #000
+            background-color: #fff
+            width: 100%
+            height: 100px
+            min-width: 100%
+            margin-top: 20px
+
+          .tta-buttons
+            margin-top: 20px
+            width: 100%
+            text-align: center
+
+            .tta-save-and-collect,
+            .tta-cancel
+              height: 30px
+              width: 100px
+              width: 49%
+
+
+    .asset
+      display: inline-block
+
+    li
+      @include tile-size
+      position: relative
+      background-color: #fff
+      overflow: hidden
+      display: inline-block
+      margin: 12px
+      cursor: pointer
+      border: 10px solid #fff
+      @include box-shadow( 0px 1px 3px 0px rgba(0,0,0, .4) )
+
+      .asset-saved-overlay
+        @include top-left
+        @include tile-size
+        background-color: #fff
+        opacity: 0.6
+
+        .asset-saved-label-wrapper
+          position: absolute
+          top: 50%
+          width: 100%
+
+          .asset-saved-label
+            text-align: center
+            color: #000
+
+      .asset-container
+        @include top-left
+        @include tile-size
+
+      .collect-button
+        background-color: $overlay-color
+        color: white
+        position: absolute
+        top: 50%
+        left: 50%
+        height: 40px
+        min-width: 60px
+        margin-top: -20px
+        margin-left: -30px
+        text-align: center
+        line-height: 40px
+        padding: 0 10px
+        @include border-radius( 5px )
+        @include box-shadow( 0 2px 2px 0 rgba(0,0,0, .7) )
+        &:active
+          @include box-shadow-two( 0 1px 2px 1px rgba(0,0,0, .4), inset 0 1px 2px 0 rgba(0,0,0, .7) )
+      .collect-overlay
+        @include top-left
+        @include tile-size
+        background-color: $overlay-color
+        opacity: 0.2
+
+      .collect-link
+        @include top-left
+        @include tile-size
+        opacity: 0
+   
+      .collect-link:hover
+        opacity: 1
+
+      img
+        @include tile-asset-attributes
+
+      video
+        @include tile-asset-attributes
+
+      .asset-dimensions
+        width: $tile-width
+        height: $asset-dimensions-height
+        text-align: center
+        position: absolute
+        bottom: 0
+        left: 0

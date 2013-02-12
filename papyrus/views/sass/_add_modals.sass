@@ -1,0 +1,406 @@
+// z-indexes
+$chooser-menu-z: 2
+$filter-z: 1
+
+#chooser-menu
+  @include font-sans-serif-book
+  font:
+    weight: bold
+    size: 13px
+  color: $gray
+  display: inline-block
+  position: absolute
+  top: 50px
+  bottom: 50px
+  z-index: $chooser-menu-z
+  width: 135px
+  background-color: $off-white
+  border-right: 2px solid $front-matter-btn-gray
+
+  li
+    display: table
+    height: 80px
+    width: 80px
+    margin: 10px auto
+    position: relative
+    cursor: pointer
+    a
+      display: table-cell
+      vertical-align: middle
+      height: 80px
+      width: 80px
+      text-align: center
+      text-transform: uppercase
+      @include border-radius( 50px )
+      line-height: 25px
+      @include transition( background-color 200ms )
+      &:hover
+        background-color: fade_out( $dark-blue, .8 )
+        text-decoration: none
+      &.selected
+        color: $blue-gray
+        background-color: $dark-blue
+        @include box-shadow( 0 0 0 5px $btn-border-blue )
+      &.my-stuff:before, &.search:before, &.upload:before, &.text:before, &.feed:before
+        font-size: 32px
+        display: block
+        position: relative
+        clear: both
+        text-transform: none
+        text-align: center
+
+      &.my-stuff:before
+        content: "o"
+
+      &.search:before
+        content: "s"
+
+      &.upload:before
+        content: "{"
+
+      &.text:before
+        content: "p"
+
+      &.feed:before
+        content: "f"
+
+.add-items-chooser
+
+  .container
+    text-align: center
+    display: none
+    position: absolute
+    top: 50px
+    right: 0
+    bottom: 50px
+    left: 135px
+      
+    &.text, &.feed
+      margin-top: 2em
+
+    span.placeholder
+      font-size: 1.3em
+
+    label
+      text-align: left
+      display: block
+      margin-left: 5%
+
+    .title, .text
+      @include font-sans-serif-book
+      font-weight: normal
+    
+    .results
+      position: absolute
+      top: 54px
+      right: 0
+      bottom: 0
+      left: 0
+      overflow-y: scroll
+      text-align: left
+      
+      $scrn-size: 275px
+      .screen
+        float: none
+        height: $scrn-size
+        width: $scrn-size
+    &.upload, &.text, &.feed
+      overflow-y: scroll
+      .preview
+        position: relative
+        margin: 0 auto
+        text-align: left
+        img
+          width: auto
+          height: 100px
+          @include box-shadow( 0 1px 3px 0 rgba(0,0,0, .3) )
+      .progress
+        @include box-shadow( inset 0 1px 3px 1px rgba(0,0,0, .3)  )
+        background-color: #fff
+        @include border-radius( 3px )
+        overflow: hidden
+        margin: 0 auto
+        opacity: 0
+        @include transition( opacity .3s )
+        .bar
+          top: 0
+          left: 0
+          width: 0%
+          height: 30px
+          background-color: $dark-blue
+          @include box-shadow( 0 1px 3px 0 rgba(0,0,0, .3)  )
+          border: none
+          @include border-radius( 3px )
+          @include transition( width .5s )
+      input, label, textarea, .preview, .progress
+        width: 90%
+      input
+        &[type=file]
+          padding: 10px 0
+          border: none
+      textarea
+        max-width: 90%
+        min-height: 80px
+        padding: 10px
+
+      .flash-uploader-close-button-container
+        height: 70px
+
+      .flash-uploader-close-button
+        font-family: pictos
+        font-size: 30px
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
+        color: #666666
+        &:hover
+          opacity: .75
+
+      .upload_button, .done_button   
+        @include modal-button
+        cursor: default
+        margin: 10px 0 10px 5%
+        display: block
+        width: 90px
+        @include transition( opacity .3s )
+      .message
+        color: $error-red
+
+      &.file-chosen, &.text-valid
+        .upload_button, .done_button
+          opacity: 1
+      &.uploading
+        .progress
+          opacity: 1
+      .upload-incapable
+        display: none
+
+// add a collection or item modals
+.add-collection-form-wrapper, .add-items-chooser
+  overflow-y: hidden
+  font-weight: normal
+  @include font-sans-serif
+  display: block
+  position: fixed
+  z-index: 20
+  background-color: $off-white
+  border: 3px solid $charcoal
+  @include border-radius( 5px )
+  @include box-shadow( 0 3px 15px 0 rgba(0, 0, 0, 0.7) )
+  header, footer
+    height: 50px
+  header
+    z-index: 1
+    position: relative
+    color: $light-txt-gray
+    background-color: $charcoal
+    text-align: center
+    line-height: 50px
+    font-size: 1.5em
+    vertical-align: middle
+    @include font-serif
+    font:
+      variant: small-caps
+      size: 25px
+  footer
+    z-index: 10
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
+    font-size: .8em
+    background-color: $charcoal
+    @include box-shadow( 0 -2px 10px 0 rgba(0,0,0, .4) )
+    a
+      position: absolute
+      top: 0
+      @include modal-button
+      margin-top: 10px
+      &.cancel_btn
+        color: $off-white
+        font-variant: normal
+        @include font-sans-serif
+        font-size: 14px
+        @include box-shadow (none)
+        background-color: transparent
+        left: 10px
+        &:hover
+          background-color:transparent
+      &.create_btn
+        right: 10px
+
+.add-items-chooser-wrapper
+  position: fixed
+  height: 100%
+  width: 100%
+  min-width: 500px
+  
+.add-items-chooser
+  width: 80%
+  height: 90%
+  top: 5%
+  right: 10%
+  bottom: 5%
+  left: 10%
+  @include animation( fadeIn .3s linear )
+  .tiles
+    position: absolute
+    top: 50px
+    right: 0
+    bottom: 50px
+    left: 0
+    overflow-y: scroll
+    .screen.item-chooser-tile
+      height: 200px
+      width: 200px
+      display: inline-block
+      .collect_btn, .collect_btn_holder
+        display: none
+  .fs_overlay
+    z-index: -1
+
+.add-collection-form-wrapper
+  width: 500px
+  height: 400px
+  top: 150%
+  margin-top: -150px
+  left: 50%
+  margin-left: -200px
+  opacity: 0
+  overflow: hidden  
+  @include transition( opacity .3s linear )
+  &.activated
+    opacity: 1
+    top: 50%
+  .add-collection-form
+    position: relative
+    height: 100%
+
+#create-collection
+  position: relative
+  background-color: #fff
+  border: 10px solid #fff
+  top: 20px
+  width: 80%
+  margin: 0 auto
+  display: block
+  @include box-shadow ( 0 5px 15px 0 rgba(0,0,0,0.4) )
+  &:before, &:after
+    content: ""
+    display: block
+    position: absolute
+    top: -10px
+    right: -10px
+    bottom: -10px
+    left: -10px
+    background-color: #fff
+  &:before
+    @include box-shadow( 0 2px 8px 1px rgba(0,0,0,0.4) )
+    @include transform( rotate(-2deg) )
+    z-index: -1
+  &:after
+    @include box-shadow( 0 1px 5px 0 rgba(0,0,0,0.4) )
+    @include transform( rotate(2deg) )
+    z-index: -2
+
+  & > div
+    position: relative
+
+  .error_message
+    display: none
+    color: #fff
+    font:
+      size: 10px
+      weight: bold
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .5)
+    position: absolute
+    top: 14px
+    right: 5px
+    z-index: 1
+    padding: 5px 10px
+    background: $error-red
+    @include border-radius( 5px )
+    @include box-shadow( 0 2px 3px 0 rgba(0,0,0, .4) )
+
+  .default_image
+    position: relative
+    height: 150px
+    width: 100%
+    display: block
+    background-image: url("/images/default_new_collection.png")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+  input, select
+    font-size: 1em
+    @include font-sans-serif-book
+    color: $charcoal
+    height: 30px
+    width: 100%
+    margin-top: 10px
+    position: relative
+    border: 2px solid $close-btn-gray
+    @include border-radius( 5px )
+    &.field_validation_error
+      border: 2px solid $error-red
+      @include animation( wiggle .2s 3 alternate )
+  input
+    padding: 0 10px
+  select
+    padding: 2px 0px 0px 7px
+
+.filter, .search-bar
+  position: absolute
+  z-index: $filter-z
+  top: 0
+  right: 0
+  left: 0
+  border-top: 1px solid #fff
+  background-color: #fff
+  @include box-shadow( 0 2px 21px 1px rgba(0, 0, 0, 0.15) )
+  li
+    display: inline-block
+    cursor: pointer
+    margin: 10px
+    a
+      display: block
+      padding: 7px 15px
+      @include border-radius( 8px )
+      @include transition( background-color 200ms )
+      &:hover
+        background-color: fade_out( $dark-blue, .8 )
+      &.selected
+        color: $off-white
+        background-color: $dark-blue
+    span
+      margin-left: .3em
+
+.search-bar
+  text-align: left
+  input
+    width: 50%
+.add-items-chooser
+  input
+    height: 40px
+  input, textarea
+    border: 1px solid rgba(0,0,0, .3)
+    font-size: 1.2em
+    @include border-radius( 3px )
+    padding: 0 10px
+    margin: 5px 10px
+    min-width: 10%
+    &:focus
+      @include box-shadow( inset 0 1px 3px 0 rgba(0,0,0, .3) )
+footer a.create_btn
+  @include font-serif
+  font-variant: small-caps
+  font-size: 16px
+  &:hover
+    text-decoration: none
+    background-color: #1e4e68
+footer a.cancel_btn 
+  background-color: $charcoal
+  margin
+  &:hover 
+    @include box-shadow (none)

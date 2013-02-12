@@ -1,0 +1,9 @@
+<li class="notification {{#read}}read{{/read}}{{^read}}unread{{/read}}">
+    <a class="view-link" href="{{collection_url}}">
+        <span class="user">{{source_user_name}}</span> {{actionText}}
+        <div class="comment">
+          <span class="copy">"{{text}}"</span>
+          <time class="time">{{created_timestamp}}</time>
+        </div>
+    </a>
+</li>

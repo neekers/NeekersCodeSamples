@@ -1,0 +1,50 @@
+#content {
+  width: 530px;
+  margin: 0 auto; }
+  #content .fail-text {
+    font-family: "Asap", "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif;
+    font-weight: 400;
+    color: #be2a2a;
+    font-size: 22px;
+    margin: 15px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #cccccc; }
+  #content .message, #content .email-message {
+    font-weight: 300;
+    font-size: 16px;
+    color: #666666;
+    text-align: left;
+    margin: 0 0 30px 0; }
+  #content .email-message {
+    color: black;
+    font-weight: bold; }
+  #content .email-text {
+    font-family: "Asap", "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif;
+    font-weight: 400;
+    color: #222222;
+    font-weight: 400;
+    text-align: left;
+    margin: 0 0 10px 0;
+    font-size: 16px; }
+  #content .email, #content #mc-embedded-subscribe {
+    display: block;
+    border: 1px solid #b2b2b2;
+    padding: 6px; }
+  #content .email {
+    height: 42px;
+    width: 100%;
+    font-size: 17px;
+    background-color: #f7f7f7;
+    font-weight: 300;
+    font-family: inherit;
+    -webkit-box-shadow: inset 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px 1px 8px 0 rgba(0, 0, 0, 0.2); }
+  #content #mc-embedded-subscribe {
+    width: 205px;
+    color: white;
+    font-size: 18px;
+    border: medium none;
+    margin-top: 20px;
+    background-color: #50aade;
+    cursor: pointer; }

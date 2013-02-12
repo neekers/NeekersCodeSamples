@@ -1,0 +1,46 @@
+#wayback
+  position: absolute
+  top: 60px
+  left: 15px
+  font-size: 15px
+  color: $charcoal
+  cursor: pointer
+  z-index: 15
+
+  &:hover ol
+    display: block
+
+  ol
+    display: none
+    background-color: #e0e0e0
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(224, 224, 224)), to(rgb(255, 255, 255)))
+    background-image: -webkit-linear-gradient(left top, rgb(224, 224, 224), rgb(255, 255, 255))
+    background-image: -moz-linear-gradient(left top, rgb(224, 224, 224), rgb(255, 255, 255))
+    background-image: -o-linear-gradient(left top, rgb(224, 224, 224), rgb(255, 255, 255))
+    background-image: -ms-linear-gradient(left top, rgb(224, 224, 224), rgb(255, 255, 255))
+    background-image: linear-gradient(left top, rgb(224, 224, 224), rgb(255, 255, 255))
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,StartColorStr='#e0e0e0', EndColorStr='#ffffff')
+
+    &:hover
+      display: block
+
+    li
+      padding: 10px 15px
+      border-bottom:  1px solid $charcoal
+      background: inherit
+
+      & *
+        vertical-align: middle
+
+      img.tiny
+        width: 45px
+        margin-right: 15px
+
+      &:first-child
+        display: none
+
+.wayback section .front-matter
+  top: 50px
+
+.wayback #topics, .wayback #explore-popular
+  top: 25px

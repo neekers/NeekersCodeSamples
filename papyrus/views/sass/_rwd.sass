@@ -1,0 +1,1614 @@
+/* Max Width larger than containers to maintain side margins */
+@media screen and (max-width: 639px)
+  // @include debugmessage("Media Query: screen and (max-width: 639px)")
+
+  #explore-turntable
+    display: none
+  
+  .page-header .head-wrap,
+  .explore-navigation-header .navigation,
+  #profile-navigation .profile-nav-wrapper,
+  #topic-header .topic-header-inner,
+  #profile-header .profile-top .name-header,
+  .profile-content,
+  #recommended-collages.explore-collage .wrapper,
+  #collections article
+    max-width: 639px
+    width: 100%
+
+  .collage-list
+    width: 90%
+    margin: 30px auto
+
+  .searchResults .peopleResults .collage-list
+    max-width: 410px
+    width: 410px
+
+  // Disable editing on mobile for now.
+  #edit-collection
+    display: none !important
+
+  #collage-header
+    height: 265px
+    .title
+      width: 80%
+      margin-bottom: 0
+      font-size: 30px
+      line-height: 1.15em
+      height: 110px
+    .description
+      margin-bottom: 0
+      font-size: 16px
+      font-weight: 22px
+      width: 80%
+      height: 34px
+    .header-content
+      width: 100%
+      height: 255px
+      padding-left: 5px
+
+      .ego-stats-right
+        bottom: 25px
+        left: 0
+
+    .like-container
+      right: 20px
+    .details
+      left: 5px
+      bottom: 70px
+
+    .collection-fb-share
+      right: 20px
+      top: 12px
+    
+  #profile-header 
+    .logo
+      margin-left: 0
+    .avatar
+      width: 65px
+      margin-right: 20px
+      margin-left: 10px
+  #profile-header .user-name, #profile-header .collection-count
+    margin-left: 0
+  #profile-header .user-name
+    font-size: 30px
+  #profile-header .collection-count
+    font-size: 15px
+  #profile-navigation
+    height: 35px
+  .profile-navigation
+    .item
+      line-height: 35px
+      padding: 0 13px
+  #notifications
+    width: 367px
+    .notch
+      right: 52px
+    .notification 
+      font-size: 18px
+      .user
+        display: block
+    .comment .time
+      margin-left: 0
+      font-size: 14px
+  #notifications-count
+    line-height: 40px
+    width: 40px
+    height: 40px
+  .page-header
+    .logo
+      margin-left: 0
+    .create-btn
+      display: none
+    .login
+      right: 15px
+  .page-header .my-profile
+    width: 56px
+    height: 56px
+  .page-header .my-profile-picture
+    width: 40px
+    height: 40px
+  #user-options
+    top: 45px
+    width: 305px
+    .option .title
+      height: 40px
+      line-height: 40px
+      font-size: 20px
+  #topic-header 
+    height: 50px
+    .title
+      float: left
+      margin-left: 10px
+      font-size: 18px
+      line-height: 50px
+    .like-container
+      position: relative
+      float: right
+      right: auto
+      top: auto
+      margin-top: 5px
+    .like-btn
+      float: left
+    .like-count
+      float: left
+  .explore-navigation-header 
+    height: 35px
+    .navigation
+      height: 35px
+      .list
+        width: 100%
+      .search-form
+        height: 35px
+        .query
+          height: 35px
+          line-height: 35px
+          font-size: 15px
+      .explore-filters
+        float: left
+        width: 110px
+        height: 35px
+        line-height: 35px
+        .button-wrapper
+          width: 110px
+          .notch
+            top: 15px
+            right: 2px
+      .explore-following
+        width: 110px
+        height: 35px
+        line-height: 35px
+        border-right: none
+
+      .explore-sort-label
+        display: none
+      .explore-topics
+        width: 110px
+        height: 35px
+        line-height: 35px
+        border-right: none
+        .title
+          border-right: none
+      .explore-search
+        width: 35px
+        height: 35px
+        .icon
+          width: 100%
+          height: 100% 
+      .explore-topics
+        .button-wrapper
+          width: 110px
+          .notch
+            top: 15px
+            right: 2px
+  .topics-options
+    width: 100%
+    top: 35px
+    left: 0
+    .option .title
+      width: 50%
+      height: 45px
+      line-height: 45px
+
+  .filter-options
+    width: 100%
+    top: 35px
+    left: 0
+    .option .title
+      width: 50%
+      height: 45px
+      line-height: 45px
+
+  #collections article 
+    .screen-item 
+      margin-left: 0
+      .asset-wrapper
+        width: auto
+        float: none
+        overflow: hidden
+        @include box-shadow(none)
+      .page-tear
+        width: 100%
+      .screen-nav
+        display: none
+      .comments
+        clear: left
+        float: none
+        width: 100%
+        margin: 0
+        background-color: #fff
+        border-bottom: 1px solid $light-gray-1
+        opacity: 1 !important
+        .screen-comments
+          padding: 10px 55px 0 30px
+        .leave-comment
+          padding: 0 55px 10px 30px
+      
+  // Screen defaults at this viewport size
+  .screen
+    float: none
+    margin: 0 auto 20px
+    .asset.subFeatured
+      width: 100%
+    .info
+      width: 100%
+
+  // My Elements in Profile View
+  .screen.element
+    height: 210px
+    float: none
+    .asset
+      height: 210px
+    &:hover
+      .asset
+        height: 210px
+  .screen.element:nth-child(odd)
+    margin: 0 auto 20px
+  .screen.element:nth-child(even)
+    margin: 0 auto 20px
+
+  .form_toggle_btn
+    display: none
+
+  #collections .collection-type .collage
+    width: 100%
+    height: 310px
+    overflow: hidden
+  #collections .collection-type .metadata
+    width: 100%
+  #collections .collection-type h3
+    width: 531px
+  #collections .image-type .image-wrapper .image
+    width: 100%
+  #recommended-collages
+    .collage-list
+      width: 100%
+    .screen
+      float: none
+      margin: 0 auto 20px
+
+  // Liked Topics in Profile View
+  .screen.topics
+    .asset, .asset .gradient
+      height: 210px
+
+  // Search Results
+  .searchResults
+    .collage-list
+      width: 380px
+    .screen
+      margin: 0 auto 20px
+      .asset
+        height: 180px
+      &:hover
+        .asset, .asset .gradient
+          height: 215px
+        .asset.with-description, .asset.with-description .gradient
+          height: 180px
+      &:after
+        width: 400px
+        height: 315px
+  .onboardComplete
+    .first-time-user-callout
+      display: none
+
+@media screen and (min-width: 640px) and (max-width: 867px)
+  // @include debugmessage("Media Query: screen and (min-width: 640px) and (max-width: 867px)")
+
+  #explore-turntable
+    display: none
+
+  .page-header .head-wrap,
+  .explore-navigation-header .navigation,
+  .collage-list,
+  .profile-nav-wrapper,
+  #topic-header .topic-header-inner,
+  #profile-header .profile-top .name-header,
+  .profile-content,
+  #recommended-collages.explore-collage .wrapper,
+  #collections article
+    max-width: 585px
+    width: 100%
+  .searchResults .peopleResults .collage-list
+    max-width: 615px
+    width: 615px
+  .profile-navigation
+    .item
+      padding: 0 25px
+  #topic-header 
+    height: 70px
+    .title
+      font-size: 30px
+      line-height: 70px
+    .like-container
+      position: relative
+      float: right
+      right: auto
+      top: -55px
+    .like-btn
+      float: left
+    .like-count
+      float: left
+  .topics-options
+    width: 480px
+    .option .title
+      width: 20%
+      height: 50px
+      line-height: 50px
+      font-size: 14px
+
+  .explore-navigation-header 
+    .navigation
+      .explore-sort-label
+        display: none
+
+  #collage-header
+    height: 285px
+    .title
+      font-size: 34px
+      line-height: 36px
+      width: 448px
+    .description
+      font-size: 16px
+      font-weight: 22px
+      width: 448px
+      height: 40px
+      line-height: 1.3em
+    .header-content
+      max-width: 585px
+      min-width: 585px
+      width: 100%
+      height: 255px
+      padding-left: 0
+
+      .ego-stats-right
+        left: 0
+
+    .like-container
+      right: 0
+    .details
+      left: 0
+      bottom: 70px
+
+    .collection-fb-share
+      right: 0
+      top: 160px
+
+  #collections article 
+    .screen-item 
+      margin-left: 0
+      .asset-wrapper
+        width: auto
+        float: none
+        overflow: hidden
+        @include box-shadow(none)
+      .page-tear
+        width: 100%
+      .screen-nav
+        display: none
+      .comments
+        clear: left
+        float: none
+        width: 100%
+        margin: 0
+        background-color: #fff
+        border-bottom: 1px solid $light-gray-1
+        opacity: 1 !important
+        .screen-comments
+          padding: 10px 55px 0 30px
+        .leave-comment
+          padding: 0 55px 10px 30px
+
+  .editing #collections article .screen-item
+    margin-left: 0
+    .comments
+      display: none
+
+  // My Elements in Profile View
+  .screen.element
+    height: 210px
+    &:after
+      height: 300px
+  .screen.element.item
+    .asset
+      height: 210px
+  .screen.element:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.element:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  .screen
+    margin: 0 0 20px
+  .screen.featured
+    width: 584px
+    height: 328px
+    /* Using generated content behind small screens for border */
+    &:not(.no-hover):after
+      width: 605px
+      height: 375px
+    .asset
+      height: 294px
+  .screen.item:nth-child(odd)
+    margin-right: 14px
+  .screen.item:nth-child(even)
+    margin-left: 14px
+
+  #collections .collection-type .collage
+    width: 100%
+    height: 310px
+    overflow: hidden
+  #collections .collection-type .metadata
+    width: 100%
+  #collections .collection-type h3
+    width: 490px
+
+  // Liked Topics in Profile View
+  .screen.topics
+    .asset, .asset .gradient
+      height: 210px
+    &:not(.no-hover):hover
+      .asset, .asset .gradient
+        height: 210px 
+
+  // Likes in My Profile
+  .screen.likes
+    margin-bottom: 20px
+    .asset
+      height: 210px
+    &:not(.no-hover):hover
+      .asset, .asset .gradient
+        height: 210px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+    &:after
+      width: 298px
+      height: 229px
+  .screen.likes:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.likes:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  // Search Results
+  .searchResults
+    .collage-list
+      width: 380px
+    .screen
+      float: none
+      margin: 0 auto 20px
+      .asset
+        height: 180px
+      &:hover
+        .asset, .asset .gradient
+          height: 215px
+        .asset.with-description, .asset.with-description .gradient
+          height: 180px
+      &:after
+        width: 400px
+        height: 315px
+
+  // EDITING MODE
+  .editing
+    #collections .header-content
+      .title
+        width: 515px
+        height: 105px
+        margin-bottom: 2px
+      .description
+        width: 515px
+
+  // FIRST TIME USER
+  .first-time-user-callout
+    left: 330px
+    margin-top: -5px
+    .arrow
+      left: -48px
+      width: 52px
+      height: 74px
+      background: url("/images/red-arrow-small.png") no-repeat
+
+  #collections
+    article
+      .add-bar
+        .add-label
+          margin-left: 230px
+        &:hover
+          .add-label
+            margin-left: -88px
+            visibility: hidden
+
+@media screen and (min-width: 868px) and (max-width: 949px)
+  // @include debugmessage("Media Query: screen and (min-width: 868px) and (max-width: 949px)")
+
+  #explore-turntable
+    display: none
+
+  .page-header .head-wrap,
+  .explore-navigation-header .navigation,
+  .collage-list,
+  .profile-nav-wrapper,
+  #topic-header .topic-header-inner,
+  #profile-header .profile-top .name-header,
+  .profile-content,
+  #recommended-collages.explore-collage .wrapper,
+  #collections article
+    max-width: 788px
+    width: 100%
+  .searchResults .peopleResults .collage-list
+    max-width: 820px
+    width: 820px
+
+  #collage-header
+    height: 285px
+    .title
+      font-size: 34px
+      line-height: 36px
+      width: 50%
+    .description
+      font-size: 16px
+      font-weight: 22px
+      width: 50%
+      height: 40px
+      line-height: 1.3em
+    .header-content
+      max-width: 750px
+      min-width: 750px
+      width: 100%
+      height: 255px
+
+  #topic-header .like-container
+    right: 0
+
+  .topics-options
+    width: 640px
+    .option .title
+      width: 20%
+      height: 50px
+      line-height: 50px
+  .fact-type h2
+    font-size: 40px
+    line-height: 42px
+
+  .fact-type .screen-text,
+  .fact-type .screen-text p
+    font-size: 20px
+    line-height: 28px
+
+  #collections article 
+    .screen-item 
+      margin-left: 0
+      .asset-wrapper
+        width: auto
+        float: none
+        overflow: hidden
+        @include box-shadow(none)
+      .page-tear
+        width: 100%
+      .screen-nav
+        display: none
+      .comments
+        clear: left
+        float: none
+        width: 100%
+        margin: 0
+        background-color: #fff
+        border-bottom: 1px solid $light-gray-1
+        opacity: 1 !important
+        .screen-comments
+          padding: 10px 55px 0 30px
+        .leave-comment
+          padding: 0 55px 10px 30px
+      
+  // Screen defaults at this viewport size
+  .screen
+    float: none
+    margin: 0 auto 20px
+    .asset.subFeatured
+      width: 100%
+    .info
+      width: 100%
+
+  /* Screen Sizes and Margins */
+  .screen:nth-child(1)
+    margin-left: 0
+  .screen:nth-child(2)
+    margin-right: 0
+  .screen:nth-child(3n+3)
+    margin-left: 0
+  .screen:nth-child(3n+5)
+    margin-right: 0
+  .screen.item
+    width: 244px
+    &:after
+      width: 264px
+    .info
+      width: 244px
+    .asset
+      &:after
+        width: 244px
+
+  // My Collages in My Profile
+  .screen.collections
+    margin-bottom: 20px
+    .asset
+      height: 180px
+    &:hover
+      .asset, .asset .gradient
+        height: 215px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+    &:after
+      width: 400px
+      height: 315px
+  .screen.collections:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.collections:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  // My Elements in Profile View
+  .screen.element
+    height: 210px
+    float: none
+    .asset
+      height: 210px
+    &:hover
+      .asset
+        height: 210px
+    &:not(.no-hover):after
+      width: 400px
+      height: 290px
+  .screen.element:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.element:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  #collections .collection-type .collage
+    width: 100%
+    height: 310px
+    overflow: hidden
+  #collections .collection-type .metadata
+    width: 100%
+  #collections .collection-type h3
+    width: 325px
+  #recommended-collages
+    .screen:nth-child(3n+5)
+      margin-right: 14px
+    .screen:nth-child(3n+3)
+      margin-left: 14px
+    .screen:nth-child(even)
+      margin-right: 0
+    .screen:nth-child(odd)
+      margin-left: 0
+
+  // Liked Topics in My Profile
+  .screen.topics:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.topics:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  // Likes in My Profile
+  .screen.likes
+    margin-bottom: 20px
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 294px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+    &:after
+      width: 400px
+      height: 315px
+  .screen.likes:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.likes:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  // Search Results
+  .searchResults
+    .collage-list
+      width: 800px
+    .screen
+      margin-bottom: 20px
+      .asset
+        height: 180px
+      &:hover
+        .asset, .asset .gradient
+          height: 215px
+        .asset.with-description, .asset.with-description .gradient
+          height: 180px
+      &:after
+        width: 400px
+        height: 315px
+    .screen:nth-child(odd)
+      margin-left: 0
+      margin-right: 10px
+    .screen:nth-child(even)
+      margin-left: 10px
+      margin-right: 0
+
+  #recommended-collages
+    .screen.item:nth-child(3n+1)
+      margin-left: 0
+      margin-right: 1%
+    .screen.item:nth-child(3n+2)
+      margin-left: 1%
+      margin-right: 1%
+    .screen.item:nth-child(3n+3)
+      margin-left: 1%
+      margin-right: 0
+
+
+  .form_toggle_btn
+    display: none
+
+  #collections .collection-type .collage
+    width: 100%
+    height: 310px
+    overflow: hidden
+  #collections .collection-type .metadata
+    width: 100%
+  #collections .collection-type h3
+    width: 531px
+  #collections .image-type .image-wrapper .image
+    width: 100%
+  #recommended-collages
+    .collage-list
+      width: 100%
+    .screen
+      float: none
+      margin: 0 auto 20px
+
+
+
+  // EDITING MODE
+  // .editing
+  //   #collections .header-content
+  //     .title
+  //       width: 47%
+  //       height: 105px
+  //       margin-bottom: 2px
+  //     .description
+  //       width: 47%
+
+  // FIRST TIME USER
+  .first-time-user-callout
+    left: 365px
+
+  #collections
+    article
+      .add-bar
+        .add-label
+          margin-left: 370px
+        &:hover
+          .add-label
+            margin-left: 105px
+
+@media screen and (min-width: 950px) and (max-width: 1099px)
+  // @include debugmessage("Media Query: screen and (min-width: 950px) and (max-width: 1099px)")
+
+  #explore-turntable
+    display: none
+
+  .page-header .head-wrap,
+  .explore-navigation-header .navigation,
+  .collage-list,
+  .profile-nav-wrapper,
+  #topic-header .topic-header-inner,
+  #profile-header .profile-top .name-header,
+  .profile-content,
+  #recommended-collages.explore-collage .wrapper,
+  #collections article
+    max-width: 870px
+    min-width: 800px
+    width: 100%
+  .searchResults .peopleResults .collage-list
+    max-width: 820px
+    width: 820px
+
+  .topics-options
+    width: 770px
+    .option .title
+      width: 20%
+      height: 55px
+      line-height: 55px
+
+  #topic-header .like-container
+    right: 0
+
+  #collage-header
+    height: 285px
+    .title
+      font-size: 34px
+      line-height: 36px
+      width: 450px
+    .description
+      font-size: 16px
+      font-weight: 22px
+      width: 450px
+      height: 40px
+      line-height: 1.3em
+    .header-content
+      padding-top: 24px
+      max-width: 830px
+      min-width: 810px
+      width: 100%
+      height: 255px
+
+  .fact-type h2
+    font-size: 24px
+    line-height: 26px
+
+  .fact-type .screen-text,
+  .fact-type .screen-text p
+    font-size: 14px
+    line-height: 20px
+
+  #collections article 
+    .screen-item 
+      .asset-wrapper
+        width: 415px
+      .page-tear
+        width: 500px
+    .add-bar
+      .add-label
+        margin-left: 230px
+      &:hover
+        .add-label
+          margin-left: -75px
+          visibility: hidden
+
+  /* Screen Sizes */
+  .screen
+    margin: 0 1% 20px
+    .info
+      width: 425px
+  .screen.featured 
+    width: 425px
+    /* Using generated content behind small screens for border */
+    &:not(.no-hover):after
+      width: 445px
+      height: 396px
+    &:hover
+      .asset
+        height: 270px
+        .gradient
+          height: 270px
+      .asset.with-description
+        height: 235px
+        .gradient
+          height: 235px
+    .asset, .asset .gradient
+      height: 235px
+  .screen.featured:nth-child(1)
+    margin-left: 0
+    margin-right: 10px
+  .screen.featured:nth-child(2)
+    margin-left: 10px
+    margin-right: 0
+  .screen.featured
+    width: 425px
+    height: 350px
+  .screen:nth-child(3n+3)
+    margin-left: 0
+    margin-right: 1%
+  .screen:nth-child(3n+4)
+    margin-right: 1%
+    margin-left: 1%
+  .screen:nth-child(3n+5)
+    margin-right: 0
+    margin-left: 1%
+  #explore-turntable #records-wrapper
+    width: 800px
+  #explore-turntable #records-wrapper .container
+    width: 732px
+
+  #collections .collection-type .collage, #collections .collection-type .metadata 
+    width: 417px
+    overflow: hidden
+  #collections .collection-type h3
+    width: 407px
+
+  .profile-content .collage-list
+    width: 800px
+
+  .screen.subFeatured
+    .asset
+      height: 180px
+    &:hover
+      .asset, .asset .gradient
+        height: 215px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 345px
+        height: 316px
+
+  // My Elements in Profile View
+  .screen.element
+    width: 380px
+    height: 270px
+    margin-bottom: 40px
+    &.subFeatured
+      .asset
+        height: 100%
+      &:hover:after
+        height: 290px
+        width: 400px
+  .screen.element::after
+    width: 400px
+    height: 400px
+  .screen.element:nth-child(odd)
+    margin-left: 0
+    margin-right: 20px
+  .screen.element:nth-child(even)
+    margin-left: 20px
+    margin-right: 0
+
+  // My Collages in My Profile
+  .screen.collections
+    margin-bottom: 20px
+    .asset
+      height: 180px
+    &:hover
+      .asset, .asset .gradient
+        height: 215px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+    &:after
+      width: 400px
+      height: 315px
+  .screen.collections:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.collections:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  // Liked Topics in Profile View
+  .screen.topics
+    .asset
+      height: 445px
+    &:hover
+      .asset, .asset .gradient
+        height: 445px
+  .screen.topics
+    &:not(.no-hover):after
+      width: 346px
+      height: 300px
+  .screen.topics
+    height: 445px
+    .asset, .asset .gradient
+      height: 445px
+  .screen.topics:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.topics:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  // Likes in My Profile
+  .screen.likes
+    margin-bottom: 20px
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 294px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+    &:after
+      width: 400px
+      height: 315px
+  .screen.likes:nth-child(odd)
+    margin-left: 0
+    margin-right: 10px
+  .screen.likes:nth-child(even)
+    margin-left: 10px
+    margin-right: 0
+
+  // Search Results
+  .searchResults
+    .collage-list
+      width: 800px
+    .screen
+      .asset
+        height: 180px
+      &:hover
+        .asset, .asset .gradient
+          height: 215px
+        .asset.with-description, .asset.with-description .gradient
+          height: 180px
+      &:after
+        width: 400px
+        height: 315px
+    .screen:nth-child(odd)
+      margin-left: 0
+      margin-right: 20px
+    .screen:nth-child(even)
+      margin-left: 20px
+      margin-right: 0
+
+  #recommended-collages
+    .screen.item:nth-child(3n+1)
+      margin-left: 0
+      margin-right: 1%
+    .screen.item:nth-child(3n+2)
+      margin-left: 1%
+      margin-right: 1%
+    .screen.item:nth-child(3n+3)
+      margin-left: 1%
+      margin-right: 0
+
+  // EDITING MODE
+  .editing
+    #collections .header-content
+      .title
+        width: 432px
+        height: 105px
+        margin-bottom: 2px
+      .description
+        width: 432px
+
+  // FIRST TIME USER
+  .first-time-user-callout
+    left: 445px
+
+  // ADD ITEM
+  .add-asset.image-type .liked-items-bar a.active, .add-asset.image-type .liked-items-bar a.upload-image
+    font-size: 11px
+    
+@media screen and (min-width: 1100px) and (max-width: 1300px)
+  // @include debugmessage("Media Query: screen and (min-width: 1100px) and (max-width: 1300px)")
+
+  .page-header .head-wrap,
+  .explore-navigation-header .navigation,
+  .collage-list,
+  .profile-nav-wrapper,
+  #profile-header .profile-top .name-header,
+  #topic-header .topic-header-inner,
+  .profile-content,
+  #recommended-collages.explore-collage .wrapper,
+  #collections article
+    max-width: 1020px
+    min-width: 1000px
+    width: 100%
+  .searchResults .peopleResults .collage-list
+    max-width: 1025px
+
+  #collage-header
+    height: 320px
+    .header-content
+      padding-top: 25px
+    .title
+      font-size: 44px
+      line-height: 50px
+      width: 600px
+      max-height: 150px
+    .description
+      font-size: 17px
+      width: 600px
+      height: 50px
+    .header-content
+      max-width: 980px
+      min-width: 960px
+      width: 100%
+      height: 280px
+
+      .ego-stats-right
+        bottom: 6px
+
+    .details
+      bottom: 6px
+
+
+  .fact-type h2
+    font-size: 28px
+    line-height: 32px
+
+  .fact-type .screen-text,
+  .fact-type .screen-text p
+    font-size: 14px
+    line-height: 20px
+
+  #collections article 
+    .screen-item 
+      .asset-wrapper
+        width: 565px
+      .page-tear
+        width: 650px
+
+  /* Screen Sizes */
+  .screen
+    margin: 0 1% 20px
+    .info
+      width: 500px
+  .screen.featured 
+    width: 500px
+    /* Using generated content behind small screens for border */
+    &:after
+      width: 520px
+    &:hover
+      .asset
+        height: 270px
+        .gradient
+          height: 270px
+      .asset.with-description
+        height: 235px
+        .gradient
+          height: 235px
+  .screen.featured:nth-child(1)
+    margin-left: 0
+    margin-right: 10px
+  .screen.featured:nth-child(2)
+    margin-left: 10px
+    margin-right: 0
+  .screen.featured 
+    height: 350px
+    &:not(.no-hover):after
+      height: 405px
+
+  .screen.subFeatured
+    .asset
+      height: 180px
+    &:hover
+      .asset, .asset .gradient
+        height: 215px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+
+  .screen.subFeatured 
+    width: 32%
+    /* Using generated content behind small screens for border */
+    &:not(.no-hover):after
+      width: 346px
+      height: 316px
+    .asset
+      &:after
+        width: 326px
+    .info
+      width: 326px
+
+  .screen.item
+    width: 240px
+    margin: 0 10px 20px
+    &:after
+      width: 260px
+    .asset
+      &:after
+        width: 240px
+    .info
+      width: 100%
+
+  // Medium screens
+  .screen:nth-child(3n+3):nth-child(-n+11)
+    margin-left: 0
+    margin-right: 1%
+  .screen:nth-child(3n+4):nth-child(-n+9)
+    margin-right: 1%
+    margin-left: 1%
+  .screen:nth-child(3n+5):nth-child(-n+11)
+    margin-right: 0
+    margin-left: 1%
+  // Small screens
+  .screen.item:nth-child(4n+12)
+    margin-left: 0
+    margin-right: 10px
+  .screen.item:nth-child(4n+15)
+    margin-right: 0
+    margin-left: 10px
+
+  #explore-turntable #records-wrapper
+    width: 905px
+  #explore-turntable #records-wrapper .container
+    width: 835px
+
+  #collections .collection-type .collage, #collections .collection-type .metadata 
+    width: 565px
+    overflow: hidden
+  #collections .collection-type h3
+    width: 555px
+
+  #collections
+    article
+      .add-bar
+        .add-label
+          margin-left: 310px
+        &:hover
+          .add-label
+            margin-left: 55px
+
+  // My Collages in My Profile
+  .screen.collections
+    .asset
+      height: 180px
+    &:hover
+      .asset, .asset .gradient
+        height: 215px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+  .screen.collections:nth-child(3n+1)
+    margin-left: 0
+    margin-right: 10px
+  .screen.collections:nth-child(3n+2)
+    margin-left: 10px
+    margin-right: 10px
+  .screen.collections:nth-child(3n+3)
+    margin-left: 10px
+    margin-right: 0
+
+  // My Elements in Profile View
+  .screen.element
+    .asset
+      height: 300px
+    &:hover
+      .asset
+        height: 280px
+  .screen.element
+    &:not(.no-hover):after
+      width: 346px
+      height: 300px
+  .screen.element
+    margin-left: 1%
+    margin-right: 1%
+  .screen.element:nth-child(3n+1)
+    margin-left: 0
+    margin-right: 1%
+  .screen.element:nth-child(3n+2)
+    margin-right: 1%
+    margin-left: 1%
+  .screen.element:nth-child(3n+3)
+    margin-right: 0
+    margin-left: 1%
+
+  // Liked Topics in Profile View
+  .screen.topics
+    .asset
+      height: 445px
+    &:hover
+      .asset, .asset .gradient
+        height: 445px
+  .screen.topics
+    &:not(.no-hover):after
+      width: 346px
+      height: 300px
+  .screen.topics
+    height: 445px
+    .asset, .asset .gradient
+      height: 445px
+  .screen.topics:nth-child(3n+1)
+    margin-right: 10px
+    margin-left: 0
+  .screen.topics:nth-child(3n+2)
+    margin-right: 10px
+    margin-left: 10px
+  .screen.topics:nth-child(3n+3)
+    margin-right: 0
+    margin-left: 10px
+
+  // Likes in Profile View
+  .screen.likes
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 295px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 346px
+        height: 316px
+  .screen.likes:nth-child(3n+1)
+    margin-right: 10px
+    margin-left: 0
+  .screen.likes:nth-child(3n+2)
+    margin-right: 10px
+    margin-left: 10px
+  .screen.likes:nth-child(3n+3)
+    margin-right: 0
+    margin-left: 10px
+
+
+  // My Stats in Profile View
+  .screen.my-stats-collage
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 295px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 346px
+        height: 316px
+  .screen.my-stats-collage:nth-child(3n+1)
+    margin-right: 10px
+    margin-left: 0
+  .screen.my-stats-collage:nth-child(3n+2)
+    margin-right: 10px
+    margin-left: 10px
+  .screen.my-stats-collage:nth-child(3n+3)
+    margin-right: 0
+    margin-left: 10px
+
+
+  // Search Results
+  .searchResults
+    .screen
+      .asset
+        height: 180px
+      &:hover
+        .asset, .asset .gradient
+          height: 215px
+        .asset.with-description, .asset.with-description .gradient
+          height: 180px
+    .screen:nth-child(3n+1)
+      margin-left: 0
+      margin-right: 10px
+    .screen:nth-child(3n+2)
+      margin-left: 10px
+      margin-right: 10px
+    .screen:nth-child(3n+3)
+      margin-left: 10px
+      margin-right: 0
+
+  #recommended-collages
+    .screen.subFeatured:nth-child(3n+1)
+      margin-left: 0
+      margin-right: 1%
+    .screen.subFeatured:nth-child(3n+2)
+      margin-left: 1%
+      margin-right: 1%
+    .screen.subFeatured:nth-child(3n+3)
+      margin-left: 1%
+      margin-right: 0
+
+  // EDITING MODE
+  .editing
+    #collections .header-content
+      .title
+        width: 580px
+        height: 140px
+        margin-bottom: 2px
+      .description
+        width: 580px
+    .feed-type
+      input
+        width: 471px
+
+  // FIRST TIME USER
+  .first-time-user-callout
+    left: 590px
+
+@media screen and (min-width: 1301px)
+  .searchResults .peopleScroller .collage-list
+    max-width: 1200px
+  // @include debugmessage("Media Query: screen and (min-width: 1301px)")
+  .screen:nth-child(1), .screen:nth-child(3), .screen:nth-child(6), .screen:nth-child(9)
+    margin-left: 0
+  .screen:nth-child(2), .screen:nth-child(5), .screen:nth-child(8), .screen:nth-child(11)
+    margin-right: 0
+  .screen:nth-child(4n+12)
+    margin-left: 0
+  .screen:nth-child(4n+15)
+    margin-right: 0
+  .screen.featured
+    height: 409px
+    .asset, .asset::after
+      height: 294px
+  .screen.featured
+    &:not(.no-hover):after
+      width: 605px
+      height: 455px
+
+  // My Collage in My Profile
+  .screen.collections
+    .asset
+      height: 180px
+    &:hover
+      .asset, .asset .gradient
+        height: 215px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 400px
+        height: 316px
+  .screen.collections:nth-child(3n+1)
+    margin-left: 0
+    margin-right: 14px
+  .screen.collections:nth-child(3n+2)
+    margin-left: 14px
+    margin-right: 14px
+  .screen.collections:nth-child(3n+3)
+    margin-left: 14px
+    margin-right: 0
+
+  .screen.subFeatured
+    .asset
+      height: 180px
+    &:hover
+      .asset, .asset .gradient
+        height: 215px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 400px
+        height: 316px
+
+  // Likes in Profile View
+  .screen.likes
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 295px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 400px
+        height: 316px
+
+
+  // My Stats in Profile View
+  .screen.my-stats-collage
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 295px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 400px
+        height: 316px
+
+
+
+  // My Elements in Profile View
+  .profile-content
+    .screen.element
+      width: 380px
+      .asset
+        height: 270px
+      &:hover
+        .asset
+          height: 280px
+      &:after
+        width: 400px
+        height: 300px
+
+    .screen
+      margin-left: 0
+      margin-right: 20px
+
+  // Likes in Profile View
+  .screen.likes
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 295px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 400px
+        height: 316px
+  .screen.likes:nth-child(3n+1)
+    margin-right: 10px
+    margin-left: 0
+  .screen.likes:nth-child(3n+2)
+    margin-right: 10px
+    margin-left: 10px
+  .screen.likes:nth-child(3n+3)
+    margin-right: 0
+    margin-left: 10px
+
+
+  // My Stats in Profile View
+  .screen.my-stats-collage
+    .asset
+      height: 270px
+    &:hover
+      .asset, .asset .gradient
+        height: 295px
+      .asset.with-description, .asset.with-description .gradient
+        height: 180px
+      &:after
+        width: 400px
+        height: 316px
+  .screen.my-stats-collage:nth-child(3n+1)
+    margin-right: 10px
+    margin-left: 0
+  .screen.my-stats-collage:nth-child(3n+2)
+    margin-right: 10px
+    margin-left: 10px
+  .screen.my-stats-collage:nth-child(3n+3)
+    margin-right: 0
+    margin-left: 10px
+
+
+
+  // Liked Topics in Profile View
+  .screen.topics
+    .asset
+      height: 445px
+    &:hover
+      .asset, .asset .gradient
+        height: 445px
+  .screen.topics
+    &:not(.no-hover):after
+      width: 346px
+      height: 300px
+  .screen.topics
+    height: 445px
+    .asset, .asset .gradient
+      height: 445px
+  .screen.topics:nth-child(3n+1)
+    margin-right: 10px
+    margin-left: 0
+  .screen.topics:nth-child(3n+2)
+    margin-right: 10px
+    margin-left: 10px
+  .screen.topics:nth-child(3n+3)
+    margin-right: 0
+    margin-left: 10px
+
+  #recommended-collages
+    .screen.subFeatured:nth-child(3n+1)
+      margin-left: 0
+      margin-right: 1%
+    .screen.subFeatured:nth-child(3n+2)
+      margin-left: 1%
+      margin-right: 1%
+    .screen.subFeatured:nth-child(3n+3)
+      margin-left: 1%
+      margin-right: 0
+
+  // SEARCH RESULTS
+  .searchResults
+    .screen
+      .asset
+        height: 180px
+      &:hover
+        .asset, .asset .gradient
+          height: 215px
+        .asset.with-description, .asset.with-description .gradient
+          height: 180px
+        &:after
+          width: 400px
+          height: 316px
+    .screen:nth-child(3n+1)
+      margin-left: 0
+      margin-right: 14px
+    .screen:nth-child(3n+2)
+      margin-left: 14px
+      margin-right: 14px
+    .screen:nth-child(3n+3)
+      margin-left: 14px
+      margin-right: 0
+
+  // EDITING MODE
+  .editing
+    #collections .header-content
+      .title
+        height: 165px
+        margin-bottom: 2px
+
+  // FIRST TIME USER
+  .first-time-user-callout
+    left: 775px
+
+  // ADD ITEM
+  .add-asset.image-type .search-photo-bar
+    width: 39%

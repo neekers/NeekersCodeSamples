@@ -1,0 +1,17 @@
+<section id="explore-turntable">
+    <div id="vignette"></div>
+    <div id="turntable-wrapper">
+        <ol id="turntable"></ol>
+    </div>
+    <div id="records-wrapper">
+        <a class="turntable-arrow-left"></a>
+        <div class="container">
+            <ol id="records">
+                {{#items}}
+                <li style="background-image: url({{cover_asset.image_300_url}})" /></li>
+                {{/items}}
+            </ol>
+        </div>
+        <a class="turntable-arrow-right"></a>
+    </div>
+</section>

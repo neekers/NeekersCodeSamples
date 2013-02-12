@@ -1,0 +1,775 @@
+// small screens
+$screen-small-width: 278px
+$screen-small-height: 210px
+$screen-small-asset-width: 33.33333%
+$screen-small-asset-height: 55px
+
+// normal screens
+$screen-width: 380px
+$screen-height: 270px
+$screen-asset-width: 25%
+$screen-asset-height: 55px
+
+// big screens 
+$screen-big-width: 585px
+$screen-big-height: 350px
+$screen-big-asset-width: 25%
+$screen-big-asset-height: 80px
+
+.body 
+  margin: $headerHeight auto 20px auto
+
+/* Default screen styling which renders as the medium size */
+.screen
+  position: relative
+  overflow: hidden
+  float: left
+  width: $screen-width
+  margin: 0 14px 30px
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15)
+
+  &:hover
+    .screen-reuse, .screen-delete
+      opacity: 1
+
+  .asset
+    overflow: hidden
+  .asset, .tile
+    background-size: cover
+    background-position: center center
+    background-color: #232323
+    color: $nearly-black
+
+    .gradient
+      position: absolute
+      @include screen-gradient-overlay
+      z-index: 1
+
+  .mini-tiles
+    position: relative
+    overflow: hidden
+    height: $screen-asset-height
+    z-index: 2
+
+    .overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,.3)
+      z-index: 2
+
+    .placeholder
+      background-color: $nearly-black-40
+      &.even
+        background-color: $nearly-black-60
+
+    .fact-header
+      font-size: 18px
+    
+    .tile
+      /* floating left instead of display inline-block eliminates space between images */
+      float: left
+      width: $screen-asset-width
+      height: $screen-asset-height
+      overflow: hidden
+
+    .fact-wrapper
+      background-color: #E0E0E0
+      &.even
+        background-color: #F0F0F0
+
+  .fact-wrapper
+    color: $mid-gray-1
+
+    .fact-header, .fact-text
+      padding: 8px 10px 0 10px
+      overflow: hidden
+
+    .fact-header
+      white-space: nowrap
+      font-weight: bold
+      font-size: 14px
+      text-overflow: ellipsis
+
+    .fact-text
+      padding-top: 5px
+      line-height: 12px
+      font-size: 10px
+
+  .title, .owner
+    text-shadow: 1px 1px 3px $nearly-black-20
+
+  .info
+    position: absolute
+    bottom: 35px
+    width: 585px
+    z-index: 2
+
+    &.with-description
+      bottom: -15px
+
+.screen
+  height: 100%
+  &:not(.no-hover):hover
+    @include transform(translateZ(0))
+    @include transform(scale(1.15))
+    top: -10px
+    z-index: 10
+    overflow: visible
+
+    .info
+      bottom: 0
+      &.with-description
+        bottom: -15px
+    .metadata
+      bottom: -35px
+
+    .rssFeed
+      overflow: hidden
+      height: 250px
+
+  /* Using generated content behind small screens for border */
+  &:not(.no-hover):after
+    position: absolute
+    content: ""
+    display: block
+    left: -10px
+    top: -10px
+    background: #fff
+    z-index: -1
+    box-shadow: 0px 1px 20px 2px rgba(0, 0, 0, 0.6)
+
+  .frame
+    display: none
+    position: relative
+    width: 150%
+    height: 2000px
+    margin-top: -1000px
+    top: 50%
+    left: -25%
+    line-height: 2000px
+    .image
+      width: 100%
+      vertical-align: middle
+  .title
+    color: #fff
+    font-size: 24px
+    line-height: 29px
+    padding: 0 10px
+  .owner
+    display: block
+    color: #fff
+    font-size: 14px
+    padding: 10px
+    bottom: 105px
+    .asset-count
+      float: right
+  .description
+    overflow: hidden
+    padding: 7px 13px
+    height: 35px
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+    background: #ffffff
+    font-size: 14px
+    color: #6f6f6f
+
+  .tile
+    .frame
+      display: block
+
+.reuse-item-form .screen
+  width: 100%
+  height: 360px
+
+/* first and secondscreens starting out big */
+.screen.featured 
+  width: $screen-big-width
+  height: $screen-big-height
+
+  /* Using generated content behind small screens for border */
+  .asset, .asset.with-description
+    width: 100%
+  .asset
+    height: 294px
+    .gradient
+      width: 100%
+      height: 294px
+
+  .mini-tiles
+    height: $screen-big-asset-height
+
+    .frame
+      position: relative
+      width: 100%
+      height: 2000px
+      margin-top: -1000px
+      top: 50%
+      line-height: 2000px
+      left: 0
+      .image
+        width: 100%
+        vertical-align: middle
+    .tile
+      width: $screen-big-asset-width
+      height: $screen-big-asset-height
+      .gradient
+        width: 100%
+        height: $screen-big-asset-height
+
+/* SubFeatured screens */
+.screen.subFeatured
+  height: 270px
+  &:not(.no-hover):hover
+    @include transform(scale(1.05))
+    .asset.with-description
+      height: 180px
+      .gradient
+        height: 180px
+
+  /* Using generated content behind small screens for border */
+  .title
+    font-size: 22px
+    line-height: 26px
+  .gradient
+    width: 100%
+    height: 180px
+  .info
+    width: 380px
+  .tile
+    .gradient
+      width: 100%
+      height: $screen-asset-height
+
+.screen.element, .screen.likes
+  .fact-header
+    white-space: nowrap
+    font-size: 16px
+    text-overflow: ellipsis
+  .fact-text
+    line-height: normal
+    font-size: 15px
+
+  &:not(.no-hover):hover
+    .metadata
+      bottom: -10px
+
+
+.screen.topics
+  height: 445px
+  .asset, .asset .gradient
+    height: 445px
+    
+
+/* Smallest screens */
+.screen.item
+  width: $screen-small-width
+  height: 210px
+
+  &:not(.no-hover):hover
+    .asset
+      height: 156px
+      .gradient
+        height: 156px
+    .asset.with-description
+      height: 120px
+      .gradient
+        height: 120px
+  /* Using generated content behind small screens for border */
+  &:after
+    width: 298px
+    height: 265px
+  .title
+    font-size: 20px
+    line-height: 23px
+
+  .asset
+    height: 120px
+    .gradient
+      width: 100%
+      height: 120px
+    .frame
+      width: 400px
+      left: -61px
+
+  .mini-tiles
+    height: $screen-small-asset-height
+
+    .tile
+      width: $screen-small-asset-width
+      height: $screen-small-asset-height
+      .gradient
+        width: 100%
+        height: $screen-small-asset-height
+  .info
+    width: $screen-small-width
+
+// Profile View screens and elements
+.screen.element
+  margin-left: 20px
+  margin-right: 20px
+.screen.element:nth-child(3n+1)
+  margin-left: 0
+.screen.element:nth-child(3n+3)
+  margin-right: 0
+
+.topics-options
+  z-index: 200
+
+.collage-list, .following-list
+  width: $bodyWidth
+  margin: 30px auto
+
+.metadata
+  position: absolute
+  bottom: 0
+  display: block
+  width: 100%
+  height: 35px
+  background-color: #FFF
+  color: #6f6f6f
+  z-index: 2
+
+  .container
+    width: 100%
+    height: 100%
+    .view-count-wrapper, .comment-count-wrapper, .reuse-count-wrapper, .creation-elapsed-wrapper
+      width: 60px
+      height: 100%
+      float: left
+      display: inline-block
+
+    .creation-elapsed-wrapper
+      float: right
+      width: 90px
+      .creation-elapsed
+        padding-right: 10px
+        float: right
+
+    .icon
+      float: left
+
+    .view-count-wrapper 
+      .icon
+        padding: 13px 5px 0 10px
+
+    .comment-count-wrapper
+      .icon
+        padding: 11px 5px 0 10px
+
+    .reuse-count-wrapper
+      .icon
+        padding: 11px 5px 0 10px
+
+    .view-count, .comment-count, .reuse-count, .creation-elapsed
+      padding: 13px 0
+      font-size: 12px
+      display: inline-block
+      float: left
+
+    .asset-count-wrapper
+      overflow: hidden
+      display: none
+      height: 35px
+
+    .asset-count
+      display: inline-block
+      margin: 13px
+      font-size: 12px
+
+
+.searchResults
+  .result-count
+    text-align: center
+    font-size: 24px
+    line-height: 30px
+    color: $mid-gray-2
+  .screen-app-link
+    top: auto
+  li
+    position: relative
+    display: inline-block
+    @include box-shadow( 0 1px 5px $nearly-black-20)
+  .border
+    width: 100%
+    height: 8px
+    background: url(/images/search-results/spike.png) repeat
+  .peopleResults
+    .collage-list
+      margin: 30px auto 0
+    background: url(/images/search-results/background.png) repeat
+    padding: 35px 0
+    li
+      height: 175px
+      width: 175px
+      margin-right: 30px
+      margin-bottom: 30px
+    li:nth-child(6n)
+      margin-right: 0
+    .screen-app-link
+      height: 100%
+    .user
+      position: relative
+      height: 175px
+      width: 100%
+      overflow: hidden
+      background-size: cover
+      .name
+        position: absolute
+        width: 157px
+        bottom: 45px
+        left: 10px
+        font-size: 24px
+        color: #fff
+        z-index: 3
+      .first, .last
+        display: block
+      .overlay
+        position: absolute
+        height: 140px
+        width: 100%
+        @include gradient(linear,top,rgba(0, 0, 0, 0.00),rgba(13, 13, 13, 0.80),'left top, left bottom')
+        z-index: 2
+      .image
+        width: 175px
+        height: 175px
+      .owner
+        position: absolute
+        bottom: 0
+        left: 0
+        padding: 10px
+        color: $off-white
+        font-size: 24px
+        line-height: 30px
+    .count
+      position: relative
+      top: -37px
+      width: 100%
+      background-color: $off-white
+      padding: 0 10px
+      color: $mid-gray-2
+      text-transform: uppercase
+      font-size: 14px
+      height: 35px
+      line-height: 35px
+  .collectionResults
+    padding: 35px 0
+    .screen-nav
+      display: none
+    .search-result
+      .screens-wrapper
+        height: 260px
+        background-size: cover
+        background-repeat: no-repeat
+    .count
+      background-color: $off-white
+      padding: 0 10px
+      color: $mid-gray-2
+      text-transform: uppercase
+      font-size: 14px
+      height: 35px
+      line-height: 35px
+    .overlay
+      height: 260px
+      width: 100%
+      display: block
+      @include gradient(linear,top,rgba(0, 0, 0, 0.00),rgba(13, 13, 13, 0.80),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#0d0d0d')
+
+.screen-reuse, .screen-fb-share, .screen-delete
+  @include blue-button-base
+  position: absolute
+  z-index: 2
+  top: 0
+
+.screen-reuse
+  left: 45%
+  top: 0
+
+.like-container
+  position: absolute
+  top: 0
+  right: 0
+  cursor: pointer
+  @include box-shadow( 0 1px 3px $nearly-black-20)
+  z-index: 2
+
+  .like-btn
+    @include button-square-base
+    @include box-shadow( none )
+    background-repeat: no-repeat
+    background-position: center center
+    display: block
+    @include gradient(linear,top,rgba(13, 13, 13, 0.20),rgba(63, 63, 63, 0.20),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0d0d0d', EndColorStr='#3f3f3f')
+
+  .like-count
+    @include button-square-base
+    @include box-shadow( none )
+    font-size: 15px
+    color: $off-white
+    display: block
+    @include gradient(linear,top,rgba(13, 13, 13, 0.40),rgba(63, 63, 63, 0.40),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0d0d0d', EndColorStr='#3f3f3f')
+
+  &.liked
+    @include box-shadow( none )
+    .like-btn
+      background-color: #e51818
+      @include gradient(linear,top,rgb(229, 24, 24),rgb(191, 11, 11),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e51818', EndColorStr='#bf0b0b')
+    .like-count
+      @include gradient(linear,top,rgba(13, 13, 13, 0.40),rgba(63, 63, 63, 0.40),'left top, left bottom')
+      
+  &:hover
+    .like-btn
+      background-color: #ea3232
+      @include gradient(linear,top,rgb(234, 50, 50),rgb(193, 59, 59),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ea3232', EndColorStr='#c13b3b')
+    .like-count
+      @include gradient(linear,top,rgba(13, 13, 13, 0.70),rgba(63, 63, 63, 0.70),'left top, left bottom')
+
+  &:active
+    @include box-shadow( inset 0 1px 3px $nearly-black-80 )
+    .like-btn
+      background-color: #e51818
+      @include gradient(linear,top,rgb(229, 24, 24),rgb(191, 11, 11),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e51818', EndColorStr='#bf0b0b')
+    .like-count
+      @include gradient(linear,top,rgb(13, 13, 13),rgb(63, 63, 63),'left top, left bottom')
+
+.svg_play
+  display: none
+
+
+#my-profile-following
+  .no-data
+    font-size: 24px
+    line-height: 30px
+    padding-top: 20px
+    color: $mid-gray-2
+  .following-count, .collage-count, .no-data
+    font-size: 24px
+    line-height: 30px
+    padding-top: 20px
+    color: $mid-gray-2
+  .screen-app-link
+    top: auto
+  li
+    position: relative
+    display: inline-block
+    @include box-shadow( 0 1px 5px $nearly-black-20)
+  .border
+    width: 100%
+    height: 8px
+    background: url(/images/search-results/spike.png) repeat
+  .profile-content
+    .following-list
+      margin: 30px auto 0
+      padding: 5px 0
+    li
+      height: 175px
+      width: 175px
+      margin-right: 30px
+      margin-bottom: 30px
+    li:nth-child(6n)
+      margin-right: 0
+      .no-data
+        display: none
+    .collage-list
+      margin: 30px auto 0
+      padding: 5px 0
+      width: 1300px
+      li
+        width: 380px
+        height: 270px
+        margin-right: 30px
+        margin-bottom: 30px
+        .link .asset .gradient
+          height: 100%
+        .like-container
+          display: none
+    .screen-app-link
+      height: 100%
+    .user
+      position: relative
+      height: 175px
+      width: 100%
+      overflow: hidden
+      background-size: cover
+      .name
+        position: absolute
+        width: 157px
+        bottom: 45px
+        left: 10px
+        font-size: 24px
+        color: #fff
+        z-index: 3
+      .first, .last
+        display: block
+      .overlay
+        position: absolute
+        height: 140px
+        width: 100%
+        @include gradient(linear,top,rgba(0, 0, 0, 0.00),rgba(13, 13, 13, 0.80),'left top, left bottom')
+        z-index: 2
+      .image
+        width: 175px
+        height: 175px
+      .owner
+        position: absolute
+        bottom: 0
+        left: 0
+        padding: 10px
+        color: $off-white
+        font-size: 24px
+        line-height: 30px
+    .count
+      position: relative
+      top: -37px
+      width: 100%
+      background-color: $off-white
+      padding: 0 10px
+      color: $mid-gray-2
+      text-transform: uppercase
+      font-size: 14px
+      height: 35px
+      line-height: 35px
+  .collectionResults
+    padding: 35px 0
+    .screen-nav
+      display: none
+    .search-result
+      .screens-wrapper
+        height: 260px
+        background-size: cover
+        background-repeat: no-repeat
+    .count
+      background-color: $off-white
+      padding: 0 10px
+      color: $mid-gray-2
+      text-transform: uppercase
+      font-size: 14px
+      height: 35px
+      line-height: 35px
+    .overlay
+      height: 260px
+      width: 100%
+      display: block
+      @include gradient(linear,top,rgba(0, 0, 0, 0.00),rgba(13, 13, 13, 0.80),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#0d0d0d')
+
+#people-following-container
+  .no-data
+    font-size: 24px
+    line-height: 30px
+    padding-top: 20px
+    color: $mid-gray-2
+  .following-count, .collage-count, .no-data
+    font-size: 24px
+    line-height: 30px
+    padding-top: 20px
+    color: $mid-gray-2
+  .screen-app-link
+    top: auto
+  li
+    position: relative
+    display: inline-block
+    @include box-shadow( 0 1px 5px $nearly-black-20)
+  .border
+    width: 100%
+    height: 8px
+    background: url(/images/search-results/spike.png) repeat
+  .following-list
+    margin: 30px auto 0
+    padding: 5px 0
+  li
+    height: 175px
+    width: 175px
+    margin-right: 30px
+    margin-bottom: 30px
+  li:nth-child(6n)
+    margin-right: 0
+    .no-data
+      display: none
+  .collage-list
+    margin: 30px auto 0
+    padding: 5px 0
+    width: 1300px
+    li
+      width: 380px
+      height: 270px
+      margin-right: 30px
+      margin-bottom: 30px
+      .link .asset .gradient
+        height: 100%
+      .like-container
+        display: none
+  .screen-app-link
+    height: 100%
+  .user
+    position: relative
+    height: 175px
+    width: 100%
+    overflow: hidden
+    background-size: cover
+    .name
+      position: absolute
+      width: 157px
+      bottom: 45px
+      left: 10px
+      font-size: 24px
+      color: #fff
+      z-index: 3
+    .first, .last
+      display: block
+    .overlay
+      position: absolute
+      height: 140px
+      width: 100%
+      @include gradient(linear,top,rgba(0, 0, 0, 0.00),rgba(13, 13, 13, 0.80),'left top, left bottom')
+      z-index: 2
+    .image
+      width: 175px
+      height: 175px
+    .owner
+      position: absolute
+      bottom: 0
+      left: 0
+      padding: 10px
+      color: $off-white
+      font-size: 24px
+      line-height: 30px
+  .count
+    position: relative
+    top: -37px
+    width: 100%
+    background-color: $off-white
+    padding: 0 10px
+    color: $mid-gray-2
+    text-transform: uppercase
+    font-size: 14px
+    height: 35px
+    line-height: 35px
+.collectionResults
+  padding: 35px 0
+  .screen-nav
+    display: none
+  .search-result
+    .screens-wrapper
+      height: 260px
+      background-size: cover
+      background-repeat: no-repeat
+  .count
+    background-color: $off-white
+    padding: 0 10px
+    color: $mid-gray-2
+    text-transform: uppercase
+    font-size: 14px
+    height: 35px
+    line-height: 35px
+  .overlay
+    height: 260px
+    width: 100%
+    display: block
+    @include gradient(linear,top,rgba(0, 0, 0, 0.00),rgba(13, 13, 13, 0.80),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#0d0d0d')

@@ -1,0 +1,12 @@
+<div class="record-screen-item {{item.type}}-type" {{#item.image_300_url}}style="background-image: url({{item.image_300_url}});"{{/item.image_300_url}}>
+    {{#item.text}}
+    <div class="fact-wrapper">
+        {{#item.title}}
+        <h4>{{item.title}}</h4>
+        {{/item.title}}
+
+        <aside class="screen-text">{{{item.text}}}</aside>
+    </div>
+    <div class="overlay"></div>
+    {{/item.text}}
+</div>

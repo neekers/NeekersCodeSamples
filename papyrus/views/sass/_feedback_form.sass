@@ -1,0 +1,114 @@
+// feedback form
+#feedback_inner_wrapper
+  position: relative
+  display: block
+  padding: 20px
+  height: 100%
+  width: 100%
+#feedback_inner_wrapper, .form_toggle_btn, .feedback_response_message
+  @include border-radius( 0 5px 5px 0 )
+  @include box-shadow( 0px 2px 15px 0px rgba(0,0,0, .7) )
+  background-color: $dark-blue
+.feedback_response_message
+  position: absolute
+  z-index: 10
+  display: none
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding: 20px
+  word-wrap: break-word
+  text-align: center
+  p
+    position: relative
+    top: 50%
+    font-size: 1.5em
+
+#feedback_form
+  @include font-sans-serif
+  color: #fff
+  text-shadow: 0px -1px 1px rgba(108,132,153, 1)
+  position: fixed
+  display: block
+  width: 300px
+  min-height: 300px
+  bottom: 100px
+  left: -343px
+  text-align: left
+  @include border-radius( 5px )
+  z-index: 999999
+  @include transition( left 500ms ease )
+  &.activated
+    left: 0
+  .feedback_type input
+    width: auto
+
+.form_toggle_btn
+  font:
+    weight: bold
+    size: 1.1em
+  position: absolute
+  top: 50%
+  margin-top: -25px
+  color: $off-white
+  height: 50px
+  line-height: 50px
+  vertical-align: middle
+  width: 150px
+  right: -20px
+  z-index: -1
+  display: block
+  text-align: center
+  @include box-shadow( 0px 4px 8px 0px rgba(0,0,0, .4) )
+  @include transition( all 200ms linear )
+  &:hover
+    right: -150px
+.close_form
+  padding: 5px 10px
+  position: absolute
+  right: 10px
+  bottom: 0
+  color: $off-white
+  &:hover
+    text-decoration: underline
+#feedback_form textarea
+  padding: 10px
+  height: 125px
+  width: 95%
+  margin-bottom: 20px
+#feedback_form input
+  &[type=checkbox]
+    width: 15px
+    height: 15px
+
+#feedback_submit
+  font-size: 1.1em
+  height: 50px
+  line-height: 50px
+  vertical-align: middle
+  text-align: center
+  display: block
+  color: #333
+  text-shadow: 0px -1px 1px #916B02
+  margin: 20px 0
+  @include border-radius( 10px )
+  @include box-shadow( 0px 2px 3px 0px rgba(0,0,0, .7) )
+  background: #ffd65e
+  background: -moz-linear-gradient(top, #ffd65e 0%, #febf04 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd65e), color-stop(100%,#febf04))
+  background: -webkit-linear-gradient(top, #ffd65e 0%,#febf04 100%)
+  background: -o-linear-gradient(top, #ffd65e 0%,#febf04 100%)
+  background: -ms-linear-gradient(top, #ffd65e 0%,#febf04 100%)
+  background: linear-gradient(top, #ffd65e 0%,#febf04 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04',GradientType=0 )
+  &:active
+    @include box-shadow( inset 0px 2px 3px 0px rgba(0,0,0, .7) )
+    background: #febf04
+    background: -moz-linear-gradient(top, #febf04 0%, #ffd65e 100%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#febf04), color-stop(100%,#ffd65e))
+    background: -webkit-linear-gradient(top, #febf04 0%,#ffd65e 100%)
+    background: -o-linear-gradient(top, #febf04 0%,#ffd65e 100%)
+    background: -ms-linear-gradient(top, #febf04 0%,#ffd65e 100%)
+    background: linear-gradient(top, #febf04 0%,#ffd65e 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febf04', endColorstr='#ffd65e',GradientType=0 )

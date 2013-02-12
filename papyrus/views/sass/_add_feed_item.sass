@@ -1,0 +1,78 @@
+.editing 
+  .feed-type
+    p
+      font-size: 16px
+      color: $mid-gray-2
+      margin-bottom: 5px
+      vertical-align: middle
+    input
+      width: 500px
+      height: 40px
+      line-height: 40px
+      padding: 0 10px
+      font-size: 16px
+      color: $mid-gray-3
+      outline: none
+      background-color: $off-white
+      @include box-shadow( inset 0 0 3px 1px $nearly-black-20 )
+      border: 0
+      vertical-align: middle
+    .add-feed
+      margin-bottom: 20px
+    .liked-feeds
+      @include box-shadow( inset 0 0 3px 1px $nearly-black-20 )
+      padding: 30px 30px 10px 0
+      max-height: 257px
+      overflow: auto
+    .button
+      @include add-toolbar-button
+      height: 40px
+      line-height: 40px
+      vertical-align: middle
+      font-weight: bold
+      margin-left: 8px
+    .liked-items
+      li
+        display: inline-block
+        margin-left: 30px
+        margin-bottom: 20px
+        width: 327px
+        a
+          display: block
+          height: 40px
+          line-height: 40px
+          font-size: 16px
+          background-color: #f0f0f0
+          color: $mid-gray-2
+          @include box-shadow( 0 0 3px 1px $nearly-black-20 )
+          @include gradient(linear,top,rgb(240, 240, 240),rgb(225, 225, 225),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f0f0f0', EndColorStr='#e1e1e1')
+          .icon
+            margin-right: 10px
+            display: inline-block
+            height: 40px
+            width: 40px
+            text-align: center
+            background-color: #ff7200
+            @include gradient(linear,top,rgb(255, 114, 0),rgb(241, 108, 0),'left top, left bottom')
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ff7200', EndColorStr='#f16c00')
+            img
+              vertical-align: middle
+          &:hover
+            background-color: #f3f3f3
+            @include gradient(linear,top,rgb(243, 243, 243),rgb(231, 231, 231),'left top, left bottom')
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f3f3f3', EndColorStr='#e7e7e7')
+            @include box-shadow( 0 0 5px 1px $nearly-black-20 )
+            .icon
+              background-color: #ff8600
+              @include gradient(linear,top,rgb(255, 134, 0),rgb(244, 128, 0),'left top, left bottom')
+              filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ff8600', EndColorStr='#f48000')
+          &:active
+            background-color: #eaeaea
+            @include gradient(linear,top,rgb(234, 234, 234),rgb(216, 216, 216),'left top, left bottom')
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eaeaea', EndColorStr='#d8d8d8')
+            @include box-shadow(inset 0 0 3px 1px $nearly-black-30 )
+            .icon
+              background-color: #fe5700
+              @include gradient(linear,top,rgb(254, 87, 0),rgb(237, 81, 0),'left top, left bottom')
+              filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fe5700', EndColorStr='#ed5100')

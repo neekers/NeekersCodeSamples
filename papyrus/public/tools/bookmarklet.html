@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Collagio Bookmarklet</title>
+<link rel="stylesheet" href="resources/styles/bookmarklet.css">
+<link rel="stylesheet" href="/papyrus/css/login.css">
+</head>
+<body>
+
+  <a id="button" class="request-button">+ Collagio</a>
+  <script type="text/x-pinster-bookmarklet" id="pinster-bookmarklet">
+    function() {
+        var v = $VERSION, r = '$ROOT';
+        s=document.createElement('script');
+        s.type = 'text/javascript';
+        s.setAttribute('data-root', r);
+        s.setAttribute('data-version', v);
+        s.src = r + '/bookmarklet.js?v=' + v + '&r=' + Math.floor(Math.random()*99999);
+        s.className = 'pinster-resource';
+        s.id = 'pinster-root';
+        s.onerror=function() {
+          s.parentNode.removeChild(s);
+          alert('Unable to load +Collagio. Try again later.');
+        };
+        document.getElementById('pinster-root')||(document.head||document.body).appendChild(s);
+    }
+  </script>
+
+  <script type="text/javascript">
+    var version = 4; // Up this version everytime the bookmarkelt code changes
+    var root = window.location.href.replace(/\/[^\/]*$/,'/js/src/')
+                                   .replace(/^https?:\/\//,"//");
+
+    var a = document.createElement('a');
+    a.href = window.location.href;
+    var environment = a.host.replace(/[.:].*/,'');
+
+    var button = document.getElementById('button');
+    button.onclick = function() { return false; };
+    var f = document.getElementById('pinster-bookmarklet').innerHTML
+                    .replace(/^\s+|\s+$/g, '')
+                    .replace(/([{}();,]|if)\s*/g, '$1')
+                    .replace(/\s*([+=])\s*/g, '$1')
+                    .replace('$VERSION', version)
+                    .replace('$ROOT', root);
+    button.href = 'javascript:(' + f + ')()';
+    if (environment !== "www") button.appendChild(document.createTextNode(' ' + environment + ' v' + version));
+  </script>
+</body>
+</html>

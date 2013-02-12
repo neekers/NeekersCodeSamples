@@ -1,0 +1,45 @@
+.appendix {
+  margin-top: 20px;
+  padding: 20px;
+  clear: both; }
+  .appendix header {
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    position: relative; }
+    .appendix header:after {
+      content: "";
+      height: 0px;
+      width: 0px;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -10px;
+      display: block;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 25px solid rgba(205, 205, 205, 0.7);
+      border-radius: 3px; }
+  .appendix .appendix_meta {
+    float: left;
+    width: 23%; }
+    .appendix .appendix_meta .appendix_prompt {
+      padding: 20px 0;
+      height: 200px;
+      text-align: center; }
+      .appendix .appendix_meta .appendix_prompt .avatar, .appendix .appendix_meta .appendix_prompt .appendix_owner_name {
+        display: inline-block; }
+      .appendix .appendix_meta .appendix_prompt .appendix_owner_name {
+        font-size: 1.5em; }
+      .appendix .appendix_meta .appendix_prompt .avatar {
+        height: 40px;
+        width: 40px;
+        position: relative;
+        margin: 0 auto;
+        clear: both;
+        background: url("/prototypes/images/user_avatar.jpg") center center no-repeat;
+        background-size: auto 100%;
+        border-radius: 5px;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6); }
+      .appendix .appendix_meta .appendix_prompt blockquote {
+        font-size: 2em;
+        margin-top: 20px; }

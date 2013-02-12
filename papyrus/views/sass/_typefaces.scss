@@ -1,0 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic);
+
+// pictos icon font
+@font-face {
+  font-family: 'Pictos';
+  src: url('/papyrus/css/pictos/pictos-web.eot');
+  src: local('☺'),
+  url('/papyrus/css/pictos/pictos-web.woff') format('woff'),
+  url('/papyrus/css/pictos/pictos-web.ttf') format('truetype'),
+  url('/papyrus/css/pictos/pictos-web.svg#webfontIyfZbseF') format('svg');
+}

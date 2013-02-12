@@ -1,0 +1,103 @@
+.add_to_collection {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: table;
+  border: 1px dashed #999999;
+  cursor: pointer;
+  box-shadow: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+  overflow: hidden;
+  max-height: 250px;
+  margin-top: 20px;
+  /* show and hide the form using a simple animation */ }
+  .add_to_collection:hover {
+    background-color: rgba(0, 0, 0, 0.3); }
+    .add_to_collection:hover > p {
+      color: white; }
+  .add_to_collection form {
+    position: absolute;
+    bottom: -100%;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    background: url("/prototypes/images/bg_tile.png");
+    box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.4), inset 0px -4px 8px 0px rgba(0, 0, 0, 0.1);
+    -webkit-transition: bottom 1s ease;
+    -moz-transition: bottom 1s ease;
+    transition: bottom 1s ease;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4); }
+    .add_to_collection form.activated {
+      bottom: 0px; }
+    .add_to_collection form input, .add_to_collection form textarea {
+      width: 100%;
+      margin: 10px 0; }
+    .add_to_collection form .cancel_btn, .add_to_collection form .go_btn {
+      position: absolute;
+      bottom: 15px;
+      background-color: rgba(204, 204, 204, 0.5); }
+    .add_to_collection form .cancel_btn {
+      font-weight: bold;
+      left: 20px;
+      padding: 5px 10px;
+      border: 2px solid white;
+      border-radius: 5px;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.7); }
+      .add_to_collection form .cancel_btn:hover {
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.7); }
+      .add_to_collection form .cancel_btn:active {
+        box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.7); }
+    .add_to_collection form textarea {
+      height: 40px; }
+    .add_to_collection form .go_btn {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: block;
+      background: rgba(204, 204, 204, 0.5) url("/prototypes/images/plus.png") center center no-repeat;
+      background-size: auto 100%;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      right: 20px;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.7);
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      transition: all 500ms ease; }
+      .add_to_collection form .go_btn:hover {
+        background-color: rgba(155, 155, 155, 0.7);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.7); }
+      .add_to_collection form .go_btn:active {
+        box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.7); }
+  .add_to_collection p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+  .add_to_collection .add_icon {
+    font-size: 1.3em;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 35px; }
+    .add_to_collection .add_icon:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -10px;
+      top: 0px;
+      height: 25px;
+      width: 25px;
+      border: 2px solid #333333;
+      border-radius: 50%;
+      background: rgba(204, 204, 204, 0.5) url("/prototypes/images/plus.png") left center no-repeat;
+      background-size: auto 100%; }
+
+.choose_from_collection {
+  float: left; }

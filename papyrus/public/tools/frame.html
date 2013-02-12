@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Collagio Bookmarklet Frame</title>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/tools/js/src/jquery.pinster.js"></script>
+  <script type="text/javascript">
+    $(window).on('message', function (e) {
+      var e = e.originalEvent, data = JSON.parse(e.data);
+      if (data.url.indexOf("/api/collections/") === -1
+        && data.url !== $.origin(location.href) + ("/api")
+        && data.url !== $.origin(location.href) + ("/api/users/s3")
+        && data.url !== $.origin(location.href) + ("/api/topics")
+        && data.url.indexOf("/collections") === -1
+        && data.url.indexOf("/collection_list") === -1
+        && data.url !== $.origin(location.href) + "/auth/check")
+        return console.log("url not authorized: " + data.url), false;
+
+      $.ajax(data).always(function(result, statusText, jqXHR) {
+        if (!jqXHR.done) {
+          jqXHR = result;
+          result = null;
+        }
+        e.source.postMessage(JSON.stringify({
+          id: data.id,
+          status: jqXHR.status,
+          statusText: statusText,
+          headers: jqXHR.getAllResponseHeaders(),
+          result: result,
+        }), e.origin);
+      });
+    });
+  </script>
+</head>
+</html>

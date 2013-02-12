@@ -1,0 +1,114 @@
+.add-collection
+  position: relative
+  width: 320px
+  padding: 40px 60px
+  background: $light-gray-1
+  margin: 150px auto
+  ::-webkit-scrollbar
+    -webkit-appearance: none
+    width: 7px
+  ::-webkit-scrollbar-thumb
+    border-radius: 4px
+    background-color: rgba(0,0,0,.5)
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5)
+  .heading
+    font-size: 36px
+    color: $mid-gray-1
+    text-align: center
+    margin-bottom: 20px
+  .title
+    width: 280px
+    font-size: 18px
+    height: 40px
+    line-height: 40px
+    padding: 0 20px
+    color: $mid-gray-3
+    outline: none
+    background-color: $off-white
+    @include box-shadow( inset 0 0 3px 1px $nearly-black-20 )
+    border: 0
+    vertical-align: middle
+  .create_btn
+    @include add-toolbar-button
+    height: 40px
+    line-height: 40px
+    vertical-align: middle
+    font-weight: bold
+    margin-left: 8px
+  .cancel_btn
+    position: absolute
+    right: 10px
+    top: 10px
+  .dropdown-container
+    width: 100%
+    margin-bottom: 20px
+    position: relative
+    cursor: pointer
+    .notch
+      margin-left: 5px
+      border-bottom: 0
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      border-top: 5px solid $mid-gray-2
+      padding: 0
+      width: 0
+      height: 0
+      position: absolute
+      top: 20px
+      right: 20px
+    .selected-topic
+      padding: 0 20px
+      height: 40px
+      line-height: 40px
+      font-size: 18px
+      background-color: #f0f0f0
+      color: $mid-gray-2
+      width: 280px
+      z-index: 90
+      @include disable-seletion
+      @include box-shadow(inset 0 0 3px 1px $nearly-black-20 )
+      @include gradient(linear,top,rgb(240, 240, 240),rgb(225, 225, 225),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f0f0f0', EndColorStr='#e1e1e1')
+      &:hover
+        background-color: #f3f3f3
+        @include gradient(linear,top,rgb(243, 243, 243),rgb(231, 231, 231),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f3f3f3', EndColorStr='#e7e7e7')
+        @include box-shadow(inset 0 0 5px 1px $nearly-black-20 )
+      &:active
+        background-color: #eaeaea
+        @include gradient(linear,top,rgb(234, 234, 234),rgb(216, 216, 216),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eaeaea', EndColorStr='#d8d8d8')
+        @include box-shadow(inset 0 0 3px 1px $nearly-black-30 )
+    &.open .selected-topic
+      background: $off-white
+      @include box-shadow(0 0 3px 1px $nearly-black-20 )
+  .options
+    display: none
+    position: absolute
+    top: 40px
+    left: 0
+    background: $off-white
+    width: 100%
+    max-height: 175px
+    overflow: auto
+    @include box-shadow(0 3px 3px 1px $nearly-black-20 )
+    .option
+      height: 36px
+      line-height: 36px
+      padding: 0 20px
+      cursor: pointer
+      color: $mid-gray-1
+      font-size: 18px
+      @include disable-seletion
+      &:hover
+        background: $mid-blue-2
+        color: $off-white
+  footer
+    text-align: center
+
+  .error_message
+    color: $red
+    margin: 10px 0
+
+  .title.field_validation_error
+    @include box-shadow( inset 0 0 3px 1px $red )

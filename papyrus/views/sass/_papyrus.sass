@@ -1,0 +1,115 @@
+$bodyWidth: 1200px
+body
+  @include font-sans-serif
+  color: $mid-gray-1
+  background-color: #343434
+  background-image: url(/images/bg_page.png)
+  -webkit-font-smoothing: antialiased
+  &.noscroll
+    overflow: hidden !important
+
+    #hidden-header
+      display: block
+
+.onboardComplete
+  .first-time-user-callout
+    display: inline-block
+    .items
+      text-align: right
+      img
+        height: 80px
+      p
+        text-align: center
+.first-time-user-callout
+  display: none
+  position: absolute
+  top: 0
+  left: 590px
+  height: auto
+  margin-top: -40px
+  color: $mid-red
+  font-weight: bold
+  z-index: 199
+  .arrow
+    position: relative
+    width: 95px
+    height: 98px
+    margin-left: 72px
+    background: url("/images/red-arrow.png") no-repeat
+a, span.spanned-link
+  color: $mid-blue-2
+  text-decoration: none
+
+#page-title
+  display: none
+
+.error-message
+  display: none
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before, .cf:after
+  content: " " /* 1 */
+  display: table /* 2 */
+
+.cf:after 
+  clear: both
+
+// unsupported browser blocker
+#msie_blocker
+  background: url("/images/bg_page.png") repeat scroll 0 0
+  height: 100%
+
+  #header
+    text-align: center
+    height: 156px
+    background: url("/images/bg_header_ie.jpg") repeat scroll 0 0
+
+    #logo
+      margin-top: 32px
+      height: 100px
+      line-height: 100px
+
+  #content
+    position: relative
+    .message
+      text-align: center
+      font-weight: 400
+      font-size: 14px
+      color: #222222
+      margin: 0 0 10px 0
+
+      &.sorry
+        margin-bottom: 20px
+        font-size: 16px
+        font-weight: bold
+
+#overlay
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 200
+  background-color: $nearly-black-80
+  opacity: 0
+  overflow-x: auto
+  overflow-y: scroll
+  @include transition( opacity 250ms )
+  &.activated
+    opacity: 1
+
+.screen-app-link
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  color: $nearly-black

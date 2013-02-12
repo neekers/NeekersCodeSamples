@@ -1,0 +1,19 @@
+<div class ='edit_controls'>
+    <a id="caption-#{uid}"></a>
+
+    <div class="fact-editor" style="display: none">
+        Add text to this page<br />
+        {{#item}}
+        <input type='text' class='screen_header_input' name="headline-input" placeholder='Headline' value="{{title}}" />
+        <textarea class='screen_text_input' name="text-input" placeholder='Enter your text here'>{{text}}</textarea>
+        {{/item}}
+    </div>
+    <div class="edit_image_caption ff-edit">
+      <textarea placeholder="Item caption here" class="asset_caption" id="asset-caption">{{caption}}</textarea>
+    </div>
+    <div class = 'edit_action_buttons cf'>
+        <a href="#" class="cancel_edit_text"> Cancel </a>
+        <a href="#" class="submit_edit_text"> Done </a>
+        <a href="#" class="saving_text">Saving...</a>
+    </div>
+</div>

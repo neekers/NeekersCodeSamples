@@ -1,0 +1,207 @@
+#collage-header
+  position: relative
+  background-position: center center
+  background-size: cover
+  padding-top:  $headerHeight
+  height: 360px
+  overflow: hidden
+  .inner-wrapper
+    position: absolute
+    top: $headerHeight
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.3)
+  .inner-wrapper-2
+    width: 100%
+    height: 100%
+  .header-content
+    width: 1160px
+    height: 330px
+    margin: 0 auto
+    padding-top: 30px
+    padding-left: 40px
+    position: relative
+    &:hover .collection-reuse, &:hover .collection-fb-share
+      opacity: 1
+    .ego-stats-right
+      position: absolute
+      bottom: 20px
+      width: 20px
+      right: 150px
+      line-height: 18px
+
+      span
+        display: block
+
+  .header-content .ego-stats-right
+    width: 150px
+    span
+      padding-left: 5px
+
+  .border-right
+    border-right: 1px solid rgba(255,255,255,.2)
+    float: left
+    display: inline
+    padding-right: 10px
+    margin-right: 10px
+
+  .topic
+    display: block
+    margin-bottom: 10px
+
+  .title
+    font-size: 56px //54px
+    color: $off-white
+    margin-bottom: 10px
+    margin-left: -1px
+    height: auto
+    overflow: hidden
+    border: 1px solid transparent
+    @include text-shadow(1px 1px 3px $nearly-black-20)
+
+  .description
+    font-size: 22px //28px
+    margin-bottom: 10px
+    @include font-sans-serif-italic
+    color: $off-white
+    overflow: hidden
+    line-height: 1.2em
+    max-height: 53px
+
+  .details
+    height: 30px
+    vertical-align: middle
+    position: absolute
+    bottom: 20px
+    left: 40px
+    *
+      display: inline
+      vertical-align: middle
+    span
+      line-height: 25px
+      display: inline-block
+    span:not(:last-child)
+      padding-right: 10px
+      margin-right: 10px
+    span:nth-child(n+2)
+      border-right: 1px solid rgba(255,255,255,.2)
+    span:last-child
+      border-right: none
+    .author > span
+      margin-right: 0
+      padding-right: 5px
+
+  #edit-background
+    position: absolute
+    bottom: 15px
+    right: 0
+    text-transform: uppercase
+    @include button-square-base
+    /*background-color: #0d0d0d;*/
+    @include gradient(linear,top,rgba(13, 13, 13, 0.20),rgba(63, 63, 63, 0.20),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0d0d0d', EndColorStr='#3f3f3f')
+    padding: 0 10px
+    text-transform: uppercase
+    width: auto
+    font-size: 14px
+    font-weight: bold
+    &:hover
+      background-color: #52b1e2
+      @include gradient(linear,top,rgb(82, 177, 226),rgb(60, 154, 202),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#52b1e2', EndColorStr='#3c9aca')
+    &:active
+      background-color: #2689cf
+      @include gradient(linear,top,rgb(38, 137, 207),rgb(24, 111, 175),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2689cf', EndColorStr='#186faf')
+
+  .avatar
+    background-position: center center
+    background-size: cover
+    display: inline-block
+    height: 30px
+    width: 30px
+
+  .title, .description, .details
+    width: 758px
+
+  .topic, .author, .item-count, .view-count
+    font-size: 14px
+    color:  $off-white
+    white-space: nowrap
+  .topic
+    @include font-sans-serif-bold
+    color: #7fc6f3
+  .author-url
+    padding-right: 10px
+    @include font-sans-serif-bold
+    color: #7fc6f3
+
+  .collage-header-view-count, .collage-header-comment-count
+    font-size: 18px
+    font-weight: bold
+    color: #fff
+
+  .collage-header-view-label, .collage-header-comment-label
+    font-size: 12px
+
+  .like-container
+    position: absolute
+    right: 330px
+    top: 72px
+    width:  40px
+    text-align: center
+    color: $off-white
+
+  .collection-reuse
+    @include blue-button-base
+    top: 0
+    left: 35%
+    @transition(opacity 250ms)
+  .collection-fb-share
+    @include blue-button-base
+    top: 50%
+    right: 330px
+    @transition(opacity 250ms)
+
+.editing #collage-header
+  [contenteditable='true']
+    outline: none
+    background-color: $nearly-black-50
+    border: 1px dashed $off-white-20
+    padding: 5px 10px
+
+  &:hover .collection-reuse, &:hover .collection-fb-share
+    opacity: 0
+
+.publish
+  position: absolute
+  top: 50px
+  left: 965px
+  text-transform: uppercase
+  @include button-square-base
+  /*background-color: #0d0d0d;*/
+  width: auto
+  font-size: 14px
+  font-weight: bold
+
+  .publish-on
+    cursor: pointer
+    opacity: 1
+    padding: 0px 15px 0px 15px
+    float: left
+    @include gradient(linear,top,rgba(63, 63, 63, 1),rgba(51, 51, 51, 1),'left top, left bottom')
+    &:hover
+      @include gradient(linear,top,rgba(63, 63, 63, 1),rgba(51, 51, 51, 1),'left top, left bottom')
+    &:active
+      @include gradient(linear,top,rgba(63, 63, 63, 1),rgba(51, 51, 51, 1),'left top, left bottom')
+
+  .publish-off
+    color: #ffffff
+    cursor: pointer
+    float: left
+    padding: 0px 15px 0px 15px
+    @include gradient(linear,top,rgba(63, 63, 63, .3),rgba(51, 51, 51, .3),'left top, left bottom')
+    &:hover
+      @include gradient(linear,top,rgba(63, 63, 63, .2),rgba(51, 51, 51, .2),'left top, left bottom')
+    &:active
+      @include gradient(linear,top,rgba(63, 63, 63, .4),rgba(51, 51, 51, .4),'left top, left bottom')

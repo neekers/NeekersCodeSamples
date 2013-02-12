@@ -1,0 +1,256 @@
+#reuse
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 2000
+  ::-webkit-scrollbar
+    -webkit-appearance: none
+    width: 7px
+  ::-webkit-scrollbar-thumb
+    border-radius: 4px
+    background-color: rgba(0,0,0,.5)
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5)
+
+  canvas
+    display: block
+
+  .reuse-item-form-wrapper
+    font-weight: normal
+    @include font-sans-serif
+    display: block
+    position: fixed
+    z-index: 2200
+    background-color: $off-white
+    @include box-shadow( 0 3px 15px 0 rgba(0, 0, 0, 0.7) )
+    width: 585px
+    height: 560px
+    margin-top: -150px
+    left: 44%
+    margin-left: -200px
+    @include transition( opacity .3s linear )
+    top: 30%
+
+    .cancel-btn
+      position: absolute
+      right: 0
+      margin: 10px
+      display: block
+      z-index: 3000
+
+    .reuse-item-form
+      width: 585px
+      height: auto
+      z-index: 2200
+      .screen-item
+        width: 585px
+        height: 360px
+        overflow: hidden
+        background-size: cover
+        background-position: center center
+
+        &.fact-type
+          overflow-y: auto
+          background-color: #ffffff
+          h2
+            font-size: 22px
+            font-weight: 700
+          p
+            line-height: 20px
+
+        &.feed-type
+          overflow-y: auto
+          .rssHeader a
+            font-size: 15px
+
+          .rssRow
+            margin-bottom: 40px
+
+            h4, h4 > a
+              margin: 0 0 10px 0
+              font-size: 28px
+              line-height: 32px
+
+            & > div // posted date
+              font-size: 13px
+
+            p
+              font-size: 15px
+              line-height: 21px
+              margin: 15px 0
+
+        &.collection-type
+          height: 360px
+
+      .asset > .fact-wrapper, .asset > .rssFeed
+        margin: 30px
+        padding: 20px 25px
+        border: 1px solid rgba(0, 0, 0, .2)
+        @include box-shadow(0 1px 3px 0 rgba(0, 0, 0, .15) )
+        overflow: hidden
+
+      #reuse-asset-caption
+        margin: 20px
+        resize: none
+        padding: 5px
+        width: 533px
+        height: 48px
+        color: #474747
+        font-size: 18px
+        line-height: 25px
+        @include font-sans-serif
+
+    footer
+
+      //background-color: red
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 100%
+      text-align: right
+      z-index: 1000
+      font-size: 14px
+      padding: 20px 0
+
+      .content
+        //background-color: green
+        height: 40px
+        width: 585px
+
+        #user-collections-list
+          font-size: 18px
+          color: $charcoal
+          height: 40px
+          width: 200px
+          border: 1px solid $close-btn-gray
+        
+        .error-message
+          display: none
+          position: absolute
+          right: 325px
+          bottom: 30px
+          color: #fff
+          font:
+            size: 10px
+            weight: bold
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, .5)
+          z-index: 100
+          padding: 5px 10px
+          background: $error-red
+          @include border-radius( 5px )
+          @include box-shadow( 0 2px 3px 0 rgba(0,0,0, .4) )
+
+        .reuse-btn
+          @include add-toolbar-button
+          padding: 0
+          float: right
+          height: 40px
+          line-height: 40px
+          vertical-align: middle
+          font-weight: bold
+          margin-left: 10px
+          margin-right: 20px
+          width: 85px
+          text-align: center
+
+          &.inactive
+            opacity: .5
+            cursor: default
+
+
+  .screen-app-link
+    width: 545px
+    height: 400px
+
+  #reuse-item
+    height: auto
+    margin: 0 auto
+    padding: 0
+    display: block
+    
+    .screen
+      margin: 0
+      .info
+        width: 585px
+      .mini-tiles, .tile
+        height: 70px
+    .screen .asset
+      background-color: #FFF
+      height: 100%
+
+  .dropdown-container
+    display: inline-block
+    margin-bottom: 20px
+    position: relative
+    cursor: pointer
+    .notch
+      margin-left: 5px
+      border-bottom: 0
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      border-top: 5px solid $mid-gray-2
+      padding: 0
+      width: 0
+      height: 0
+      position: absolute
+      top: 20px
+      right: 10px
+    .selected-collage
+      text-align: left
+      padding: 0 30px 0 20px
+      height: 40px
+      line-height: 40px
+      font-size: 16px
+      background-color: #f0f0f0
+      color: $mid-gray-2
+      width: 150px
+      z-index: 90
+      overflow: hidden
+      @include disable-seletion
+      @include box-shadow(inset 0 0 3px 1px $nearly-black-20 )
+      @include gradient(linear,top,rgb(240, 240, 240),rgb(225, 225, 225),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f0f0f0', EndColorStr='#e1e1e1')
+      &:hover
+        background-color: #f3f3f3
+        @include gradient(linear,top,rgb(243, 243, 243),rgb(231, 231, 231),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f3f3f3', EndColorStr='#e7e7e7')
+        @include box-shadow(inset 0 0 5px 1px $nearly-black-20 )
+      &:active
+        background-color: #eaeaea
+        @include gradient(linear,top,rgb(234, 234, 234),rgb(216, 216, 216),'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eaeaea', EndColorStr='#d8d8d8')
+        @include box-shadow(inset 0 0 3px 1px $nearly-black-30 )
+    &.open .selected-collage
+      background: $off-white
+      @include box-shadow(0 0 3px 1px $nearly-black-20 )
+    .options
+      display: none
+      position: absolute
+      top: 40px
+      left: 0
+      background: $off-white
+      width: 100%
+      max-height: 175px
+      overflow-y: auto
+      overflow-x: hidden
+      @include box-shadow(0 3px 3px 1px $nearly-black-20 )
+      li
+        text-align: left
+        white-space: nowrap
+        height: 34px
+        line-height: 34px
+        padding: 0 0 0 20px
+        cursor: pointer
+        color: $mid-gray-1
+        font-size: 16px
+        @include disable-seletion
+        &:hover
+          background: $mid-blue-2
+          color: $off-white
+
+  .rssFeed
+    padding: 20px 40px 40px 40px
+    .rssRow
+      margin-bottom: 5px
+  .below-asset
+    display: none

@@ -1,0 +1,80 @@
+{{#showActions}}
+    {{#showScreenNavigation}}
+      <nav class="screen-nav">
+          <a class="goTop" title="scroll to top" href="#top"><img src="/images/asset-nav-jump-top.png"/></a>
+          <a class="goPrev" title="scroll to previous" href="#screen-{{prevIndex}}"><img src="/images/asset-nav-up.png"/></a>
+          <a class="ordinal" href="#" name="screen-{{index}}">{{index}}</a>
+          <a class="goNext" title="scroll to next" href="#screen-{{nextIndex}}"><img src="/images/asset-nav-down.png"/></a>
+          <a class="goBottom" title="scroll to bottom" href="#bottom"><img src="/images/asset-nav-jump-bottom.png"/></a>
+      </nav>
+    {{/showScreenNavigation}}
+{{/showActions}}
+
+{{#item}}
+    <a class="link" href="{{app_url}}" title="{{title}}">
+      <div class="info{{#description}} with-description{{/description}}">
+        <div class='title'>{{title}}</div>
+        <div class='owner'>
+          <span class="user-name">By {{owner.first_name}} {{owner.last_name}}</span>
+          <span class="asset-count">{{screens_count}} {{screens_count_text}}</span>
+        </div>
+        <div class="mini-tiles"><div class="overlay"></div></div>
+        {{#description}}
+          <div class="description">{{description}}</div>
+        {{/description}}
+      </div>
+      <div class="metadata">
+        <div class="container">
+          {{#view_count}}
+          <div class="view-count-wrapper">
+            <img class="icon" src="/images/visits-icon.png"/>
+            <span class="view-count">{{view_count}}</span>
+          </div>
+          {{/view_count}}
+          {{#total_comment_count}}
+          <div class="comment-count-wrapper">
+            <img class="icon" src="/images/comment-icon.png"/>
+            <span class="comment-count">{{total_comment_count}}</span>
+          </div>
+          {{/total_comment_count}}
+          {{#reuse_count}}
+          <div class="reuse-count-wrapper">
+            <img class="icon" src="/images/reuse-scissors.png"/>
+            <span class="reuse-count">{{reuse_count}}</span>
+          </div>
+          {{/reuse_count}}
+          <div class="creation-elapsed-wrapper">
+            <span class="creation-elapsed">{{created}}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+{{/item}}
+
+{{#showActions}}
+    {{#showLikeButton}}
+      <div class="like-container">
+          <a class="like-btn" title="like" href="#" {{#item.collected}}class="liked"{{/item.collected}}><img src="/images/icon-heart.png" /></a>
+
+          {{#item.collected_count}}
+          <div class="like-count">
+              {{item.collected_count}}
+          </div>
+          {{/item.collected_count}}
+      </div>
+    {{/showLikeButton}}
+
+    {{#showReuseButton}}
+      <a href="#" class="screen-reuse"><img src="/images/icon-scissor.png" title="Reuse" /></a>
+    {{/showReuseButton}}
+
+    {{#showFacebookShareButton}}
+      <a href="#" class="screen-fb-share"><img src="/images/icon-facebook.png" title="Share on Facebook" /></a>
+    {{/showFacebookShareButton}}
+
+    {{#editable}}
+      {{#showDeleteButton}}
+        <a href="#" class="screen-delete" style="display: none;"><img src="/images/icon-trash.png" title="Delete" /></a>
+      {{/showDeleteButton}}
+    {{/editable}}
+{{/showActions}}

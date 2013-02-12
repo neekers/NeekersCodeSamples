@@ -1,0 +1,277 @@
+// Explore Navigation Header
+// TO DO: There is way too much nesting here, lets clean this up.
+// *******************************************
+
+//Topics Menu
+//********************************
+.topics-options
+  display: none
+  position: absolute
+  top: 50px
+  width: 850px
+  left: 52px
+  background-image: url(/images/bg_page.png)
+  .option
+    &:nth-child(1) .title
+      background-color: rgba(13, 13, 13, .9)
+    &:nth-child(2) .title
+      background-color: rgba(13, 13, 13, .8)
+    &:nth-child(3) .title
+      background-color: rgba(13, 13, 13, .7)
+    &:nth-child(4) .title
+      background-color: rgba(13, 13, 13, .6)
+    &:nth-child(5) .title
+      background-color: rgba(13, 13, 13, .5)
+    &:nth-child(6) .title
+      background-color: rgba(13, 13, 13, .8)
+    &:nth-child(7) .title
+      background-color: rgba(13, 13, 13, .7)
+    &:nth-child(8) .title
+      background-color: rgba(13, 13, 13, .6)
+    &:nth-child(9) .title
+      background-color: rgba(13, 13, 13, .5)
+    &:nth-child(10) .title
+      background-color: rgba(13, 13, 13, .4)
+    &:nth-child(11) .title
+      background-color: rgba(13, 13, 13, .7)
+    &:nth-child(12) .title
+      background-color: rgba(13, 13, 13, .6)
+    &:nth-child(13) .title
+      background-color: rgba(13, 13, 13, .5)
+    &:nth-child(14) .title
+      background-color: rgba(13, 13, 13, .4)
+    &:nth-child(15) .title
+      background-color: rgba(13, 13, 13, .3)
+    &:hover .title
+      background-color: rgba(91, 189, 247, 1)
+
+    .title
+      font-weight: bold
+      text-align: center
+      line-height: 60px
+      color: #FFF
+      display: inline-block
+      float: left
+      width: 170px
+      height: 60px
+      text-transform: uppercase
+      background-color: rgba(13, 13, 13, .9)
+
+    .topic-selected
+      background-color: rgba(91, 189, 247, 1) !important
+
+
+
+//Filter Menu
+//********************************
+.filter-options
+  display: none
+  position: absolute
+  right: 1px
+  top: 50px
+  width: 170px
+  background-image: url(/images/bg_page.png)
+  .option
+    &:nth-child(1) .title
+      background-color: rgba(13, 13, 13, .9)
+    &:nth-child(2) .title
+      background-color: rgba(13, 13, 13, .8)
+    &:nth-child(3) .title
+      background-color: rgba(13, 13, 13, .7)
+    &:nth-child(4) .title
+      background-color: rgba(13, 13, 13, .6)
+    &:nth-child(5) .title
+      background-color: rgba(13, 13, 13, .5)
+    &:nth-child(6) .title
+      background-color: rgba(13, 13, 13, .8)
+    &:nth-child(7) .title
+      background-color: rgba(13, 13, 13, .7)
+    &:hover .title
+      background-color: rgba(91, 189, 247, 1)
+    
+    .title
+      font-weight: bold
+      text-align: center
+      line-height: 60px
+      color: #FFF
+      display: inline-block
+      float: left
+      width: 172px
+      height: 60px
+      text-transform: uppercase
+      background-color: rgba(13, 13, 13, .9)
+
+    .filter-selected
+      background-color: rgba(91, 189, 247, 1) !important
+
+//********************************
+
+
+.explore-navigation-header
+  display: block
+  height: 50px
+  background-image: url(/images/bg_page.png)
+  box-sizing: border-box
+  position: relative
+  z-index: 20
+
+  .wrapper
+    background-color: rgba(13, 13, 13, 0.3)
+
+  .navigation
+    position: relative
+    margin: 0 auto
+    display: block
+    width: $bodyWidth
+    height: 50px
+
+    .item:not(.search-form)
+      border-left: 1px solid $light-grey-border
+      color: #FFF
+      .title
+        display: inline-block
+        border-left: 1px solid $mid-grey-border
+        width: 100%
+        color: rgb(71, 71, 71)
+        overflow: hidden
+
+      &:hover
+        .title
+          color: $off-white
+          background-color: #3f3f3f
+          @include gradient(linear,top,rgb(47, 47, 47),rgb(3b, 3b, 3b),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#474747', EndColorStr='#3b3b3b')
+
+      &.selected
+        .title
+          color: #FFF
+          background-color: #3f3f3f
+          @include gradient(linear,top,rgb(63, 63, 63),rgb(51, 51, 51),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3f3f3f', EndColorStr='#333333')
+
+      &.over
+        .title
+          color: $off-white
+          background-color: #3f3f3f
+          @include gradient(linear,top,rgb(47, 47, 47),rgb(3b, 3b, 3b),'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#474747', EndColorStr='#3b3b3b')
+
+
+    .explore-topics, .explore-filters
+
+      .button-wrapper
+        display: block
+        width: 170px
+        height: 50px
+        position: absolute
+
+        .title
+          display: block
+
+        .notch
+          display: inline-block
+          border-left: 5px solid transparent
+          border-right: 5px solid transparent
+          border-top: 5px solid $mid-gray-2
+          position: absolute
+          top: 23px
+          right: 10px
+
+    .explore-topics
+      .button-wrapper
+        overflow: hidden
+
+    .explore-search
+      float: left
+      display: block
+      width: 50px
+      height: 50px
+      .icon
+        border-left: 1px solid $mid-grey-border
+        display: block
+        height: 50px
+        width: 50px
+        text-indent: -900px
+        background-repeat: no-repeat
+        background-position: center center
+        background-image: url('/images/search-icon.png')
+        &:hover
+          background-color: $off-white-30
+        &:active
+          background-color: $nearly-black-20
+          @include box-shadow(inset 0 0 3px $nearly-black-30)
+
+    .explore-sort-label
+      height: 50px
+      line-height: 50px
+      padding: 0 10px
+      text-align: right
+      font-weight: bold
+      font-size: 14px
+      float: right
+    
+
+    .search-form
+      display: block
+      float: left
+      height: 50px
+      width: 0
+      overflow: hidden
+      @include transition(width 250ms ease-in-out)
+      .query
+        height: 50px
+        width: 260px
+        margin: 0
+        line-height: 50px
+        border: none
+        padding: 0 20px
+        font-size: 18px
+        outline: none
+        background-color: $off-white
+        @include box-shadow(inset 0 0 3px $nearly-black-20)
+
+    .explore-topics, .explore-filters, .explore-following
+      line-height: 50px
+      font-weight: bold
+      font-size: 14px
+      height: 50px
+      color: #FFF
+
+    .explore-topics
+      float: left
+      text-align: center
+      width: 170px
+
+    .explore-following
+      float: left
+      text-align: center
+      width: 170px
+      border-right: 1px solid $light-grey-border
+      .title
+        border-right: 1px solid $mid-grey-border
+
+    .explore-filters
+      text-align: center
+      float: right
+      width: 170px
+      .title
+        border-right: 1px solid $mid-grey-border
+
+    .explore-filters.item
+      border-right: 1px solid $light-grey-border
+      
+
+  .searchOpen
+    .explore-search
+      .icon
+        background-image: url('/images/icon-search-cancel.png')
+        background-color: #505050
+        &:hover
+          background-color: #646464
+        &:active
+          background-color: #353535
+    .search-form
+      width: 300px
+
+// End of Explore Navigation Header
+// *******************************************

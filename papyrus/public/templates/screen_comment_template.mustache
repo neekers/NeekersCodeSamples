@@ -1,0 +1,18 @@
+<li class="comment-wrapper cf">
+    <table>
+        <tr>
+            <td><a class="author" href="{{user_url}}"><img src="{{author.image_url}}" width="30" /></a></td>
+            <td>
+                <span class="comment-text"><a class="author-name" href="{{user_url}}">{{author.first_name}} {{author.last_name}} </a>
+                    <span class="comment">{{text}}</span>
+                </span>
+
+                <date class="comment-date">{{created_timestamp}}</date>
+
+                {{#deletable}}
+                <a class="delete-comment" href="#">Delete</a>
+                {{/deletable}}
+            </td>
+        </tr>
+    </table>
+</li>

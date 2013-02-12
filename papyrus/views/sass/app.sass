@@ -1,0 +1,89 @@
+// this is the primary sass file.
+// any sass files you wish to include must be added here.
+//
+// this provides us with a few advantages
+// .one { we can share mixins between stylesheets; }
+// .two { guardfile and assets.yml have only one control point for stylesheets. }
+
+
+// reset all browser defaults.. in theory. reset needs mixins.
+@import "reset"
+
+// the order of this file is importnat.
+@import "gradient_mixin"
+
+// color variables.
+@import "colors"
+
+// all mixins and animations should be stored here. they are shared with all other sass files below.
+@import "mixins" 
+
+// animations
+@import "animate"
+
+// branded and icon typefaces
+@import "typefaces"
+
+// the main app is called papyrus. these items don't really fall into the subcategories below.
+@import "papyrus"
+
+// the header. 'nuff said.
+@import "header"
+
+// the explore header. 'nuff said.
+@import "explore_header"
+
+// the collage header. 'nuff said.
+@import "collage_header"
+
+@import "profile"
+
+@import "bookmarklet"
+
+@import "full_stacked_view"
+
+@import "screen_view"
+
+@import "item_lightbox"
+
+@import "notifications"
+
+// temp feedback form on the right side of the body.
+@import "feedback_form" 
+
+@import "feed_assets"
+
+//Way back button bar
+@import "wayback"
+
+// the meta data shown on the back of screen cards.
+@import "meta_data_holder"
+
+//item reuse modal
+@import "reuse"
+
+//screen comments
+@import "comments"
+
+@import "reorder"
+
+@import "add_fact_item"
+
+@import "add_photo_video_item"
+
+@import "add_feed_item"
+
+//Formats markdown back to normal after the reset
+@import "fact_markdown"
+
+@import "turntable"
+
+@import "create_collection_modal"
+
+@import "recommended_collages"
+
+// this is where all our feature flags are kept so we can override them
+@import "feature_flags"
+
+// always add rwd last. rwd = responsive web design.
+@import "rwd"

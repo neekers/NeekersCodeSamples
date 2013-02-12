@@ -1,0 +1,42 @@
+<div class="page-tear top"></div>
+<div class="page-tear"></div>
+
+<div class="asset-wrapper">
+  <h3>{{headline}}</h3>
+
+  <a href="#" class="close-add-item" title="close add photo"><img src="/images/close-button.png" /></a>
+
+  {{#showPhotoBar}}
+  <div class="liked-items-bar cf">
+      <a href="#" class="search-images"><span class="icon"></span></a>
+      <span class="search-photo-bar"><input type="text" placeholder="Search the web" /> </span>
+      <a href="#" class="liked-images active">Liked Images</a>
+      <a href="#" class="my-images">My Images</a>
+
+      <a title="Upload new photo" class="upload-image">
+        Upload
+        <input name="file" class="file" type="file" multiple accept="image/*">
+      </a>
+  </div>
+  {{/showPhotoBar}}
+
+  {{#showVideoBar}}
+  <div class="liked-items-bar cf">
+      <a href="#" class="liked-videos active">Liked Video</a>
+      <a href="#" class="my-videos">My Videos</a>
+  </div>
+  {{/showVideoBar}}
+
+  {{#showCollageBar}}
+  <div class="liked-items-bar cf">
+      <a href="#" class="liked-collages active">Liked Collages</a>
+      <a href="#" class="my-collages">My Collages</a>
+  </div>
+  {{/showCollageBar}}
+
+
+  <ul class="liked-items"></ul>
+  <div class="file-uploader">
+    
+  </div>
+</div>

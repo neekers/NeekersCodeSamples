@@ -1,0 +1,13 @@
+{{!
+THIS TEMPLATE IS JUST USED TO RENDER COLLECTION TILES IN THE ADD ITEMS TO A COLLECTION DIALOG. 
+It probably doesn't support rendering a raw collection in a regular tile view, but that shouldn't be an
+issue because everywhere else in the app we use the Papyrus approach of treating collections as a screen.
+}}
+<div class="asset image-wrapper">
+  {{#item}}
+  {{#cover_asset}}
+  <div class="asset-image" style='background-image: url("{{thumbnail_url}}");' />
+  {{/cover_asset}}
+  {{/item}}
+    <div class="show_meta_data_btn"></div>
+</div>

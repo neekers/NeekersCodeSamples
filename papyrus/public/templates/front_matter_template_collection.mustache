@@ -1,0 +1,74 @@
+<header id="collage-header">
+    <img src="{{cover_asset.asset_url}}" style="display: none;" id="hidden-header" />
+    <div class="inner-wrapper">
+    <div class="inner-wrapper-2">
+    <div class="header-content">
+        <a class="topic" href='#'>{{topic_title}}</a>
+         <div class="publish">
+          <span class="text publish-on">published</span>
+          <span class="text publish-off">unpublished</span>
+                    <!-- <input type="radio" name="publish"  value="publish" checked="true" /> Publish
+                     <input type="radio" name="publish" value="unpublish" /> Unpublish -->
+         </div>
+        <div id="collection_title_error_message" class="error-message">Please enter a title.</div>
+        <h1 class="title" placeholder="Title">
+          {{title}}
+        </h1>
+
+        <div class="description" placeholder="Enter description">
+            {{description}}
+            {{#deleted}}This collage has been deleted{{/deleted}}
+        </div>
+
+        <div class="details">
+            <a href="#" class="author-url"><span class="avatar" style='background-image:url("{{owner.image_url}}");'></span></a>
+            <span class="author">
+                <span>By</span><a class="author-url" href="#">{{owner.first_name}} {{owner.last_name}}</a>
+            </span>
+            <span class="view-count">
+               {{screens_count}} {{screens_count_text}}
+            </span>
+            <span class="view-count">
+             <img src="/images/time-icon.png">&nbsp;&nbsp;  Updated {{updatedAgo}}
+            </span>
+        </div>
+
+        <div class="like-container">
+            <a class="like-btn" href="#"><img src="/images/icon-heart.png" /></a>
+            {{#collected_count}}
+            <div class="like-count">
+                {{collected_count}}
+            </div>
+            {{/collected_count}}
+        </div>
+        <div class="ego-stats-right view-count">
+          <ul>
+            <li class="border-right">
+              <span class="collage-header-view-count">
+                {{view_count}}
+              </span>
+              <span class="collage-header-view-label">
+                {{view_label}}
+               </span>
+            </li>
+            <li>
+              <span class="collage-header-comment-count">
+                {{total_comment_count}}
+              </span>
+              <span class="collage-header-comment-label">
+                {{comment_label}}
+              </span>
+            </li>
+          </ul>
+
+        </div>
+        {{#editable}}
+        <a href="#" id="edit-background" style="display: none;">Edit Background</a>
+        {{/editable}}
+
+        <a href="#" class="collection-reuse"><img src="/images/icon-scissor.png" title="Reuse Collage" /></a>
+        <a href="#" class="collection-fb-share"><img src="/images/icon-facebook.png" title="Share Collage on Facebook" /></a>
+    </div>
+    </div>
+    </div>
+</header>

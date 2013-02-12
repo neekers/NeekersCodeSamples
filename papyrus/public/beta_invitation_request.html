@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+  <head lang='en-US'>
+    <title>Collagio Beta Signup</title>
+    <meta charset='utf-8' />
+    <meta content='en' http-equiv='Content-language' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' />
+    <link href='/images/favicons/favicon.png' rel='shortcut icon' type='image/x-icon' />
+    <link href='/css/beta_invitation_request.css' rel='stylesheet' type='text/css' />
+    <script type='text/javascript'>
+      //<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-32378783-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      //]]>
+    </script>
+  </head>
+  <body>
+    <div id="background"></div>
+    <div id='container'>
+      <header>
+        <div id="logo-container">
+          <img id="logo" src='/images/beta_request/logo.png' />
+        </div>
+      </header>
+      <div id="login-container">
+        <div id="welcome-message">
+          <h2 id="title" class="slogan">Collagio is a Curiosity Engine</h2>
+          <div id="bodyCopy">
+            <p class="message">A place to explore, connect and learn with others who share your interests. A fun and visual way to find, store and share our collective knowledge. You can enter text, upload photos and videos or collect information you find around the Web and assemble those elements into collages.</p>
+            <p class="message">We've pulled together a very early version of Collagio and are looking for awesome beta testers.</p>
+            <p class="message"><strong>Are you interested in helping us make it great?</strong></p>
+          </div>
+        </div>
+        <div id="request">
+          <p class="request-header">Please give us the email address with which you log into Facebook.</p>
+          <p class="request">If you are interested in learning more, please give us your email below.</p>
+          <!-- Google Doc Form -->
+          <div id="google_doc_form">
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='/thankyou.html';}" style="display:none;"></iframe>
+            <form action="https://docs.google.com/a/collagio.com/spreadsheet/formResponse?formkey=dExJMW9KdFFJd1p4XzVnaE4wUFRPemc6MQ&amp;amp;ifq" class="validate" id="ss-form" method="post" onsubmit="submitted=true;" target="hidden_iframe">
+              <input class="email request-form" id="entry_0" name="entry.0.single" placeholder="Facebook Email Address" required="required" style="display: inline-block;" type="email" value="">
+              <input name="pageNumber" type="hidden" value="0">
+              <input name="backupCache" type="hidden" value="">
+              <input class="button request-button" id="mc-embedded-subscribe" name="subscribe" style="display: inline-block" type="submit" value="Learn More">
+            </form>
+          </div>
+          <!-- End of Google Doc Form -->
+          <!-- MailChimp Stuff -->
+          <!-- %div#google_doc_form -->
+          <!-- %form{:action => "http://collagio.us2.list-manage1.com/subscribe/post?u=936a08a1189ac12471f12ccbf&amp;id=2ecdf15c60", :method => 'post', :id => "mc-embedded-subscribe-form", :class => 'validate', :name => "mc-embedded-subscribe-form", :target => '_self'} -->
+          <!-- %input{:type => 'email',  :value=>'', :name=>"EMAIL", :class=>"email", :id=>"mce-EMAIL", :placeholder=>"email address", :style=>"display: inline-block;", :required=>'required'} -->
+          <!-- %input{:type => 'submit', :value=>'Request Invitation', :name=>'subscribe', :id=>'mc-embedded-subscribe', :class=>'button', :style=>'display: inline-block'} -->
+          <!-- End of MailChimp Stuff -->
+        </div>
+      </div>
+    </div>
+
+    <script src='/javascripts/lib/jquery-1.8.2.js' type='text/javascript'></script>
+    <script type="text/javascript" src="/javascripts/lib/omniture_web_s_code_2012-8-3.js"></script>
+    <script src="/javascripts/beta_invite.js"></script>
+    <script type="text/javascript">
+      //Omniture tracking  
+      omnicollagio.pageName = document.title
+      var s_code=omnicollagio.t();if(s_code)document.write(s_code)
+
+      //Beta Invite
+      var betaInvite = new BetaInvite()
+    </script>
+  </body>
+</html>

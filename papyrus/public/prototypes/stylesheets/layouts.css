@@ -1,0 +1,354 @@
+.screen {
+  color: #cccccc;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  background: black;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.7); }
+  .screen .collect_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/bookmark_sprite.png");
+    background-repeat: no-repeat;
+    background-size: auto 80px;
+    display: block; }
+    .screen .collect_btn.collected {
+      background-position: center bottom; }
+    .screen .collect_btn.not_collected {
+      background-position: center top; }
+  .screen .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 2;
+    color: #cdcdcd;
+    font-weight: bold; }
+    .screen .overlay .title, .screen .overlay .subtitle {
+      padding: 0 10px; }
+    .screen .overlay .title {
+      height: 30px;
+      line-height: 30px;
+      vertical-align: middle; }
+    .screen .overlay .subtitle {
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 0.8em; }
+
+.video-wrapper .video-placeholder {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+.video-wrapper .video-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1; }
+.video-wrapper .play-overlay {
+  background-image: url("/play_btn.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  z-index: 1; }
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.screen-container .screen {
+  width: 100%;
+  height: 100%; }
+
+.asset {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -icab-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+  .asset .fact-text {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden; }
+
+.layout-0 .asset {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px; }
+
+.layout-1 .left-column, .layout-1 .middle-column, .layout-1 .right-column {
+  top: 0px;
+  height: 75%;
+  width: 33%; }
+.layout-1 .left-column {
+  left: 0px; }
+.layout-1 .middle-column {
+  left: 33.5%; }
+.layout-1 .right-column {
+  right: 0px; }
+.layout-1 .bottom-row {
+  bottom: 0px;
+  width: 100%;
+  height: 25%; }
+
+.layout-2 .top-row {
+  top: 0px;
+  height: 75%;
+  width: 100%; }
+.layout-2 .bottom-row {
+  bottom: 0px;
+  width: 100%;
+  height: 25%; }
+
+.layout-3 .left-column, .layout-3 .right-column {
+  width: 50%;
+  height: 75%;
+  top: 0px; }
+.layout-3 .left-column {
+  left: 0px; }
+.layout-3 .right-column {
+  right: 0px; }
+.layout-3 .bottom-row {
+  bottom: 0px;
+  width: 100%;
+  height: 25%; }
+
+.layout-4 .asset {
+  width: 50%;
+  height: 33%; }
+.layout-4 .top-left, .layout-4 .middle-left, .layout-4 .bottom-left {
+  left: 0px; }
+.layout-4 .top-right, .layout-4 .middle-right, .layout-4 .bottom-right {
+  right: 0px; }
+.layout-4 .top-left, .layout-4 .top-right {
+  top: 0px; }
+.layout-4 .middle-left, .layout-4 .middle-right {
+  top: 33.5%; }
+.layout-4 .bottom-left, .layout-4 .bottom-right {
+  bottom: 0px; }
+
+.layout-5 .asset {
+  height: 33%;
+  width: 33%; }
+.layout-5 .top-left, .layout-5 .middle-left, .layout-5 .bottom-left {
+  left: 0px; }
+.layout-5 .top-middle, .layout-5 .middle-middle, .layout-5 .bottom-middle {
+  left: 33.5%; }
+.layout-5 .top-right, .layout-5 .middle-right, .layout-5 .bottom-right {
+  right: 0px; }
+.layout-5 .top-left, .layout-5 .top-middle, .layout-5 .top-right {
+  top: 0px; }
+.layout-5 .middle-left, .layout-5 .middle-middle, .layout-5 .middle-right {
+  top: 33.5%; }
+.layout-5 .bottom-left, .layout-5 .bottom-middle, .layout-5 .bottom-right {
+  bottom: 0px; }
+
+.layout-6 .asset {
+  height: 33%; }
+.layout-6 .top-left, .layout-6 .top-middle, .layout-6 .top-right, .layout-6 .middle-left, .layout-6 .middle-middle, .layout-6 .middle-right {
+  width: 33%; }
+.layout-6 .top-left, .layout-6 .top-middle, .layout-6 .top-right {
+  top: 0px; }
+.layout-6 .middle-left, .layout-6 .middle-middle, .layout-6 .middle-right {
+  top: 33.5%; }
+.layout-6 .top-left, .layout-6 .middle-left {
+  left: 0px; }
+.layout-6 .top-middle, .layout-6 .middle-middle {
+  left: 33.5%; }
+.layout-6 .top-right, .layout-6 .middle-right {
+  right: 0px; }
+.layout-6 .bottom-row {
+  left: 0px;
+  bottom: 0px;
+  width: 100%; }
+
+.layout-7 .asset {
+  height: 50%;
+  width: 100%;
+  left: 0px; }
+.layout-7 .top-row {
+  top: 0px; }
+.layout-7 .bottom-row {
+  bottom: 0px; }
+
+.layout-8 .asset {
+  width: 50%; }
+.layout-8 .top-left, .layout-8 .bottom-left {
+  height: 50%;
+  left: 0px; }
+.layout-8 .top-left, .layout-8 .right-column {
+  top: 0px; }
+.layout-8 .bottom-left {
+  bottom: 0px; }
+.layout-8 .right-column {
+  right: 0px;
+  height: 100%; }
+
+.layout-9 .asset {
+  height: 50%; }
+.layout-9 .top-row {
+  width: 100%;
+  top: 0px; }
+.layout-9 .top-row, .layout-9 .bottom-left {
+  left: 0px; }
+.layout-9 .bottom-left, .layout-9 .bottom-right {
+  width: 50%;
+  bottom: 0px; }
+.layout-9 .bottom-right {
+  right: 0px; }
+
+.layout-yo .column {
+  height: 100%; }
+.layout-yo .column1 {
+  left: 0%;
+  right: 66.7%; }
+.layout-yo .column2 {
+  left: 33.3%;
+  right: 33.3%;
+  height: 100%; }
+.layout-yo .column3 {
+  left: 66.7%;
+  right: 0;
+  height: 100%; }
+
+/******* Title card layout **********? */
+.collection.layout-title-card .title {
+  font-size: 1em; }
+
+.layout-title-card .cover-image {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0px;
+  top: 0px; }
+.layout-title-card .title {
+  position: absolute;
+  right: 0px;
+  width: 40%;
+  height: 100%;
+  bottom: 0px;
+  font-size: 2em;
+  padding: 10px; }
+.layout-title-card .overlay {
+  display: none; }
+.layout-title-card .subtitle {
+  display: none; }
+
+/******* End card layout **********? */
+.layout-end-card .content {
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -300px; }
+.layout-end-card .left-column {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50%;
+  bottom: 0; }
+.layout-end-card .right-column {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0; }
+.layout-end-card .stack-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+.layout-end-card a.next-collection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -125px;
+  margin-left: -156px;
+  width: 300px;
+  height: 250px;
+  background-color: white;
+  border: solid 6px white; }
+.layout-end-card .cover-image {
+  width: 100%;
+  height: 100%; }
+.layout-end-card .stack2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -145px;
+  margin-top: -131px;
+  width: 290px;
+  height: 6px;
+  background-color: #666666; }
+.layout-end-card .stack3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -134px;
+  margin-top: -137px;
+  width: 268px;
+  height: 6px;
+  background-color: #333333; }
+.layout-end-card .text-wrapper {
+  margin-top: 50%;
+  color: white; }
+.layout-end-card h1 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 0; }
+.layout-end-card h2 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #666666;
+  margin: 0; }
+.layout-end-card p {
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  position: relative; }
+
+@media all and (min-width: 450px) {
+  .asset {
+    font-size: 17pt; } }
+@media all and (max-width: 450px) {
+  .asset {
+    font-size: 4pt; }
+
+  .video-wrapper .play-overlay {
+    background-size: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px; } }

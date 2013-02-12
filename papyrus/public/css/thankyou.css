@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: url("/images/bg_page.png") repeat scroll 0 0 transparent;
+}
+
+#container{
+  font-family: "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif;
+}
+
+header{
+  text-align: center;
+  height: 156px;
+  z-index: 1;
+}
+
+header:before {
+   content:"";
+   position:absolute;
+   z-index:-1;
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   background: url("/images/bg_header.png") repeat-x scroll 0 0 transparent;
+   opacity:0.1;
+}
+
+#logo{
+  margin-top: 32px;
+  height: 100px;
+}
+
+#thank-you{
+  margin: 50px 0 30px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 40px;
+  font-size: 3em;
+  text-align: center;
+  color: black;
+}
+
+.message {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: #222222;
+  margin: 0 0 10px 0; 
+}

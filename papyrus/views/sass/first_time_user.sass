@@ -1,0 +1,333 @@
+@import "colors"
+@import "mixins"
+@import "reset"
+@import "typefaces"
+@import "animate"
+
+body
+  @include font-sans-serif
+  background: url(/images/bg_page.png)
+  font-size: 16px
+  color: #424242
+  -webkit-font-smoothing: antialiased
+  // This is to make the animations not "pop"
+  -webkit-transform: translateZ(0)
+
+a.button
+  position: relative
+  z-index: 2
+  font-size: 16px
+  color: #f6f6f6
+  background-color: #1faddb
+  padding: 12px 25px 10px
+  text-decoration: none
+  @include box-shadow( 3px 3px 5px 0 rgba(0,0,0,.15) )
+  .arrow
+    right: -12px
+    top: 0
+    height: 0
+    width: 0
+    position: absolute
+    border-top: 20px solid transparent
+    border-bottom: 19px solid transparent
+    border-left: 12px solid #1faddb
+
+
+header
+  height: 156px
+  background: url(/images/onboard/bg_header.png)
+  text-align: center
+  .logo
+    display: inline-block
+    margin-top: 26px
+    height: 115px
+    width: 335px
+    background-image: url(/images/onboard/logo-static-n-onboarding.png)
+    background-position: 0 0
+    // .logo.part2
+    //   background-position: 0 -102px
+    // .logo.part3
+    //   background-position: 0 -204px
+    // .logo.part4
+    //   background-position: 0 -304px
+
+p 
+  line-height: 22px
+  margin: 20px 0
+
+.bodycontent
+  width: 100%
+  overflow-x: hidden
+
+.scrollcontainer
+  @include transition(margin .5s ease-in-out)
+
+.page 
+  width: 100%
+  float: left
+
+.container
+  width: 530px
+  margin: 40px auto
+  padding-bottom: 40px
+
+.content
+  position: relative
+
+.dragarrow
+  position: absolute
+  bottom: 40px
+  right: -150px
+  opacity: 1
+  @include transition(opacity .15s ease-in-out)
+.dragarrow.hidden
+  opacity: 0
+
+h2.section-header
+  text-transform: uppercase
+  font-size: 24px
+  margin: 20px 0
+
+h3.section-header
+  font-size: 18px
+  margin: 20px 0 0
+  font-weight: bold
+
+ol, ul
+  margin: 10px 0
+  li 
+    line-height: 22px
+    margin: 2px 0 2px 20px
+    list-style-type: square
+
+.bookmarkbar
+  padding: 15px
+  text-align: center
+  background-color: #f2f2f2
+  border: 1px solid #bebebe
+  margin: 50px 0 20px 0
+  @include box-shadow( inset 1px 1px 4px 0 rgba(106,106,106,.4) )
+
+#pinster
+  display: inline-block
+  border: 0
+  height: 40px
+  width: 120px
+  vertical-align: middle
+  text-align: center
+  overflow: hidden
+
+.grid
+  .item
+    display: inline-block
+    margin: 15px 11px 0 0
+    height: 234px
+    width: 162px
+    overflow: hidden
+    position: relative
+    background-image: url(/images/default_new_collection.png)
+    background-size: cover
+    background-position: center
+    a 
+      height: 100%
+      width: 100%
+      text-wrap: break-word
+      display: table
+      background-size: cover
+      text-align: center
+      color: #f6f6f6
+      cursor: pointer
+      overflow: hidden
+      @include text-shadow(0 0 5px #000)
+      span
+        font-size: 22px
+        line-height: 30px
+        padding: 10px
+        display: table-cell
+        vertical-align: middle
+      .overlay
+        position: absolute
+        display: table
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,.4)
+        opacity: 0
+        top: 0
+        left: 0
+        @include transition(opacity .25s ease-in-out)
+        .check 
+          display: table-cell
+          vertical-align: middle
+          font-size: 38px
+          text-align: center
+          @include font-icon
+  .item:nth-child(4n)
+    margin-right: 0
+
+#welcome
+  a.button.continue
+    position: absolute
+    top: -8px
+    right: 0
+
+#topics
+  .container
+    width: 696px
+
+  h2.section-header
+    text-align: center
+
+#additems
+  .container
+    width: 585px
+
+  a.button.continue
+    float: right
+    margin-bottom: 20px
+    right: 12px
+    opacity: 0
+    @include transition(all .25s ease-in-out)
+  a.button.continue.visible
+    opacity: 1
+
+  h2.section-header
+    font-size: 21px
+    text-align: center
+
+  .grid
+    .item
+      height: 135px
+      width: 135px
+      @include transition(all .25s ease-in-out)
+    .item.checked
+      @include transform(scale(.95))
+      .play-overlay
+        opacity: 0
+      .overlay
+        opacity: 1
+    .play-overlay
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      opacity: .7
+      background-image: url("/play_btn.png")
+      background-size: 30px 30px
+      background-repeat: no-repeat
+      background-position: center center
+      @include transition( all .25s linear )
+      &:hover
+        opacity: 1
+
+    .item.feed-type
+      a
+        text-align: left
+        background-color: rgb(255,255,255)
+        @include text-shadow(none)
+        .title
+          display: block
+          width: 300px
+          font-size: 24px
+          line-height: 24px
+          color: #424242
+    .item.fact-type
+      a 
+        text-align: left
+        background-color: rgb(255,255,255)
+        @include text-shadow(none)
+        .title
+          display: block
+          width: 300px
+          font-size: 24px
+          line-height: 24px
+          color: #424242
+        .text
+          display: block
+          width: 300px
+          font-size: 14px
+          line-height: 16px
+          color: #424242
+          p 
+            margin: 0 0 10px
+
+#finished
+  text-align: center
+  .screen
+    margin: 20px auto 40px
+    width: 398px
+    @include box-shadow( 3px 3px 5px 0 rgba(0,0,0,.15) )
+  .item
+    height: 270px
+    width: 398px
+    overflow: hidden
+    background-image: url(/images/default_new_collection.png)
+    background-size: cover
+    background-position: center
+    a 
+      height: 100%
+      width: 100%
+      text-wrap: break-word
+      display: table
+      background-size: cover
+      text-align: center
+      color: #f6f6f6
+      cursor: pointer
+      position: relative
+      @include text-shadow(0 0 5px #000)
+      .text
+        position: absolute
+        bottom: 20px
+        left: 20px
+        right: 20px
+        text-align: left
+        font-size: 28px
+        margin: 0
+        small
+          display: block
+          font-size: 14px
+          margin-top: 5px
+
+@media screen and (max-width: 480px)
+  .container
+    width: auto
+    padding-left: 20px
+    padding-right: 20px
+
+  .dragarrow
+    display: none
+
+  #topics
+    .container
+      width: auto
+
+  #additems
+    .container
+      width: auto
+    .grid
+      .item
+        margin: 10px 10px 10px 0
+        width: 127px
+        height: 113px
+      .item:nth-child(even)
+        margin-right: 0
+    h2.section-header
+      text-align: left
+      width: 50%
+
+  #finished
+    .screen
+      width: 100%
+    .item
+      width: 100%
+      height: 200px
+    .arrow
+      // This isn't displaying properly.
+      display: none
+  
+  .grid
+    .item
+      width: 100%
+      margin-left: 0
+      display: block
+      float: left

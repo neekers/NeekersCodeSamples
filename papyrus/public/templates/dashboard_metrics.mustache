@@ -1,0 +1,50 @@
+            <ul>
+              <li>
+                Total Assets: {{total}}
+            {{#counts}}
+              <li> {{key}}:  {{count}}
+            {{/counts}}
+              <li> Average number of collections per user:  {{avg_collections}}
+              <li> Average number of assets per user: {{avg_items}}
+              <li> Average number of likes per user: {{avg_likes}}
+              <li>
+                Top 10 Most Liked Collections:
+                <ul>
+                {{#most_liked}}
+                    <li> {{collection_title}} {{count}} Likes
+                {{/most_liked}}
+                </ul>
+              <li>
+                Top 10 Most Used Assets:
+                <ul>
+                {{#most_used}}
+                    <li> {{{title}}}
+                         {{^title}}{{uid}}{{/title}} {{uses}} Uses
+                {{/most_used}}
+                </ul>
+              <li>
+                Topics by Number of Followers:
+                <ul>
+                {{#most_followed}}
+                    <li>{{collection_title}}
+                        {{^collection_title}}{{uid}}{{/collection_title}}: {{count}} Follows
+                {{/most_followed}}
+                </ul>
+            <table>
+              <tr>
+                <th>Creation date</th>
+                <th>Users</th>
+                <th>Collections</th>
+                <th>Images</th>
+                <th>Facts</th>
+                <th>Videos</th>
+              </tr>
+            {{#daily_stats}}
+              <tr>
+                <th>{{day}}</th>
+                <td class="number">{{User}}</td>
+                <td class="number">{{Collection}}</td>
+                <td class="number">{{ImageAsset}}</td>
+                <td class="number">{{FactAsset}}</td>
+                <td class="number">{{VideoAsset}}</td>
+            {{/daily_stats}}

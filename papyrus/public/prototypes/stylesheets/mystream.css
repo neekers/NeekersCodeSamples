@@ -1,0 +1,21 @@
+.my_stream {
+  width: 100%;
+  padding: 20px 40px; }
+
+@media screen and (min-width: 1280px) {
+  .my_stream {
+    width: 1200px;
+    margin: 0 auto; }
+
+  .messaging {
+    width: 33%;
+    float: left;
+    text-align: left;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    line-height: 1.3em;
+    color: #7d7d7d;
+    padding: 45px 20px 20px 40px; }
+    .messaging span {
+      color: black; } }

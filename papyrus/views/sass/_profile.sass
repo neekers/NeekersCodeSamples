@@ -1,0 +1,297 @@
+#profile-header
+  .profile-top
+    background-color: #222222
+  .name-header
+    position: relative
+    padding: 12px 0
+    width: $bodyWidth
+    margin: 0 auto
+    .following-user-btn
+      top: 0
+      left: 0
+      right: 0
+      cursor: pointer
+      background-color: #222222
+      z-index: 100
+      @include transition( background-color 250ms )
+      float: right
+      display: inline-block
+      &:hover
+        @include box-shadow( 1px 1px 4px $nearly-black-30 )
+        .text
+          background-color: #1faddb
+          @include gradient(linear,top,#1faddb,#1faddb,'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#1faddb', EndColorStr='#1faddb')
+      &:active
+        @include box-shadow( inset 1px 1px 3px $nearly-black-80 )
+        .text
+          @include box-shadow( inset 1px 1px 3px $nearly-black-80 )
+          background-color: #1faddb
+          @include gradient(linear,top,#1faddb,#1faddb,'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0ea633', EndColorStr='#116e01')
+
+      .text
+        @include button-base
+        display: table-cell
+        height: $headerHeight
+        vertical-align: middle
+        padding: 15px 30px
+        height: 0px
+        font-weight: bold
+        background-color: #1faddb
+        @include gradient(linear,top,#3ea1db,#3a88bf,'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3ea1db', EndColorStr='#3a88bf')
+        border-left: 1px solid $nearly-black-20
+    .followed-user-btn
+      top: 0
+      left: 0
+      right: 0
+      cursor: pointer
+      background-color: #222222
+      z-index: 100
+      @include transition( background-color 250ms )
+      float: right
+      display: inline-block
+      &:hover
+        @include box-shadow( 1px 1px 4px $nearly-black-30 )
+        .text
+          background-color: #2cc966
+          @include gradient(linear,top,#2cc966,#349902,'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2cc966', EndColorStr='#349902')
+      &:active
+        @include box-shadow( inset 1px 1px 3px $nearly-black-80 )
+        .text
+          @include box-shadow( inset 1px 1px 3px $nearly-black-80 )
+          background-color: #0ea633
+          @include gradient(linear,top,#0ea633,#116e01,'left top, left bottom')
+          filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0ea633', EndColorStr='#116e01')
+
+      .text
+        @include button-base
+        display: table-cell
+        height: $headerHeight
+        vertical-align: middle
+        padding: 15px 30px
+        height: 0px
+        font-weight: bold
+        background-color: #1cbd51
+        @include gradient(linear,top,#1cbd51,#238701,'left top, left bottom')
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#1cbd51', EndColorStr='#238701')
+        border-left: 1px solid $nearly-black-20
+
+  .avatar
+    float: left
+    width: 85px
+    margin-right: 26px
+  .user-name
+    font-size: 36px
+    color: $off-white
+    display: block
+    margin: 0 0 12px 0
+  .collection-count
+    float: left
+    display: block
+    font-size: 18px
+    color: $mid-gray-3
+
+
+#profile-navigation
+  background-color: $nearly-black-30
+  height: 50px
+  .profile-nav-wrapper
+    width: $bodyWidth
+    margin: 0 auto
+
+.profile-navigation
+  float: right
+  .item
+    line-height: 50px
+    display: table-cell
+    font-size: 14px
+    color: $mid-gray-1
+    padding: 0 40px
+    border-left: 1px solid $light-gray-1-40
+    border-right: 1px solid $mid-gray-2-40
+    &:hover, &.active
+      color: $off-white
+      background-color: #3f3f3f
+      @include gradient(linear,top,rgb(63, 63, 63),rgb(51, 51, 51),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3f3f3f', EndColorStr='#333333')
+
+.profile-content
+  width: $bodyWidth
+  margin: 0 auto
+
+#my-profile
+  margin-top: $headerHeight
+  .collage-count, .element-count, .following-count
+    font-size: 24px
+    color: $mid-gray-2
+    padding: 25px 0
+
+  .no-data
+    .header
+      font-size: 25px
+      margin-bottom: 20px
+    line-height: 20px
+    width: 900px
+    margin: 0 auto
+    text-align: center
+
+  .video-type
+    .svg_play
+      display: block
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      width: 216px
+      height: 165px
+      cursor: pointer
+      background-image: url(/images/play.png)
+      background-position: center center
+      background-repeat: no-repeat
+
+  .topic-type
+    width: 100%
+
+  .rssFeed
+    background: #fff
+    padding: 25px
+    h4, h4 > a
+      font-size: 20px
+      line-height: 24px
+      margin-top: 0
+    .rssHeader
+      font-size: 15px
+    .rssRow
+      h4 .spanned-link
+        font-weight: 700
+      & > div
+        font-size: 13px
+        line-height: 13px
+      p
+        font-size: 15px
+        line-height: 21px
+
+  .fact-type
+    background-color: #fff
+    .fact-wrapper
+      padding: 25px
+    h2
+      font-size: 20px
+      line-height: 24px
+      padding: 0
+    .fact-text
+      padding: 0
+      p
+        font-size: 15px
+        line-height: 21px
+        margin: 16px 0 22px 0
+
+  &.likes
+    .video-type
+      .svg_play
+        height: 320px
+        width: 380px
+
+
+// My Stats Tab
+#my-profile.my_stats
+
+  .collage-filter-wrapper, .element-filter-wrapper
+    margin: 40px 0
+
+  .collage-count, .element-count
+    vertical-align: middle
+    padding: 0
+    display: inline-block
+    margin-right: 10px
+
+  .collage-list
+    z-index: -1
+
+  .info
+    .asset-count
+      float: right
+
+  .view-options
+    vertical-align: middle
+    z-index: 100
+    display: inline-block
+
+  .divider
+    margin: 50px 0
+    height: 2px
+    background-color: rgba(0, 0, 0, .2)
+    border: none
+
+.collage-view-options, .element-view-options
+  display: inline-block
+  position: relative
+  cursor: pointer
+  .notch
+    margin-left: 5px
+    border-bottom: 0
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+    border-top: 5px solid $mid-gray-2
+    padding: 0
+    width: 0
+    height: 0
+    position: absolute
+    top: 20px
+    right: 10px
+  .selected-collage-filter, .selected-element-filter
+    text-align: left
+    padding: 0 0 0 20px
+    height: 40px
+    line-height: 40px
+    font-size: 20px
+    background-color: #f0f0f0
+    color: $mid-gray-2
+    width: 125px
+    z-index: 90
+    overflow: hidden
+    @include disable-seletion
+    @include box-shadow(inset 0 0 3px 1px $nearly-black-20 )
+    @include gradient(linear,top,rgb(240, 240, 240),rgb(225, 225, 225),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f0f0f0', EndColorStr='#e1e1e1')
+    &:hover
+      background-color: #f3f3f3
+      @include gradient(linear,top,rgb(243, 243, 243),rgb(231, 231, 231),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f3f3f3', EndColorStr='#e7e7e7')
+      @include box-shadow(inset 0 0 5px 1px $nearly-black-20 )
+    &:active
+      background-color: #eaeaea
+      @include gradient(linear,top,rgb(234, 234, 234),rgb(216, 216, 216),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eaeaea', EndColorStr='#d8d8d8')
+      @include box-shadow(inset 0 0 3px 1px $nearly-black-30 )
+  &.open .selected-collage-filter, &.open .selected-element-filter
+    background: $off-white
+    @include box-shadow(0 0 3px 1px $nearly-black-20 )
+  .options
+    display: none
+    position: absolute
+    top: 40px
+    left: 0
+    background: $off-white
+    width: 100%
+    max-height: 175px
+    overflow-y: auto
+    overflow-x: hidden
+    @include box-shadow(0 3px 3px 1px $nearly-black-20 )
+    z-index: 100
+    li
+      text-align: left
+      white-space: nowrap
+      height: 34px
+      line-height: 34px
+      padding: 0 0 0 20px
+      cursor: pointer
+      color: $mid-gray-1
+      font-size: 20px
+      @include disable-seletion
+      &:hover
+        background: $mid-blue-2
+        color: $off-white

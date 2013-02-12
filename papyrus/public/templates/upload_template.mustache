@@ -1,0 +1,11 @@
+<form action="http://{{bucket}}.s3.amazonaws.com/" method="POST" enctype="multipart/form-data" class="upload-form">
+  <input type="hidden" name="key"            value="" />
+  <input type="hidden" name="bucket"         value="{{bucket}}" />
+  <input type="hidden" name="acl"            value="{{acl}}" />
+  <input type="hidden" name="AWSAccessKeyId" value="{{AWSAccessKeyId}}" />
+  <input type="hidden" name="policy"         value="{{policy}}"/>
+  <input type="hidden" name="signature"      value="{{signature}}" />
+  <input type="hidden" name="Content-Type"   value="{{Content-Type}}" />
+  <input type="file"   name="file"           placeholder="filename..." />
+  <br><span class="message"></span>
+</form>

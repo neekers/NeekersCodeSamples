@@ -1,0 +1,82 @@
+.profile_header {
+  height: 50px;
+  position: relative; }
+  .profile_header .back_arrow {
+    display: block; }
+  .profile_header .user_name, .profile_header .profile_actions {
+    display: inline-block; }
+  .profile_header .user_name {
+    width: 200px;
+    position: absolute;
+    left: 33%;
+    color: #696969;
+    text-shadow: 0px -1px 1px rgba(51, 51, 51, 0.6);
+    bottom: 10px;
+    font-weight: normal;
+    font-size: 1.4em;
+    margin-left: -100px; }
+  .profile_header .profile_actions {
+    position: absolute;
+    right: 220px; }
+    .profile_header .profile_actions a {
+      display: inline-block; }
+      .profile_header .profile_actions a.edit, .profile_header .profile_actions a.share {
+        height: 30px;
+        line-height: 20px;
+        background: rgba(204, 204, 204, 0.8);
+        border-radius: 8px;
+        padding: 5px 20px;
+        margin: 15px;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6); }
+        .profile_header .profile_actions a.edit:active, .profile_header .profile_actions a.share:active {
+          box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+          text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4); }
+
+.user_grid {
+  padding: 0 40px;
+  text-align: justified; }
+  .user_grid article {
+    height: 250px;
+    width: 23%; }
+    .user_grid article h2 {
+      text-align: left; }
+    .user_grid article .card_meta {
+      text-align: right;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      color: #999999; }
+  .user_grid .user_grid_header {
+    text-align: center;
+    /* relative in grid */
+    position: relative;
+    width: 23%;
+    float: left;
+    margin: 0 0.5%; }
+    .user_grid .user_grid_header > div {
+      height: 250px; }
+    .user_grid .user_grid_header .user_meta {
+      padding: 20px 0; }
+      .user_grid .user_grid_header .user_meta .avatar {
+        height: 120px;
+        width: 120px;
+        position: relative;
+        margin: 0 auto;
+        clear: both;
+        background: url("/prototypes/images/user_avatar.jpg") center center no-repeat;
+        background-size: auto 100%;
+        border-radius: 20px;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6); }
+      .user_grid .user_grid_header .user_meta h1 {
+        padding: 10px 0;
+        font-style: italic;
+        font-size: 1.3em; }
+      .user_grid .user_grid_header .user_meta span {
+        margin: 0 10px; }
+
+.bookmark_count {
+  text-align: left; }
+
+.page_title {
+  visibility: hidden; }

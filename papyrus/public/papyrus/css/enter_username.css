@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Pictos';
+  src: url("/papyrus/css/pictos/pictos-web.eot");
+  src: local("☺"), url("/papyrus/css/pictos/pictos-web.woff") format("woff"), url("/papyrus/css/pictos/pictos-web.ttf") format("truetype"), url("/papyrus/css/pictos/pictos-web.svg#webfontIyfZbseF") format("svg"); }
+
+#content {
+  font-family: "Asap", "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif;
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin: 20px 0 0 -300px;
+  display: table;
+  width: 600px;
+  height: 300px;
+  color: #666666;
+  font-weight: 300; }
+  #content input::-webkit-input-placeholder, #content textarea::-webkit-input-placeholder {
+    font-family: "Asap", "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 14px; }
+  #content input:-moz-placeholder, #content textarea:-moz-placeholder {
+    font-family: "Asap", "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 14px; }
+
+#header {
+  color: #18506c;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 500; }
+
+#form-container {
+  margin: 0 auto;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  text-align: center; }
+
+table {
+  width: 100%; }
+
+label {
+  padding-right: 10px; }
+
+td {
+  padding: 10px; }
+
+input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #b2b2b2;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  font-weight: 300;
+  font-family: inherit;
+  -webkit-box-shadow: inset 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 1px 8px 0 rgba(0, 0, 0, 0.2); }
+
+.done_button {
+  font-family: "Asap", "Open Sans", "PT Sans", "Myriad Pro", Arial, Helvetica, Sans-Serif;
+  font-weight: 400;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  font-variant: small-caps;
+  font-size: 18px;
+  text-align: center;
+  padding: 3px;
+  width: 125px;
+  background-color: #5e8ca4;
+  border: 3px solid #5e8ca4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 0 0 #cecece;
+  -moz-box-shadow: 1px 1px 0 0 #cecece;
+  box-shadow: 1px 1px 0 0 #cecece;
+  cursor: pointer; }

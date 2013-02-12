@@ -1,0 +1,33 @@
+<h1>Ingester Stats</h1>
+
+<img src="http://s3.amazonaws.com/assets.collagio.com/{{ingester_version}}/{{environment}}/stats/ingester-stats-day.png">
+<img src="http://s3.amazonaws.com/assets.collagio.com/{{ingester_version}}/{{environment}}/stats/ingester-stats-month.png">
+
+<h2>Redis Queues</h2>
+<table>
+  <tr><th>New Image Queue          </th><td class="number">{{queue}}      </td></tr>
+  <tr><th>Bulk Update Queue        </th><td class="number">{{bulk_queue}} </td></tr>
+  <tr><th>Error Retry Image Queue  </th><td class="number">{{retry_queue}}</td></tr>
+  <tr><th>Currently Being Ingested </th><td class="number">{{ingesting}}  </td></tr>
+  <tr><th>Ingest Fatalities        </th><td class="number">{{fatalities}} </td></tr>
+</table>
+<h2>Neo4j Data</h2>
+<table>
+  <tr><th>total</th><td class="number">{{total}}</td></tr>
+  <tr><th>ingested</th><td class="number">{{ingested}}</td></tr>
+  <tr><th>resized to 1024x1024</th><td class="number">{{resized}}</td></tr>
+  <tr><th>thumbnailed</th><td class="number">{{thumbnailed}}</td></tr>
+  <tr><th>failures</th><td class="number">{{failures}}</td></tr>
+  <tr><th>failed</th><td class="number">{{failed}}</td></tr>
+  <tr><th>new_upload_bucket</th><td class="number">{{new_upload_bucket}}</td></tr>
+  <tr><th>old_upload_bucket</th><td class="number">{{old_upload_bucket}}</td></tr>
+  </tr>
+</table>
+
+<h2>Bad Assets</h2>
+<table>
+  <tr><th>Neo ID</th><th>Source URL</th></tr>
+{{#bad}}
+  <tr><td class="number"><a href="http://{{neo_server}}:7474/webadmin/#/data/search/{{id}}/">{{id}}</a></td><td><a href="{{source_url}}">{{source_url}}</a></td></tr>
+{{/bad}}
+</table>

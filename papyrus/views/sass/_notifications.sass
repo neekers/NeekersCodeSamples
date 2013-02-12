@@ -1,0 +1,113 @@
+#count-wrapper
+  display: inline-block
+#notifications-count
+  @include button-square-base
+  background-color: #ea3232
+  @include gradient(linear,top,rgb(234, 50, 50),rgb(193, 59, 59),'left top, left bottom')
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ea3232', EndColorStr='#c13b3b')
+  &:hover
+    background-color: #ee5656
+    @include gradient(linear,top,rgb(238, 86, 86),rgb(212, 48, 48),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ee5656', EndColorStr='#d43030')
+  &:active
+    background-color: #e51818
+    @include gradient(linear,top,rgb(229, 24, 24),rgb(191, 11, 11),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e51818', EndColorStr='#bf0b0b')
+
+  &.zero
+    background-color: #505050
+    @include gradient(linear,top,rgb(80, 80, 80),rgb(51, 51, 51),'left top, left bottom')
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#505050', EndColorStr='#333333')
+    &:hover
+      background-color: #646464
+      @include gradient(linear,top,rgb(100, 100, 100),rgb(104, 104, 104),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#646464', EndColorStr='#686868')
+    &:active
+      background-color: #353535
+      @include gradient(linear,top,rgb(53, 53, 53),rgb(31, 31, 31),'left top, left bottom')
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#353535', EndColorStr='#1f1f1f')
+
+#notifications
+  white-space: normal
+  position: absolute
+  top: 60px
+  right:  0
+  width:  450px
+  background-color: #fff
+  text-align: left
+  color: $dark-gray-1
+  z-index: 300
+  border:  1px solid #666
+  @include box-shadow( 0 7px 15px 0px rgba(0,0,0, .5) )
+
+  .notch
+    position: absolute
+    top: -10px
+    right: 70px
+    margin: 0
+    border-top: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-bottom: 10px solid #fff
+    padding: 0
+    width: 0
+    height: 0
+  .border-notch
+    border-bottom-color: #666
+    top: -11px
+
+  .title
+    height: 45px
+    line-height: 45px
+    padding-left: 12px
+    font-weight: bold
+    @include font-sans-serif
+    border-bottom: 1px solid $dark-gray-1
+    color:  $dark-gray-1
+    font-size: 18px
+
+  #no-notifications-message
+    font-size: 14px
+    padding: 20px
+    line-height: 20px
+    text-align: center
+
+  #notifications-list
+    overflow-y: auto
+    overflow-x: hidden
+    max-height: 340px
+  .notification
+    cursor: pointer
+    height: 60px
+    @include font-sans-serif
+    font-size: 13px
+    line-height: 17px
+    border-bottom: 1px solid #999
+    padding: 12px 0 12px 12px
+    &:hover
+      background-color: #DDEEF9
+    &.read
+      color: #676767
+      background-color: #DBDAD9
+      &:hover
+        background-color: #DDEEF9
+    .view-link
+      text-decoration: none
+    .user
+      font-weight: bold
+
+  .comment
+    @include font-sans-serif
+    font-style: italic
+    .copy
+      overflow: hidden
+      width: 345px
+      height: 17px
+      display: inline-block
+      white-space: nowrap
+      text-overflow: ellipsis
+    .time
+      width: 65px
+      font-size: 11px
+      color: #999
+      margin-left: 12px

@@ -1,0 +1,49 @@
+<header class='page-header cf'>
+    <div class="canvas-wrap"></div>
+    <div class="light-overlay"></div>
+    <div class="head-wrap">
+        <a class='logo' href='/papyrus'>
+            <img src='/images/logos/logo-header.png' title='Click to go home' />
+        </a>
+        <nav class='login'>
+            <a class="create-btn" href="#"><span class="icon"><img src="/images/icon-add-collage-plus.png" /></span><span class="text">Create</span></a>
+            <div class='login-container'>
+                <a href="#" class='view-my-profile my-profile' title="View profile of {{first_name}} {{last_name}}">
+                    <img alt='profile photo of {{first_name}} {{last_name}}' class='my-profile-picture' src='{{current_user_image_url}}' />
+                </a>
+                <ul id="user-options">
+                    <li class="option">
+                        <a href="#" class="title view-my-stats">Stats</a>
+                    </li>
+                    <li class="option">
+                        <a href="#" class="title view-my-collages">Collages</a>
+                    </li>
+                    <li class="option">
+                        <a href="#" class="title view-my-items">Elements</a>
+                    </li>
+                    <li class="option">
+                        <a href="#" class="title view-my-liked-topics">Following</a>
+                    </li>
+                    <li class="option">
+                        <a href="#" class="title view-my-bookmarks">Likes</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="option plus">
+                        <a href="#" class="title view-bookmarklet">+ Collagio</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="option">
+                        <a class="title logout_btn" href="/auth/logout_and_redirect">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class='edit cf'>
+            <a class="reorder-btn" href="#"><img src="/images/icon-reorder.png" /><span class="text">Reorder</span></a>
+
+            <a class="done-edit-btn" href="#"><span class="text">I'm Done</span></a>
+            <a class="cancel-edit-btn" href="#"><span class="text">Cancel</span></a>
+        </nav>
+        <a href="#" title="Edit Collage" id="edit-collection"><span class="text">Edit</span><span class="icon"><img src="/images/icon-edit.png" /></span></a>
+    </div>
+</header>

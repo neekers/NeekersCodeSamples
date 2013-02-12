@@ -1,0 +1,34 @@
+{{#item}}
+  <a class="link" href="{{app_url}}">
+      <div class="asset">
+        <div class="gradient"></div>
+        <div class="frame">
+          <img class="image" {{#item.image_300_url}}src="{{item.image_300_url}}"{{/item.image_300_url}}>
+        </div>
+      </div>
+      
+      <div class="info">
+        <b class="topic-title-background"></b>
+        <h3 class='topic-title'>{{title}}</h3>
+        <div class="details">
+          {{screens_count}} {{screens_count_text}}
+        </div>
+      </div>
+  </a>
+
+
+  <div class="like-container">
+      <a class="like-btn" title="like" href="#" {{#collected}}class="liked"{{/collected}}><img src="/images/icon-heart.png" /></a>
+      {{#collected_count}}
+      <div class="like-count">
+          {{collected_count}}
+      </div>
+      {{/collected_count}}
+  </div>
+{{/item}}
+
+{{#editable}}
+  {{#showDeleteButton}}
+      <a href="#" class="screen-delete" style="display: none;"><img src="/images/icon-trash.png" title="Delete" /></a>
+  {{/showDeleteButton}}
+{{/editable}}

@@ -1,0 +1,64 @@
+.collection_header {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: pink;
+  z-index: 9000; }
+  .collection_header .back_arrow {
+    display: block; }
+  .collection_header .collection_name {
+    width: 200px;
+    position: fixed;
+    left: 33%;
+    color: #696969;
+    text-shadow: 0px -1px 1px rgba(51, 51, 51, 0.6);
+    top: 10px;
+    font-weight: normal;
+    font-size: 1.4em;
+    margin-left: -100px; }
+  .collection_header .share {
+    position: fixed;
+    display: block;
+    right: 220px;
+    height: 30px;
+    line-height: 20px;
+    background: rgba(204, 204, 204, 0.8);
+    border-radius: 8px;
+    padding: 5px 20px;
+    margin: 15px;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6); }
+    .collection_header .share:active {
+      box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.6);
+      text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.4); }
+
+.collection_owner {
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 32%;
+  float: left;
+  text-align: center; }
+  .collection_owner .avatar, .collection_owner h1 {
+    display: inline-block; }
+  .collection_owner .avatar {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    margin: 0 auto;
+    clear: both;
+    background: url("/prototypes/images/user_avatar.jpg") center center no-repeat;
+    background-size: auto 100%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.6); }
+  .collection_owner .author {
+    clear: right;
+    padding: 10px 0;
+    font-style: italic;
+    font-size: 1.3em; }
+  .collection_owner span {
+    margin: 0 10px; }
+
+.page_title {
+  visibility: hidden; }

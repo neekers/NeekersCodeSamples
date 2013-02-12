@@ -1,0 +1,14 @@
+html{
+	text-align: center;
+}
+
+body{
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+#button {
+	display: block;
+	margin: 0px;
+}
