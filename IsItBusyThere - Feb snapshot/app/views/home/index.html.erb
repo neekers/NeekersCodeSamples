@@ -1,0 +1,31 @@
+<header>
+  <h1>Is It Busy There?</h1>
+</header>
+
+
+Recent Checkins
+<ul>
+  <% @IsItBusy.each do |i| %>
+      <li>
+        <h4><img width="50" src="<%= i.user.photo_url %>" /><br />
+          <%= link_to "#{i.user.firstname} #{i.user.lastname}", "https://foursquare.com/user/#{i.user.user_id}", :target => "blank" %></h4>
+        <p>
+          <img src="<%= i.icon_url.gsub("44", "32") %>" />
+          <%= link_to(i.venue_name, "https://foursquare.com/v/#{i.placeid}", :target => "blank") %> <br />
+
+          <%= i.status %> <br />
+          <%= i.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+        </p>
+
+      </li>
+  <% end %>
+  <br />
+  <%= @User.id %>
+  <%= @User.user_id %>
+  <%= @User.created_at %>
+
+  firstname:<%= @User.firstname %> lastname <%= @User.lastname %>
+
+
+</ul>
+

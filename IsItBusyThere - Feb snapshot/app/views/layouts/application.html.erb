@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Busy There?</title>
+  <%= stylesheet_link_tag :all %>
+
+  <!-- Bootstrap -->
+  <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<%= javascript_include_tag :bootstrap %>
+
+	<div class="container">
+	  <% if flash[:notice] %>
+	  	<div class="text-error"><%= flash[:notice] %></div>
+	  <% end %>
+	<%= yield %>
+	</div>
+</body>
+</html>
