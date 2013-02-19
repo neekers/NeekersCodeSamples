@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  Id: 1
-  ServiceName: MyString
-
-two:
-  Id: 1
-  ServiceName: MyString

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_similar"
+        android:icon="@drawable/similar"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/ViewSimilar"/>
+    <item
+        android:id="@+id/menu_viewtweets"
+        android:icon="@drawable/bird_32_gray"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/ViewTweets"/>
+
+</menu>

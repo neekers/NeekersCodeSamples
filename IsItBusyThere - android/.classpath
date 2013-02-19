@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="libs/httpclient-cache-4.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/httpcore-4.1.jar"/>
+	<classpathentry kind="lib" path="libs/libGoogleAnalytics.jar"/>
+	<classpathentry kind="lib" path="libs/hc-fluent-builder-0.1.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.0.jar" sourcepath="/Users/ericnovins/Dropbox/isitbusythere/isitbuythereapp/libs/gson-2.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/isitbusythere/libs/gson-2.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

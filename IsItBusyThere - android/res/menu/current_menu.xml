@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_findPlace"
+        android:icon="@drawable/search"
+        android:showAsAction="always|withText"
+        android:title="@string/FindPlace" />
+    <item
+        android:id="@+id/menu_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:showAsAction="ifRoom"
+        android:title="@string/menu_refresh"/>
+    <item
+        android:id="@+id/menu_facebook_link"
+        android:visible="false"
+        android:icon="@drawable/social_facebook"
+        android:title="@string/LinkFacebook"/>
+     <item
+        android:id="@+id/menu_twitter_link"
+        android:icon="@drawable/social_twitter"
+        android:title="@string/LinkTwitter"/>
+    <item
+        android:id="@+id/menu_logout"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="@string/Logout"/>
+
+</menu>

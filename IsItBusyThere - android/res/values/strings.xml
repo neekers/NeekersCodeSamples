@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Busy There?</string>
+    <string name="PREFS_NAME" translatable="false">IsItBusyPrefsFile</string>
+    <string name="FACEBOOK_APP_SECRET" translatable="false">3071fa075fb1ff0bec2ebe92671b22b2</string>
+    <string name="FACEBOOK_APP_ID" translatable="false">251716658223552</string>
+    <string name="GOOGLE_MAPS_API" translatable="false">0GZH-eU2CfyTn2rx3G7Xs1AEAg5gZst1O82kf8w</string>
+    <string name="GOOGLE_PLACES_KEY" translatable="false">AIzaSyAz502LHcvGOkCl3hWncC-ze1sYBIOexaI</string>
+
+    <string-array name="FACEBOOK_PERMS" translatable="false">
+        <item>email</item>
+        <item>user_checkins</item>
+        <item>publish_stream</item>
+        <item>offline_access</item>
+        <item>friends_checkins</item>
+        <!-- <item>friends_birthday</item> -->
+        <!-- <item>friends_relationship_details</item> -->
+    </string-array>
+    <string-array name="range_options" translatable="false">
+        <item>500 ft.</item>
+        <item>1 mi.</item>
+        <item>2 mi.</item>
+        <item>5 mi.</item>
+        <item>10 mi.</item>
+        <item>25 mi.</item>
+        <item>50 mi.</item>
+        <item>100 mi.</item>
+    </string-array>
+
+    <string name="TWITTER_APP_KEY" translatable="false">cfalMSBbxDDeQcqidNSR2w</string>
+    <string name="TWITTER_APP_SECRET" translatable="false">2c6BPaUqdAiP0Qwz9YxvtrMfQcGHTteEVp4MgCPh4</string>
+    <string name="FOURSQUARE_CLIENT_ID" translatable="false">A3URAYVNHZA53IQGDGAE5KKOHRP5QIMBLFN0GFWYMHKGT4H3</string>
+    <string name="FOURSQUARE_CLIENT_SECRET" translatable="false">TYGTTN50TPXED0X235HFBQGDB5WYN2ALNOPP13CEB4SFK24F</string>
+    <string name="SignInWithFoursquare" translatable="false">Sign in with Foursquare</string>
+    <string name="OK" translatable="false">OK</string>
+    <string name="PlaceName" translatable="false">Place Name</string>
+    <string name="PlaceAddress" translatable="false">Place Address</string>
+    <string name="LastPlace" translatable="false">Last Place</string>
+    <string name="Busy" translatable="false">Busy</string>
+    <string name="NotBusy" translatable="false">Not Busy</string>
+    <string name="NotBusyNoSpaces" translatable="false">NotBusy</string>
+    <string name="LastTextUpdate" translatable="false">The line was out the door.</string>
+    <string name="ReportIn" translatable="false">REPORT IN</string>
+    <string name="OptionalStatus" translatable="false">Status (Optional)</string>
+    <string name="LoggingIn" translatable="false">Logging in &#8230;</string>
+    <string name="Logout" translatable="false">Log Out</string>
+    <string name="menu_refresh" translatable="false">Refresh</string>
+    <string name="ReportingIn" translatable="false">Reporting in &#8230;</string>
+    <string name="PlaceImAt" translatable="false">Place I\'m at</string>
+    <string name="PlaceImAtIs" translatable="false">Place I\'m at is %s</string>
+    <string name="BusyCount" translatable="false">%d Busy</string>
+    <string name="NotBusyCount" translatable="false">%d Not Busy</string>
+    <string name="LookingForCheckins" translatable="false">Looking for checkins &#8230;</string>
+    <string name="LoggingOut" translatable="false">Logging out &#8230;</string>
+    <string name="Statuses" translatable="false">Statuses</string>
+
+    <string-array name="FoursquareCategories" translatable="false">
+        <item>nightlife spot</item>
+        <item>food</item>
+        <item>arts &#38; entertainment</item>
+    </string-array>
+
+    <string name="FindingPlacesNearby" translatable="false">Finding Places Nearby &#8230;</string>
+    <string name="SeeMorePlaces" translatable="false">See More Places</string>
+    <string name="PostToFacebook" translatable="false">Post to Facebook</string>
+    <string name="PostToFoursquare" translatable="false">Post to Foursquare</string>
+    <string name="PostToTwitter" translatable="false">Post to Twitter</string>
+    <string name="SearchNearby" translatable="false">Search Nearby</string>
+    <string name="SearchByPlaceName" translatable="false">Search by place name</string>
+    <string name="Loading" translatable="false">Loading &#8230;</string>
+    <string name="LoadingPlace" translatable="false">Loading place &#8230;</string>
+    <string name="NoPlacesFound" translatable="false">No Places Found</string>
+    <string name="ReportedIn" translatable="false">Reported in!</string>
+    <string name="ProblemReportingIn" translatable="false">There was a problem reporting in.</string>
+    <string name="settings_description" translatable="false">Searches Locations to see if it\'s Busy or not</string>
+    <string name="TwitterAuthorization" translatable="false">Twitter Authorization</string>
+    <string name="EnterYourPin" translatable="false">Enter Your Pin</string>
+    <string name="TwitterPinRequired" translatable="false">Twitter Pin Required</string>
+    <string name="Submit" translatable="false">Submit</string>
+    <string name="WithinTheLastHour" translatable="false">Within the last hour</string>
+    <string name="TwitterAccountLinkedSuccessfully" translatable="false">Twitter account linked successfully!</string>
+    <string name="DoYouWantToLinkYourTwitterAccount" translatable="false">Do you want to link your Twitter account?</string>
+    <string name="AProblemHasOccurred" translatable="false">A problem has occurred</string>
+    <string name="Search" translatable="false">Search</string>
+    <string name="Range" translatable="false">Range</string>
+    <string name="PostTo" translatable="false">Post to</string>
+    <string name="GettingReports" translatable="false">Getting Reports &#8230;</string>
+    <string name="LoadingLastPlaceAndReports" translatable="false">Loading Last Place and Reports &#8230;</string>
+    <string name="NoProfileFound" translatable="false">No Profile Found.</string>
+    <string name="TwitterProfile" translatable="false">Twitter Profile</string>
+    <string name="FacebookProfile" translatable="false">Facebook Profile</string>
+    <string name="FoursquareProfile" translatable="false">Foursquare Profile</string>
+    <string name="LoadingProfile" translatable="false">Loading Profile &#8230;</string>
+    <string name="FindPlaceBusy" translatable="false">Find out if a place is Busy</string>
+    <string name="CheckPlaceStatus" translatable="false">Check Place Status</string>
+    <string name="ViewLastPlace" translatable="false">View Last Place</string>
+    <string name="FindPlace" translatable="false">Find a Place</string>
+    <string name="NearbyPlaces" translatable="false">Nearby Places</string>
+    <string name="UpdateReport" translatable="false">Update Report</string>
+    <string name="GettingFacebookCheckins" translatable="false">Getting Facebook Checkins &#8230;</string>
+    <string name="PartyStarted" translatable="false">Wow this is a ghost town, lets get the party started!</string>
+    <string name="ShareApp" translatable="false">Share App</string>
+    <string name="ShareSubject" translatable="false">Download BUSY THERE? Android App</string>
+    <string name="ShareMessage" translatable="false">Don\'t go before you know. BUSY THERE? is the newest way to report-in and tell others if it\'s worth going to or not. Perfect for a normally busy restaurant or pub crawling. \n\n Download now @ http://www.busythere.com</string>
+    <string name="LinkFacebook" translatable="false">Link Facebook</string>
+    <string name="LinkTwitter" translatable="false">Link Twitter</string>
+    <string name="GettingFoursquareCheckins" translatable="false">Getting Foursquare Checkins &#8230;</string>
+    <string name="PeopleCountHere" translatable="false">%d ppl here</string>
+    <string name="PersonCountHere" translatable="false">%d person here</string>
+    <string name="TweetPlaceOwnerForStatus" translatable="false">Tweet %s and ask #isitbusythere?</string>
+    <string name="Tweet" translatable="false">Tweet</string>
+    <string name="TweetSent" translatable="false">Tweet Sent!</string>
+    <string name="OwnerTweet" translatable="false">I want to check out %1$s %2$s @IsItBusyThere? Report In using http://bit.ly/zIk5l6</string>
+    <string name="Yes" translatable="false">Yes</string>
+    <string name="No" translatable="false">No</string>
+    <string name="LinkFoursquare" translatable="false">Link your Foursquare account.</string>
+    <string name="Sending" translatable="false">Sending &#8230;</string>
+    <string name="AdditionalQuestions" translatable="false">Additional Questions</string>
+    <string name="LastTweetFrom" translatable="false">Last tweet from @%s</string>
+    <string name="ViewTweets" translatable="false">View Tweets</string>
+    <string name="LoadingTweets" translatable="false">Loading Tweets &#8230;</string>
+    <string name="TweetsWithinTheHour" translatable="false">Tweets within the hour</string>
+    <string name="NoOnesTweetingAboutThisPlaceWithinTheLastHour" translatable="false">No one\'s tweeting about this place within the last hour</string>
+    <string name="OtherNearby" translatable="false">%s nearby</string>
+    <string name="FindingSimilarPlacesNearby" translatable="false">Finding similar places &#8230;</string>
+    <string name="ViewSimilar" translatable="false">View Similar</string>
+    <string name="WeDontKnowAboutThisPlace" translatable="false">We dont know about this place or don\'t care.</string>
+    <string name="ReportSuccess" translatable="false">Optionally tell us more.</string>
+    <string name="Continue" translatable="false">Continue</string>
+    <string name="Questions" translatable="false">Questions</string>
+    <string name="Submitting" translatable="false">Submitting</string>
+
+</resources>

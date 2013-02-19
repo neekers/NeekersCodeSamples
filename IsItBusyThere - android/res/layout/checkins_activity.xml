@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layoutPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <ImageButton
+            android:id="@+id/imgPlaceIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/lblPlaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/lblBusyIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/navy"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblPlaceAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/layoutBusyCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:background="@color/navy"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp" >
+
+        <TextView
+            android:id="@+id/lblNotBusyCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/NotBusy"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/lblBusyCount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Busy"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/txtTextUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/OptionalStatus"
+        android:inputType="textMultiLine|textShortMessage|textCapSentences"
+        android:lines="2"
+        android:maxLength="140" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="5dp" >
+
+        <TextView
+            android:id="@+id/lblPeopleCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="2"
+            android:text="@string/Loading"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/lblPostTo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="center_vertical"
+            android:paddingRight="3dp"
+            android:text="@string/PostTo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnPostToFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:src="@drawable/social_facebook_off"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btnPostToFoursquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/PostToFoursquare"
+            android:gravity="center"
+            android:paddingRight="4dp"
+            android:src="@drawable/social_foursquare_off" />
+
+        <ImageButton
+            android:id="@+id/btnPostToTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:src="@drawable/social_twitter_off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/frameNotBusy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="3dp" >
+
+            <Button
+                android:id="@+id/btnNotBusy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/singleton"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/NotBusy" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameBusy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="3dp" >
+
+            <Button
+                android:id="@+id/btnBusy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/group"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/Busy" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/tweet_item" />
+
+    <TextView
+        android:id="@+id/lblStatuses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/WithinTheLastHour"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/navy"
+        android:textStyle="bold" />
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutAnswers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="left"
+        android:orientation="horizontal" />
+
+    <ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <!-- Preview: listitem=@layout/status_item -->
+    </ListView>
+
+</LinearLayout>
