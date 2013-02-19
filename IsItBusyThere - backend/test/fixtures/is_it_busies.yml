@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Id: 1
+  UserId: 1
+  PlaceId: 1
+  IsItBusy: 1
+  Status: MyString
+  user: 
+
+two:
+  Id: 1
+  UserId: 1
+  PlaceId: 1
+  IsItBusy: 1
+  Status: MyString
+  user: 

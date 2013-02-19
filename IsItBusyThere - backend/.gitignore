@@ -1,0 +1,9 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+
+.idea
+.idea/misc.xml
+.idea/isitbusy.iml
+.idea/workspace.xml
