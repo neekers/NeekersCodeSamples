@@ -1,9 +1,9 @@
-MyD
+Eric Novins' Past Code Examples
 ===
 
-Old My Discovery work
+Old work
 
-It's an app that was called, Collagio and it was a place to share knowledge in a structured format like multimedia collages of information for the sake of learning.  
+It's an app to share knowledge in a structured format like multimedia collages of information for the sake of learning.  
 Similar product is http://www.learnist.com
 
 
